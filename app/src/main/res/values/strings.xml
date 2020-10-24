@@ -2,4 +2,12 @@
     <string name="app_name">HelpTech</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recupera_pass">Recuperar contraseña</string>
+    <string name="recupera_pass_title">Recuperar contraseña</string>
+    <string name="info1_recupera_pass" />
+    <string name="subtitle_recupera_pass">¿Has olvidado tu contraseña?</string>
+    <string name="info2_recupera_pass">Introduce el correo electrónico asociado a tu cuenta para restablecer la contraseña.</string>
+    <string name="email_placeHolder">Correo electrónico</string>
+    <string name="btn_enviar">Enviar</string>
+    <string name="email_enviar">Enviar</string>
 </resources>

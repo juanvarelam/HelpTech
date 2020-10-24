@@ -14,4 +14,10 @@
 
     </style>
 
+    <style name="title" parent="android:TextAppearance.DeviceDefault.Large">
+        <item name="fontFamily">heebo</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+
 </resources>
