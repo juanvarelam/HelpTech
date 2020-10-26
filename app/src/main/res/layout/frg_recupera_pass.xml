@@ -49,11 +49,11 @@
             android:layout_marginLeft="24dp"
             android:layout_marginTop="64dp"
             android:layout_marginRight="24dp"
-            android:text="@string/subtitle_recupera_pass"
+            android:text="@string/subtitle_recupera_passw"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="44sp"
-            tools:text="@string/subtitle_recupera_pass" />
+            tools:text="@string/subtitle_recupera_passw" />
 
         <TextView
             android:id="@+id/textView3"
