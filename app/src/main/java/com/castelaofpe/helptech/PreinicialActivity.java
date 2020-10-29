@@ -18,7 +18,7 @@ public class PreinicialActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        setContentView(R.layout.frg_recupera_pass);
+        setContentView(R.layout.act_preinicial);
 
         new Handler().postDelayed(new Runnable(){
             public void run(){
