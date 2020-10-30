@@ -264,7 +264,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/menu_home_btn"
+            android:id="@+id/frg_main_menu_home_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
@@ -274,7 +274,7 @@
             app:srcCompat="@drawable/ic_casa_silueta_negra_sin_puerta" />
 
         <ImageButton
-            android:id="@+id/menu_buscar_btn"
+            android:id="@+id/frg_main_menu_buscar_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
@@ -284,7 +284,7 @@
             app:srcCompat="@drawable/ic_buscar" />
 
         <ImageButton
-            android:id="@+id/menu_mas_btn"
+            android:id="@+id/frg_main_mas_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
@@ -294,7 +294,7 @@
             app:srcCompat="@drawable/ic_mas1" />
 
         <ImageButton
-            android:id="@+id/menu_notif_btn"
+            android:id="@+id/frg_main_menu_notif_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
@@ -304,7 +304,7 @@
             app:srcCompat="@drawable/ic_notificacion2" />
 
         <ImageButton
-            android:id="@+id/menu_usuario_btn"
+            android:id="@+id/frg_main_menu_usuario_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="8dp"

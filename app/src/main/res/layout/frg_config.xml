@@ -44,7 +44,7 @@
         android:layout_margin="32dp"
         android:orientation="vertical"
         android:weightSum="100"
-        app:layout_constraintBottom_toTopOf="@+id/frg_config_menu_lin"
+        app:layout_constraintBottom_toTopOf="@+id/frg_main_menu_lin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frg_config_title_lin">
@@ -168,7 +168,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/frg_config_menu_lin"
+        android:id="@+id/frg_main_menu_lin"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@drawable/supbar"
@@ -178,7 +178,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/menu_home_btn"
+            android:id="@+id/frg_main_menu_home_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -187,7 +187,7 @@
             android:src="@drawable/ic_casa_silueta_negra_sin_puerta" />
 
         <ImageButton
-            android:id="@+id/menu_buscar_btn"
+            android:id="@+id/frg_main_menu_buscar_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="56dp"
@@ -198,7 +198,7 @@
 
 
         <ImageButton
-            android:id="@+id/menu_notif_btn"
+            android:id="@+id/frg_main_menu_notif_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -208,7 +208,7 @@
             android:src="@drawable/ic_notificacion2" />
 
         <ImageButton
-            android:id="@+id/menu_usuario_btn"
+            android:id="@+id/frg_main_menu_usuario_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -224,11 +224,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/frg_config_menu_lin"
+        app:layout_constraintBottom_toBottomOf="@+id/frg_main_menu_lin"
         tools:layout_editor_absoluteX="1dp">
 
         <ImageButton
-            android:id="@+id/menu_mas_btn"
+            android:id="@+id/frg_main_mas_btn"
             android:layout_width="match_parent"
             android:layout_height="114dp"
             android:layout_gravity="clip_horizontal"
