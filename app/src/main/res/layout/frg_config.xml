@@ -169,12 +169,10 @@
 
     <LinearLayout
         android:id="@+id/frg_config_menu_lin"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginEnd="1dp"
         android:background="@drawable/supbar"
         android:orientation="horizontal"
-        android:weightSum="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -192,27 +190,19 @@
             android:id="@+id/menu_buscar_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginTop="8dp"
             android:layout_weight="10"
             android:background="@null"
             android:src="@drawable/ic_buscar" />
 
-        <ImageButton
-            android:id="@+id/menu_mas_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="10"
-            android:background="@null"
-            android:padding="8dp"
-            android:src="@drawable/ic_mas1"
-            tools:visibility="visible" />
 
         <ImageButton
             android:id="@+id/menu_notif_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="56dp"
             android:layout_weight="10"
             android:background="@null"
             android:src="@drawable/ic_notificacion2" />
@@ -227,6 +217,27 @@
 
             android:background="@null"
             android:src="@drawable/ic_usuario_de_perfil" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/frg_config_menu_lin"
+        tools:layout_editor_absoluteX="1dp">
+
+        <ImageButton
+            android:id="@+id/menu_mas_btn"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:layout_gravity="clip_horizontal"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_mas1"
+            android:stateListAnimator="@null"
+            tools:visibility="visible" />
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
