@@ -48,7 +48,7 @@
         android:layout_marginBottom="49dp"
         android:orientation="vertical"
         android:weightSum="100"
-        app:layout_constraintBottom_toTopOf="@+id/frg_config_menu_lin"
+        app:layout_constraintBottom_toTopOf="@+id/frg_main_menu_lin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -178,7 +178,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/frg_config_menu_lin"
+        android:id="@+id/frg_main_menu_lin"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginEnd="1dp"
@@ -191,7 +191,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/btn_home"
+            android:id="@+id/frg_main_btn_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -200,7 +200,7 @@
             android:src="@drawable/ic_casa_silueta_negra_sin_puerta" />
 
         <ImageButton
-            android:id="@+id/btn_buscar"
+            android:id="@+id/frg_main_btn_buscar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -209,7 +209,7 @@
             android:src="@drawable/ic_buscar" />
 
         <ImageButton
-            android:id="@+id/btn_mas"
+            android:id="@+id/frg_main_btn_mas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -220,7 +220,7 @@
             tools:visibility="visible" />
 
         <ImageButton
-            android:id="@+id/btn_notif"
+            android:id="@+id/frg_main_btn_notif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -229,7 +229,7 @@
             android:src="@drawable/ic_notificacion2" />
 
         <ImageButton
-            android:id="@+id/btn_user"
+            android:id="@+id/frg_main_btn_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
