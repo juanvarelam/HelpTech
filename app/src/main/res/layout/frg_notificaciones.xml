@@ -36,7 +36,7 @@
             android:gravity="center_horizontal|center_vertical"
             android:text=""
             android:textStyle="bold"
-            tools:text="@string/StringNotificaciones" />
+            tools:text="@string/Notificaciones" />
 
         <ImageButton
             android:id="@+id/frg_notificacion_btn_user"
@@ -44,7 +44,8 @@
             android:layout_height="match_parent"
             android:layout_weight=""
             android:background="@null"
-            android:src="@drawable/ic_usuario_de_perfil" />
+            android:src="@drawable/ic_usuario_de_perfil"
+            android:contentDescription="TODO" />
 
     </LinearLayout>
 
@@ -63,14 +64,15 @@
             android:layout_height="match_parent"
             android:layout_weight="30"
             android:background="@null"
-            app:srcCompat="@drawable/ic_usuario_de_perfil" />
+            app:srcCompat="@drawable/ic_usuario_de_perfil"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/frg_notificacion_notif"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="70"
-            android:text="@string/frg_notificacion_notif_txt"
+            android:text="@string/txtNotificacion"
             android:textAlignment="center" />
 
     </LinearLayout>
@@ -84,7 +86,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@id/notificacion_main_lin_notif"
         app:layout_constraintStart_toStartOf="@id/notificacion_main_lin_notif"
-        app:layout_constraintTop_toBottomOf="@+id/notificacion_main_lin_notif"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/notificacion_main_lin_notif" />
 
     <LinearLayout
         android:id="@+id/frg_main_menu_lin"
@@ -103,7 +105,8 @@
             android:layout_margin="8dp"
             android:layout_weight="10"
             android:background="@null"
-            android:src="@drawable/ic_casa_silueta_negra_sin_puerta" />
+            android:src="@drawable/ic_casa_silueta_negra_sin_puerta"
+            android:contentDescription="TODO" />
 
         <ImageButton
             android:id="@+id/frg_main_menu_buscar_btn"
@@ -124,7 +127,8 @@
             android:layout_marginTop="8dp"
             android:layout_weight="10"
             android:background="@null"
-            android:src="@drawable/ic_notificacion2" />
+            android:src="@drawable/ic_notificacion2"
+            android:contentDescription="TODO" />
 
         <ImageButton
             android:id="@+id/frg_main_menu_usuario_btn"
@@ -156,7 +160,8 @@
             android:scaleType="fitCenter"
             android:src="@drawable/ic_mas1"
             android:stateListAnimator="@null"
-            tools:visibility="visible" />
+            tools:visibility="visible"
+            android:contentDescription="TODO" />
 
 
     </LinearLayout>
