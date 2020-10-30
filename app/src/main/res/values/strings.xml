@@ -20,4 +20,19 @@
     <string name="foto_perfil">Foto de perfil</string>
     <string name="notificaciones">Notificaciones</string>
     <string name="config">Configuración</string>
+    <string name="mensajes">Mensajes</string>
+    <string name="recientes">Recientes</string>
+    <string name="user">User</string>
+    <string name="ejemplo_txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="ejemplo_hora">10:30</string>
+    <string name="detalle_pregunta">Detalle pregunta</string>
+    <string name="ejemplo_detalle">How do I compare strings in C?</string>
+    <string name="respuestas"> Respuestas</string>
+    <string name="num_ejemplo">128</string>
+    <string name="lenguaje_c">C</string>
+    <string name="ejemplo_votos">128 votos</string>
+    <string name="Bienvenido">Bienvenido</string>
+    <string name="inicio_sesion">Sign In</string>
+    <string name="btn_registro">Sign Up</string>
+    />
 </resources>
