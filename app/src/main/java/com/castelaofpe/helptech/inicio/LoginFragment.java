@@ -1,4 +1,4 @@
-package com.castelaofpe.helptech;
+package com.castelaofpe.helptech.inicio;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.castelaofpe.helptech.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ExploraFragment#newInstance} factory method to
+ * Use the {@link LoginFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ExploraFragment extends Fragment {
+public class LoginFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class ExploraFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ExploraFragment() {
+    public LoginFragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class ExploraFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ExploraFragment.
+     * @return A new instance of fragment LoginFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ExploraFragment newInstance(String param1, String param2) {
-        ExploraFragment fragment = new ExploraFragment();
+    public static LoginFragment newInstance(String param1, String param2) {
+        LoginFragment fragment = new LoginFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class ExploraFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.frg_explora, container, false);
+        return inflater.inflate(R.layout.frg_login, container, false);
     }
 }

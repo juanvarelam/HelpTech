@@ -1,4 +1,4 @@
-package com.castelaofpe.helptech;
+package com.castelaofpe.helptech.inicio;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
+
+import com.castelaofpe.helptech.principal.MainActivity;
+import com.castelaofpe.helptech.R;
 
 public class PreinicialActivity extends AppCompatActivity {
 

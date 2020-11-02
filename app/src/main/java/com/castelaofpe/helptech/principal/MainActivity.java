@@ -1,14 +1,16 @@
-package com.castelaofpe.helptech;
+package com.castelaofpe.helptech.principal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class InicialActivity extends AppCompatActivity {
+import com.castelaofpe.helptech.R;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_inicial);
+        setContentView(R.layout.act_main);
     }
 }

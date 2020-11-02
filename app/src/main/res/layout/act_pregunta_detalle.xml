@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PreguntaDetalleActivity">
+    tools:context=".principal.PreguntaDetalleActivity">
 
     <LinearLayout
         android:id="@+id/act_pregunta_detalle_title_lin"
