@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/act_login_sup_layout"
+        android:id="@+id/frg_explora__sup_layout"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:background="@drawable/supbar"

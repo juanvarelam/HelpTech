@@ -6,7 +6,7 @@
     tools:context=".LoginFragment">
 
     <LinearLayout
-        android:id="@+id/act_login_sup_layout"
+        android:id="@+id/frg_explora__sup_layout"
         android:layout_width="421dp"
         android:layout_height="64dp"
         android:background="@drawable/supbar"
