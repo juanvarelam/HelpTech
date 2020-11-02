@@ -35,4 +35,12 @@
             android:textSize="20sp" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="417dp"
+        android:layout_marginTop="313dp"
+        android:background="@drawable/supbar"
+        android:orientation="vertical"></LinearLayout>
+
 </FrameLayout>
