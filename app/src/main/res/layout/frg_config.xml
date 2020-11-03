@@ -136,7 +136,6 @@
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="16sp" />
-
             <Button
                 android:id="@+id/button4"
                 android:layout_width="match_parent"
