@@ -38,5 +38,6 @@
     <string name="txtNotificacion">Tu notificacion</string>
     <string name="todo">TODO</string>
     <string name="explora">Explora</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
     />
 </resources>
