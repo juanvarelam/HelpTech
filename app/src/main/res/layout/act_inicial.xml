@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".inicio.InicialActivity">
 
+    <FrameLayout
+        android:id="@+id/act_auth_container_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".auth.AuthActivity" />
+
     <ImageView
         android:id="@+id/act_inicial_image_logo"
         android:layout_width="197dp"
@@ -65,7 +75,7 @@
             android:weightSum="100">
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/act_inicial_btn_inicio"
                 android:layout_width="300dp"
                 android:layout_height="64dp"
                 android:layout_marginLeft="70dp"
@@ -76,7 +86,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/act_inicial_btn_registro"
                 android:layout_width="448dp"
                 android:layout_height="68dp"
                 android:layout_marginLeft="20dp"
