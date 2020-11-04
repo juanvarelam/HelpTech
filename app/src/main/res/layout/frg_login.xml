@@ -5,7 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFDE59"
+    android:background="#FCFCFC"
+    android:backgroundTint="#FAFAFA"
     tools:context=".inicio.LoginFragment">
 
     <LinearLayout

@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".inicio.InicialActivity">
 
+    <FrameLayout
+        android:id="@+id/act_auth_container_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".auth.AuthActivity" />
+
     <ImageView
         android:id="@+id/act_inicial_image_logo"
         android:layout_width="197dp"
