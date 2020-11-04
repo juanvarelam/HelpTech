@@ -39,5 +39,8 @@
     <string name="todo">TODO</string>
     <string name="explora">Explora</string>
     <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="help_tech">Help Tech</string>
+    <string name="olvidar_pass">Olvidaste tu contraseña ?</string>
+    <string name="recuerdame">Recuerdame</string>
     />
 </resources>

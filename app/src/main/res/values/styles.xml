@@ -16,7 +16,7 @@
 
     <style name="title" parent="android:TextAppearance.DeviceDefault.Large">
         <item name="fontFamily">heebo</item>
-        <item name="android:textSize">26sp</item>
+        <item name="android:textSize">33dp</item>
     </style>
 
 
