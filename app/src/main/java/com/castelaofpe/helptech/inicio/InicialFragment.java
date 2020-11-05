@@ -2,7 +2,10 @@ package com.castelaofpe.helptech.inicio;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,12 +76,14 @@ public class InicialFragment extends Fragment {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // FragmentManager manager = getSupportFragmentManager();
-                //FragmentTransaction trans = manager.beginTransaction();
+                //FragmentManager manager = getSupportFragmentManager();
+               // FragmentTransaction trans = manager.beginTransaction();
 
-                //trans.replace(R.id.act_auth_container_frame, frgLog, "fragment_01");
+                //trans.replace(R.id.act_auth_container_frame, , "fragment_01");
 
                 //trans.commit();
+
+
             }
         });
 
