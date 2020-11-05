@@ -1,6 +1,7 @@
 package com.castelaofpe.helptech.inicio;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -26,14 +27,16 @@ public class InicialActivity extends AppCompatActivity {
         trans.replace(R.id.act_auth_container_frame, frgInicial, "fragment_01");
         trans.commit();
 
-
-
-        
-
-
     }
 
+    public void changeFragment(Fragment frg){
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction trans = manager.beginTransaction();
 
+        trans.replace(R.id.act_auth_container_frame, frg, "fragment_01");
+
+        trans.commit();
+    }
 
 
 }

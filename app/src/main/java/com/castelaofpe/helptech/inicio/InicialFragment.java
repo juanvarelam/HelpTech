@@ -2,6 +2,7 @@ package com.castelaofpe.helptech.inicio;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -72,30 +73,29 @@ public class InicialFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        //si pulsa SIGN IN
+
         View v = inflater.inflate(R.layout.frg_inicial, container, false);
+
+        //si pulsa SIGN IN
         Button btnLogin = v.findViewById(R.id.frg_inicial_btn_inicio);
         btnLogin.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-                FragmentManager manager = getFragmentManager();
-                FragmentTransaction trans = manager.beginTransaction();
+               FragmentManager manager = getActivity().getSupportFragmentManager();
+               FragmentTransaction trans = manager.beginTransaction();
 
-                trans.replace(R.id.act_auth_container_frame, frgLogin, "fragment_01");
+               trans.replace(R.id.act_auth_container_frame, frgLogin, "fragment_01");
 
-                trans.commit();
-
-
+               trans.commit();
            }
         });
 
         //si pulsa SIGN UP
-        View v2 = inflater.inflate(R.layout.frg_inicial, container, false);
         Button btnRegister = v.findViewById(R.id.frg_inicial_btn_registro);
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager manager = getFragmentManager();
+                FragmentManager manager = getActivity().getSupportFragmentManager();
                 FragmentTransaction trans = manager.beginTransaction();
 
                 trans.replace(R.id.act_auth_container_frame, frgRegister, "fragment_01");
@@ -104,13 +104,7 @@ public class InicialFragment extends Fragment {
            }
            });
 
-
-
-
-
-
-
-        return inflater.inflate(R.layout.frg_inicial, container, false);
+        return v;
     }
 
 
