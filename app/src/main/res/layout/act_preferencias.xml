@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        style="@style/nombreApp"
+        style="@style/appName"
         android:layout_width="409dp"
         android:layout_height="64dp"
         android:background="@drawable/supbar"
