@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="57dp"
             android:layout_marginTop="40dp"
-            android:drawableEnd="@drawable/ic_back"
+            android:drawableEnd="@drawable/ic_candado"
             android:ems="10"
             android:hint="@string/pass"
             android:inputType="textPassword" />

@@ -2,7 +2,6 @@ package com.castelaofpe.helptech.inicio;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -65,42 +64,47 @@ public class InicialFragment extends Fragment {
 
     }
 
+    LoginFragment    frgLogin    = new LoginFragment();
+    RegisterFragment frgRegister = new RegisterFragment();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         //si pulsa SIGN IN
-        View v = inflater.inflate(R.layout.frg_login, container, false);
-        Button btnLogin = v.findViewById(R.id.act_inicial_btn_inicio);
+        View v = inflater.inflate(R.layout.frg_inicial, container, false);
+        Button btnLogin = v.findViewById(R.id.frg_inicial_btn_inicio);
         btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //FragmentManager manager = getSupportFragmentManager();
-               // FragmentTransaction trans = manager.beginTransaction();
+           @Override
+           public void onClick(View v) {
+                FragmentManager manager = getFragmentManager();
+                FragmentTransaction trans = manager.beginTransaction();
 
-                //trans.replace(R.id.act_auth_container_frame, , "fragment_01");
+                trans.replace(R.id.act_auth_container_frame, frgLogin, "fragment_01");
 
-                //trans.commit();
+                trans.commit();
 
 
-            }
+           }
         });
 
         //si pulsa SIGN UP
-        View v2 = inflater.inflate(R.layout.frg_register, container, false);
-        Button btnRegister = v.findViewById(R.id.act_inicial_btn_registro);
+        View v2 = inflater.inflate(R.layout.frg_inicial, container, false);
+        Button btnRegister = v.findViewById(R.id.frg_inicial_btn_registro);
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //FragmentManager manager = getSupportFragmentManager();
-                //FragmentTransaction trans = manager.beginTransaction();
+                FragmentManager manager = getFragmentManager();
+                FragmentTransaction trans = manager.beginTransaction();
 
-                //trans.replace(R.id.act_auth_container_frame, frgReg, "fragment_01");
+                trans.replace(R.id.act_auth_container_frame, frgRegister, "fragment_01");
 
-                //trans.commit();
-            }
-        });
+                trans.commit();
+           }
+           });
+
+
 
 
 
