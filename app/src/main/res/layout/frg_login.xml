@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/frg_explora__sup_layout"
         android:layout_width="421dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="215dp"
         android:background="@drawable/supbar"
         android:orientation="horizontal"

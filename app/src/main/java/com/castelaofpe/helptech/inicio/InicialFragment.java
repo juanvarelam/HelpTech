@@ -81,12 +81,7 @@ public class InicialFragment extends Fragment {
         btnLogin.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               FragmentManager manager = getActivity().getSupportFragmentManager();
-               FragmentTransaction trans = manager.beginTransaction();
-
-               trans.replace(R.id.act_auth_container_frame, frgLogin, "fragment_01");
-
-               trans.commit();
+              ((InicialActivity)getActivity()).changeFragment(frgLogin);
            }
         });
 
@@ -95,12 +90,7 @@ public class InicialFragment extends Fragment {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager manager = getActivity().getSupportFragmentManager();
-                FragmentTransaction trans = manager.beginTransaction();
-
-                trans.replace(R.id.act_auth_container_frame, frgRegister, "fragment_01");
-
-                trans.commit();
+                ((InicialActivity)getActivity()).changeFragment(frgRegister);
            }
            });
 
