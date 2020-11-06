@@ -7,8 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.castelaofpe.helptech.R;
+import com.castelaofpe.helptech.principal.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +59,37 @@ public class LoginFragment extends Fragment {
         }
     }
 
+
+    RegisterFragment frgInicial = new RegisterFragment();
+    MainActivity actMain = new MainActivity();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.frg_login, container, false);
+
+        View v = inflater.inflate(R.layout.frg_login, container, false);
+
+        //si pulsa Registro
+        Button btnReg = v.findViewById(R.id.frg_login_btn_registro);
+        btnReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((InicialActivity)getActivity()).changeFragment(frgInicial);
+            }
+        });
+
+        //si accede a la aplicacion
+        Button btnSignIn = v.findViewById(R.id.frg_login_btn_sigin);
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((InicialActivity)getActivity()).iniciaActivity(actMain);
+            }
+        });
+
+
+
+        return v;
     }
 }

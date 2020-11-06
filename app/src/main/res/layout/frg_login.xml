@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/act_login_imgBtn"
+            android:id="@+id/frg_login_btn_back"
             android:layout_width="43dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
@@ -31,7 +31,7 @@
             android:src="@drawable/ic_back" />
 
         <Button
-            android:id="@+id/act_login_btn_registro"
+            android:id="@+id/frg_login_btn_registro"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="230dp"
@@ -124,7 +124,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/frg_login_btn_sigin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="147dp"

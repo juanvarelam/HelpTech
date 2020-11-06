@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,5 +35,9 @@ public class InicialActivity extends AppCompatActivity {
         trans.commit();
     }
 
+    public void iniciaActivity (Activity act){
+        Intent intent = new Intent(this, act.getClass());
+        startActivity(intent);
+    }
 
 }
