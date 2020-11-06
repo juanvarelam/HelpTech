@@ -14,18 +14,13 @@ import com.castelaofpe.helptech.R;
 public class InicialActivity extends AppCompatActivity {
 
     InicialFragment frgInicial    = new InicialFragment();
-    RegisterFragment frgReg = new RegisterFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_inicial);
 
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction trans = manager.beginTransaction();
-
-        trans.replace(R.id.act_auth_container_frame, frgInicial, "fragment_01");
-        trans.commit();
+        changeFragment(frgInicial);
 
     }
 
