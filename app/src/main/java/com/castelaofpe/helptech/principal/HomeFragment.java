@@ -7,8 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.castelaofpe.helptech.R;
+import com.castelaofpe.helptech.inicio.InicialActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +59,26 @@ public class HomeFragment extends Fragment {
         }
     }
 
+    ExploraFragment frgExplora = new ExploraFragment();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.frg_home, container, false);
+
+        View v = inflater.inflate(R.layout.frg_home, container, false);
+
+        Button btnBuscar = v.findViewById(R.id.frg_main_menu_buscar_btn);
+        btnBuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity)getActivity()).changeFragmentMain(frgExplora);
+            }
+        });
+
+
+
+
+        return v;
     }
 }

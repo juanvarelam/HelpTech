@@ -22,11 +22,11 @@ public class InicialActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_inicial);
 
-        changeFragment(frgInicial);
+        changeFragmentInicio(frgInicial);
 
     }
 
-    public void changeFragment(Fragment frg){
+    public void changeFragmentInicio(Fragment frg){
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction trans = manager.beginTransaction();
 

@@ -75,7 +75,7 @@ public class LoginFragment extends Fragment {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((InicialActivity)getActivity()).changeFragment(frgInicial);
+                ((InicialActivity)getActivity()).changeFragmentInicio(frgInicial);
             }
         });
 

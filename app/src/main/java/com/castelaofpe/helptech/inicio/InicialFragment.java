@@ -81,7 +81,7 @@ public class InicialFragment extends Fragment {
         btnLogin.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-              ((InicialActivity)getActivity()).changeFragment(frgLogin);
+              ((InicialActivity)getActivity()).changeFragmentInicio(frgLogin);
            }
         });
 
@@ -90,7 +90,7 @@ public class InicialFragment extends Fragment {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((InicialActivity)getActivity()).changeFragment(frgRegister);
+                ((InicialActivity)getActivity()).changeFragmentInicio(frgRegister);
            }
            });
 
