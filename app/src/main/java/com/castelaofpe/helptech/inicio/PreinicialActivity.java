@@ -19,13 +19,13 @@ public class PreinicialActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN, WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
 
         setContentView(R.layout.act_preinicial);
 
         new Handler().postDelayed(new Runnable(){
             public void run(){
-                Intent intent = new Intent(PreinicialActivity.this, MainActivity.class);
+                Intent intent = new Intent(PreinicialActivity.this, InicialActivity.class);
                 startActivity(intent);
                 finish();
             }
