@@ -44,5 +44,6 @@
     <string name="recuerdame">Recuerdame</string>
     <string name="elegir_preferencias">Selecciona tus temas de interés</string>
     <string name="itemJavatxt">Java</string>
+    <string name="javatxt">Java</string>
     />
 </resources>
