@@ -33,6 +33,7 @@ public class PreferenciasActivity extends AppCompatActivity {
     }
 
     private void llenarPreferencias() {
+        listaPreferencias.add(new PreferenciaItem("Java",R.drawable.java));
         listaPreferencias.add(new PreferenciaItem("Eclipse",R.drawable.eclipse));
         listaPreferencias.add(new PreferenciaItem("Android Studio",R.drawable.android_studio));
         listaPreferencias.add(new PreferenciaItem("C++",R.drawable.c_masmas));
