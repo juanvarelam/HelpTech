@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/layoutItem"
@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="32dp"
             android:padding="16dp"
-            app:srcCompat="@drawable/java"/>
+            app:srcCompat="@drawable/java" />
 
         <TextView
             android:id="@+id/nombreItemPreferencia"
@@ -35,7 +35,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/gris"/>
+        android:background="@color/gris" />
 
 
 </LinearLayout>
