@@ -31,9 +31,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/seleccion_preferencias"
-            android:paddingStart="16dp"
+            android:paddingStart="24dp"
             android:paddingTop="16dp"
-            android:paddingEnd="16dp"
+            android:paddingEnd="24dp"
             android:paddingBottom="16dp"
             android:text="@string/elegir_preferencias"
             android:textColor="@color/black"
@@ -52,9 +52,7 @@
                 android:id="@+id/recycler_preferencias"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginTop="16dp"/>
         </LinearLayout>
 
     </LinearLayout>

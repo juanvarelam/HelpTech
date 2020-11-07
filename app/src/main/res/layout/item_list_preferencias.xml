@@ -7,6 +7,7 @@
     android:orientation="vertical" >
 
     <LinearLayout
+        android:id="@+id/layoutItem"
         android:layout_width="wrap_content"
         android:layout_height="128dp"
         android:orientation="horizontal">
@@ -14,9 +15,9 @@
         <ImageView
             android:id="@+id/iconoItemPreferencia"
             android:layout_width="128dp"
-            android:padding="16dp"
             android:layout_height="match_parent"
             android:layout_marginStart="32dp"
+            android:padding="16dp"
             app:srcCompat="@drawable/java" />
 
         <LinearLayout
@@ -26,7 +27,7 @@
 
             <TextView
                 android:id="@+id/nombreItemPreferencia"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:text="@string/javatxt"
@@ -37,12 +38,8 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView10"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gris"
-        android:layout_below="@+id/iconoItemPreferencia"
-        android:layout_marginTop="2dp"
-        android:text="TextView" />
+        android:layout_height="2dp"
+        android:background="@color/gris"/>
 
 </LinearLayout>
