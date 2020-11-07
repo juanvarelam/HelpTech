@@ -12,7 +12,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/javaicon"
+            android:id="@+id/iconoItemPreferencia"
             android:layout_width="128dp"
             android:padding="16dp"
             android:layout_height="match_parent"
@@ -25,7 +25,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/nombreItemPreferencia"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/gris"
-        android:layout_below="@+id/javaicon"
+        android:layout_below="@+id/iconoItemPreferencia"
         android:layout_marginTop="2dp"
         android:text="TextView" />
 

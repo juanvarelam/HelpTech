@@ -6,30 +6,41 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.castelaofpe.helptech.PreferenciaItem;
 import com.castelaofpe.helptech.R;
 
 import java.util.ArrayList;
 
 public class PreferenciasActivity extends AppCompatActivity {
 
-    ArrayList<String> listPreferencias;
-    RecyclerView recycler;
+    ArrayList<PreferenciaItem> listaPreferencias;
+    RecyclerView recyclerPreferencias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_preferencias);
 
-        recycler = (RecyclerView) findViewById(R.id.recycler_preferencias);
-        recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false) );
+        listaPreferencias = new ArrayList<>();
+        recyclerPreferencias = (RecyclerView) findViewById(R.id.recycler_preferencias);
+        recyclerPreferencias.setLayoutManager(new LinearLayoutManager(this));
 
-        listPreferencias = new ArrayList<String>();
+        llenarPreferencias();
 
-        for (int i=0; i<50; i++) {
-            listPreferencias.add("Item # " +i+" ");
-        }
+        AdapterPreferencias adapter = new AdapterPreferencias(listaPreferencias);
+        recyclerPreferencias.setAdapter(adapter);
 
-        AdapterPreferencias adapter = new AdapterPreferencias(listPreferencias);
-        recycler.setAdapter(adapter);
+    }
+
+    private void llenarPreferencias() {
+        listaPreferencias.add(new PreferenciaItem("Eclipse",R.drawable.eclipse));
+        listaPreferencias.add(new PreferenciaItem("Android Studio",R.drawable.android_studio));
+        listaPreferencias.add(new PreferenciaItem("C++",R.drawable.c_masmas));
+        listaPreferencias.add(new PreferenciaItem("NetBeans",R.drawable.netbeans));
+        listaPreferencias.add(new PreferenciaItem("Python",R.drawable.python));
+        listaPreferencias.add(new PreferenciaItem("Sourcetree",R.drawable.sourcetree));
+        listaPreferencias.add(new PreferenciaItem("Sublime Text",R.drawable.sublime_text));
+        listaPreferencias.add(new PreferenciaItem("Swift",R.drawable.swift));
+        listaPreferencias.add(new PreferenciaItem("Virtual Box",R.drawable.virtual_box));
     }
 }

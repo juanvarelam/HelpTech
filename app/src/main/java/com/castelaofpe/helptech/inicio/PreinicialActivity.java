@@ -13,7 +13,7 @@ import com.castelaofpe.helptech.R;
 
 public class PreinicialActivity extends AppCompatActivity {
 
-    private final int DURACION_SPLASH = 2000;
+    private final int DURACION_SPLASH = 900;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
