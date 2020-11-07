@@ -66,19 +66,19 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View v = inflater.inflate(R.layout.frg_home, container, false);
+       // View v = inflater.inflate(R.layout.frg_home, container, false);
 
-        Button btnBuscar = v.findViewById(R.id.frg_main_menu_buscar_btn);
-        btnBuscar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity)getActivity()).changeFragmentMain(frgExplora);
-            }
-        });
-
-
+       // Button btnBuscar = v.findViewById(R.id.frg_main_menu_buscar_btn);
+       // btnBuscar.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+          //  public void onClick(View v) {
+      //          ((MainActivity)getActivity()).changeFragmentMain(frgExplora);
+      //      }
+      //  });
 
 
-        return v;
+
+
+        return inflater.inflate(R.layout.frg_home, container, false);
     }
 }
