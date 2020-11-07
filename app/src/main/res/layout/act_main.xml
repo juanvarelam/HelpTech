@@ -74,14 +74,16 @@
 
     <LinearLayout
         android:id="@+id/frg_explora_menu_lin_mas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="113dp"
+        android:layout_height="123dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@+id/frg_main_menu_lin"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_main_container">
 
         <ImageButton
-            android:id="@+id/frg_explora_mas_btn"
+            android:id="@+id/frg_main_menu_crea"
             android:layout_width="match_parent"
             android:layout_height="114dp"
             android:layout_gravity="clip_horizontal"
