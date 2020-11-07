@@ -43,5 +43,6 @@
     <string name="olvidar_pass">Olvidaste tu contraseña ?</string>
     <string name="recuerdame">Recuerdame</string>
     <string name="elegir_preferencias">Selecciona tus temas de interés</string>
+    <string name="itemJavatxt">Java</string>
     />
 </resources>
