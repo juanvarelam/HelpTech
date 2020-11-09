@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".principal.PreguntaDetalleActivity"></activity>
-        <activity android:name=".inicio.PreferenciasActivity" />
+        <activity android:name=".inicio.PreinicialActivity" />
         <activity android:name=".PruebaActivity" />
         <activity android:name=".principal.MainActivity"/>
         <activity android:name=".perfil.PerfilActivity" />
         <activity android:name=".perfil.MensajesActivity" />
         <activity android:name=".inicio.InicialActivity"/>
-        <activity android:name=".inicio.PreinicialActivity" >
+        <activity android:name=".inicio.PreferenciasActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -17,7 +17,6 @@
             android:id="@+id/iconoItemPreferencia"
             android:layout_width="128dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="32dp"
             android:padding="16dp"
             app:srcCompat="@drawable/java" />
 

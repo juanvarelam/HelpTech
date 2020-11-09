@@ -85,7 +85,7 @@
         <ImageButton
             android:id="@+id/frg_main_menu_crea"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="clip_horizontal"
             android:background="@null"
             android:scaleType="fitCenter"
