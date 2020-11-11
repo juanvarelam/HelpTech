@@ -25,7 +25,8 @@ public class AdapterPreferencias extends RecyclerView.Adapter<AdapterPreferencia
     @NonNull
     @Override
     public ViewHolderPreferencias onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_preferencias, null, false);
+        //View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_preferencias, null, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_grid_preferencias, null, false);
         return new ViewHolderPreferencias(view);
     }
 
