@@ -64,6 +64,7 @@
         android:background="@drawable/btn_comenzar"
         android:textColor="@color/white"
         android:textSize="20sp"
+        android:onClick="onClick"
         android:text="@string/act_preferencias_btn_comenzar" />
 
 

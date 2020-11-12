@@ -5,10 +5,14 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 
 import com.castelaofpe.helptech.PreferenciaItem;
 import com.castelaofpe.helptech.R;
+import com.castelaofpe.helptech.principal.MainActivity;
 
 import java.util.ArrayList;
 
@@ -45,5 +49,10 @@ public class PreferenciasActivity extends AppCompatActivity {
         listaPreferencias.add(new PreferenciaItem("Sublime Text",R.drawable.sublime_text));
         listaPreferencias.add(new PreferenciaItem("Swift",R.drawable.swift));
         listaPreferencias.add(new PreferenciaItem("Virtual Box",R.drawable.virtual_box));
+    }
+
+    public void onClick(View view) {
+        Intent vista = new Intent(PreferenciasActivity.this, MainActivity.class);
+        startActivity(vista);
     }
 }
