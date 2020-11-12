@@ -46,5 +46,6 @@
     <string name="itemJavatxt">Java</string>
     <string name="javatxt">Java</string>
     <string name="act_preferencias_btn_comenzar">Comenzar!</string>
+    <string name="iniciar_sesion">Login</string>
     />
 </resources>
