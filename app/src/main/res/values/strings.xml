@@ -47,5 +47,8 @@
     <string name="javatxt">Java</string>
     <string name="act_preferencias_btn_comenzar">Comenzar!</string>
     <string name="iniciar_sesion">Login</string>
+    <string name="pregunta">Pregunta</string>
+    <string name="ejemplo_fecha_pregunta">Ayer, 19:30</string>
+    <string name="ejemplo_respuestas">8 respuestas</string>
     />
 </resources>

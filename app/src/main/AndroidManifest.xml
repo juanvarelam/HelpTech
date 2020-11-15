@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".principal.PreguntaDetalleActivity"></activity>
+        <activity android:name=".principal.PreguntaDetalleActivity"/>
         <activity android:name=".inicio.PreferenciasActivity"/>
         <activity android:name=".PruebaActivity" />
         <activity android:name=".principal.MainActivity"/>
