@@ -50,5 +50,7 @@
     <string name="pregunta">Pregunta</string>
     <string name="ejemplo_fecha_pregunta">Ayer, 19:30</string>
     <string name="ejemplo_respuestas">8 respuestas</string>
+    <string name="nombre_perfil">esteban_dido</string>
+    <string name="nombre_datos_perfil">Esteban Dido</string>
     />
 </resources>
