@@ -91,6 +91,7 @@
             android:scaleType="fitCenter"
             android:src="@drawable/ic_mas1"
             android:stateListAnimator="@null"
+            android:visibility="visible"
             tools:visibility="visible" />
 
 
