@@ -7,6 +7,7 @@
     tools:context=".perfil.PerfilActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/supbar"
@@ -45,25 +46,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+            android:paddingHorizontal="54dp"
             android:weightSum="100">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingBottom="10dp"
-                android:paddingEnd="3dp"
                 android:layout_weight="70"
+                android:orientation="vertical"
+                android:paddingEnd="3dp"
+                android:paddingBottom="10dp"
                 android:weightSum="70">
 
                 <TextView
                     android:id="@+id/nombre_perfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
                     android:text="@string/nombre_datos_perfil"
+                    android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textAlignment="center"
                     android:textSize="26sp" />
 
                 <TextView
@@ -71,12 +72,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:layout_marginStart="24dp"
                     android:text="@string/descripcion_perfil"
                     android:textAlignment="textStart"
                     android:textColor="@color/black2"
                     android:textSize="16sp" />
-
 
 
             </LinearLayout>
@@ -86,8 +85,137 @@
                 android:layout_height="match_parent"
                 android:layout_weight="30"
                 android:orientation="vertical"
-                android:weightSum="30"/>
+                android:weightSum="30" />
 
         </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="100"
+        android:paddingHorizontal="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/frg_main_menu_lin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/act_perfil_btn_preguntas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/btnsPerfil"
+                android:backgroundTint="#00FFFFFF"
+                android:text="@string/act_perfil_btn_preguntas" />
+
+            <Button
+                android:id="@+id/act_perfil_btn_respuestas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/btnsPerfil"
+                android:backgroundTint="#00FFFFFF"
+                android:text="@string/act_perfil_btn_respuestas" />
+
+            <Button
+                android:id="@+id/act_perfil_btn_favoritos"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                style="@style/btnsPerfil"
+                android:layout_weight="1"
+                android:background="@drawable/ic_action_favorite"
+
+                android:text="@string/act_perfil_btn_favoritos" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/frg_main_menu_lin"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/supbar"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/frg_main_menu_home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="10"
+            android:background="@null"
+            android:src="@drawable/ic_casa_silueta_negra_sin_puerta" />
+
+        <ImageButton
+            android:id="@+id/frg_main_menu_buscar_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="56dp"
+            android:layout_weight="10"
+            android:background="@null"
+            android:src="@drawable/ic_buscar" />
+
+
+        <ImageButton
+            android:id="@+id/frg_main_menu_notif_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="10"
+            android:background="@null"
+            android:src="@drawable/ic_notificacion2" />
+
+        <ImageButton
+            android:id="@+id/frg_main_menu_usuario_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginHorizontal="42dp"
+            android:layout_weight="10"
+
+            android:background="@null"
+            android:src="@drawable/ic_usuario_de_perfil" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/frg_explora_menu_lin_mas"
+        android:layout_width="113dp"
+        android:layout_height="123dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/frg_main_menu_lin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_main_container">
+
+        <ImageButton
+            android:id="@+id/frg_main_menu_crea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="clip_horizontal"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_mas1"
+            android:stateListAnimator="@null"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
