@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "950419801254",
+    "project_id": "helptech-a1b55",
+    "storage_bucket": "helptech-a1b55.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950419801254:android:bce01f303673f023cfe067",
+        "android_client_info": {
+          "package_name": "com.castelaofpe.helptech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950419801254-jd3ai2shft513q476i69gs6gtmpt62d9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkEQkRU5Wf8Vw97pgyn9PPOB3xdRFqOwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950419801254-jd3ai2shft513q476i69gs6gtmpt62d9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
