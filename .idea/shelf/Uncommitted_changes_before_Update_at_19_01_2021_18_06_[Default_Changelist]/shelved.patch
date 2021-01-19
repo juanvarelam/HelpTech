@@ -1,0 +1,226 @@
+Index: app/src/main/res/layout/act_perfil.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".perfil.PerfilActivity\">\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/linearLayout4\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:background=\"@drawable/supbar\"\r\n        android:orientation=\"vertical\"\r\n        android:weightSum=\"100\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\">\r\n\r\n            <TextView\r\n                android:id=\"@+id/textView14\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_gravity=\"center\"\r\n                android:layout_weight=\"1\"\r\n                android:text=\"@string/nombre_perfil\"\r\n                android:textAlignment=\"center\"\r\n                android:textColor=\"@color/black\"\r\n                android:textSize=\"18sp\" />\r\n\r\n            <ImageButton\r\n                android:id=\"@+id/imageButton\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:backgroundTint=\"@color/yellow\"\r\n                app:srcCompat=\"@drawable/ic_ajustes\" />\r\n\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\"\r\n            android:paddingHorizontal=\"54dp\"\r\n            android:weightSum=\"100\">\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"70\"\r\n                android:orientation=\"vertical\"\r\n                android:paddingEnd=\"3dp\"\r\n                android:paddingBottom=\"10dp\"\r\n                android:weightSum=\"70\">\r\n\r\n                <TextView\r\n                    android:id=\"@+id/nombre_perfil\"\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:text=\"@string/nombre_datos_perfil\"\r\n                    android:textAlignment=\"textStart\"\r\n                    android:textColor=\"@color/black\"\r\n                    android:textSize=\"26sp\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/act_perfil_descripcion\"\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_marginTop=\"4dp\"\r\n                    android:text=\"@string/descripcion_perfil\"\r\n                    android:textAlignment=\"textStart\"\r\n                    android:textColor=\"@color/black2\"\r\n                    android:textSize=\"16sp\" />\r\n\r\n\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"30\"\r\n                android:orientation=\"vertical\"\r\n                android:weightSum=\"30\" />\r\n\r\n        </LinearLayout>\r\n    </LinearLayout>\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"0dp\"\r\n        android:orientation=\"vertical\"\r\n        android:weightSum=\"100\"\r\n        android:paddingHorizontal=\"48dp\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/frg_main_menu_lin\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/linearLayout4\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_weight=\"1\"\r\n            android:textAlignment=\"center\"\r\n            android:gravity=\"center\"\r\n            android:orientation=\"horizontal\">\r\n\r\n            <Button\r\n                android:id=\"@+id/act_perfil_btn_preguntas\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_weight=\"1\"\r\n                style=\"@style/btnsPerfil\"\r\n                android:backgroundTint=\"#00FFFFFF\"\r\n                android:text=\"@string/act_perfil_btn_preguntas\" />\r\n\r\n            <Button\r\n                android:id=\"@+id/act_perfil_btn_respuestas\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_weight=\"1\"\r\n                style=\"@style/btnsPerfil\"\r\n                android:backgroundTint=\"#00FFFFFF\"\r\n                android:text=\"@string/act_perfil_btn_respuestas\" />\r\n\r\n            <Button\r\n                android:id=\"@+id/act_perfil_btn_favoritos\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"35dp\"\r\n                style=\"@style/btnsPerfil\"\r\n                android:layout_weight=\"1\"\r\n                android:background=\"@drawable/ic_action_favorite\"\r\n\r\n                android:text=\"@string/act_perfil_btn_favoritos\" />\r\n        </LinearLayout>\r\n\r\n    </LinearLayout>\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/frg_main_menu_lin\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"80dp\"\r\n        android:background=\"@drawable/supbar\"\r\n        android:orientation=\"horizontal\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\">\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/frg_main_menu_home_btn\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_margin=\"8dp\"\r\n            android:layout_weight=\"10\"\r\n            android:background=\"@null\"\r\n            android:src=\"@drawable/ic_casa_silueta_negra_sin_puerta\" />\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/frg_main_menu_buscar_btn\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginTop=\"8dp\"\r\n            android:layout_marginEnd=\"56dp\"\r\n            android:layout_weight=\"10\"\r\n            android:background=\"@null\"\r\n            android:src=\"@drawable/ic_buscar\" />\r\n\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/frg_main_menu_notif_btn\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginStart=\"56dp\"\r\n            android:layout_marginTop=\"8dp\"\r\n            android:layout_weight=\"10\"\r\n            android:background=\"@null\"\r\n            android:src=\"@drawable/ic_notificacion2\" />\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/frg_main_menu_usuario_btn\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_margin=\"8dp\"\r\n            android:layout_marginHorizontal=\"42dp\"\r\n            android:layout_weight=\"10\"\r\n\r\n            android:background=\"@null\"\r\n            android:src=\"@drawable/ic_usuario_de_perfil\" />\r\n\r\n    </LinearLayout>\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/frg_explora_menu_lin_mas\"\r\n        android:layout_width=\"113dp\"\r\n        android:layout_height=\"123dp\"\r\n        android:orientation=\"horizontal\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/frg_main_menu_lin\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/act_main_container\">\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/frg_main_menu_crea\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_gravity=\"clip_horizontal\"\r\n            android:background=\"@null\"\r\n            android:scaleType=\"fitCenter\"\r\n            android:src=\"@drawable/ic_mas1\"\r\n            android:stateListAnimator=\"@null\"\r\n            android:visibility=\"visible\"\r\n            tools:visibility=\"visible\" />\r\n\r\n\r\n    </LinearLayout>\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/act_perfil.xml	(revision abecf64d1dc36d62941344bc47f05a09b9a11d0a)
++++ app/src/main/res/layout/act_perfil.xml	(date 1610991590389)
+@@ -7,7 +7,6 @@
+     tools:context=".perfil.PerfilActivity">
+ 
+     <LinearLayout
+-        android:id="@+id/linearLayout4"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@drawable/supbar"
+@@ -46,25 +45,25 @@
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="horizontal"
+-            android:paddingHorizontal="54dp"
+             android:weightSum="100">
+ 
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+-                android:layout_weight="70"
+                 android:orientation="vertical"
+-                android:paddingEnd="3dp"
+                 android:paddingBottom="10dp"
++                android:paddingEnd="3dp"
++                android:layout_weight="70"
+                 android:weightSum="70">
+ 
+                 <TextView
+                     android:id="@+id/nombre_perfil"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
++                    android:layout_marginStart="24dp"
+                     android:text="@string/nombre_datos_perfil"
+-                    android:textAlignment="textStart"
+                     android:textColor="@color/black"
++                    android:textAlignment="center"
+                     android:textSize="26sp" />
+ 
+                 <TextView
+@@ -72,12 +71,14 @@
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="4dp"
++                    android:layout_marginStart="24dp"
+                     android:text="@string/descripcion_perfil"
+                     android:textAlignment="textStart"
+                     android:textColor="@color/black2"
+                     android:textSize="16sp" />
+ 
+ 
++
+             </LinearLayout>
+ 
+             <LinearLayout
+@@ -85,137 +86,8 @@
+                 android:layout_height="match_parent"
+                 android:layout_weight="30"
+                 android:orientation="vertical"
+-                android:weightSum="30" />
++                android:weightSum="30"/>
+ 
+         </LinearLayout>
+     </LinearLayout>
+-
+-    <LinearLayout
+-        android:layout_width="0dp"
+-        android:layout_height="0dp"
+-        android:orientation="vertical"
+-        android:weightSum="100"
+-        android:paddingHorizontal="48dp"
+-        app:layout_constraintBottom_toTopOf="@+id/frg_main_menu_lin"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+-
+-        <LinearLayout
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:layout_weight="1"
+-            android:textAlignment="center"
+-            android:gravity="center"
+-            android:orientation="horizontal">
+-
+-            <Button
+-                android:id="@+id/act_perfil_btn_preguntas"
+-                android:layout_width="wrap_content"
+-                android:layout_height="wrap_content"
+-                android:layout_weight="1"
+-                style="@style/btnsPerfil"
+-                android:backgroundTint="#00FFFFFF"
+-                android:text="@string/act_perfil_btn_preguntas" />
+-
+-            <Button
+-                android:id="@+id/act_perfil_btn_respuestas"
+-                android:layout_width="wrap_content"
+-                android:layout_height="wrap_content"
+-                android:layout_weight="1"
+-                style="@style/btnsPerfil"
+-                android:backgroundTint="#00FFFFFF"
+-                android:text="@string/act_perfil_btn_respuestas" />
+-
+-            <Button
+-                android:id="@+id/act_perfil_btn_favoritos"
+-                android:layout_width="0dp"
+-                android:layout_height="35dp"
+-                style="@style/btnsPerfil"
+-                android:layout_weight="1"
+-                android:background="@drawable/ic_action_favorite"
+-
+-                android:text="@string/act_perfil_btn_favoritos" />
+-        </LinearLayout>
+-
+-    </LinearLayout>
+-
+-    <LinearLayout
+-        android:id="@+id/frg_main_menu_lin"
+-        android:layout_width="match_parent"
+-        android:layout_height="80dp"
+-        android:background="@drawable/supbar"
+-        android:orientation="horizontal"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent">
+-
+-        <ImageButton
+-            android:id="@+id/frg_main_menu_home_btn"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_margin="8dp"
+-            android:layout_weight="10"
+-            android:background="@null"
+-            android:src="@drawable/ic_casa_silueta_negra_sin_puerta" />
+-
+-        <ImageButton
+-            android:id="@+id/frg_main_menu_buscar_btn"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_marginTop="8dp"
+-            android:layout_marginEnd="56dp"
+-            android:layout_weight="10"
+-            android:background="@null"
+-            android:src="@drawable/ic_buscar" />
+-
+-
+-        <ImageButton
+-            android:id="@+id/frg_main_menu_notif_btn"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_marginStart="56dp"
+-            android:layout_marginTop="8dp"
+-            android:layout_weight="10"
+-            android:background="@null"
+-            android:src="@drawable/ic_notificacion2" />
+-
+-        <ImageButton
+-            android:id="@+id/frg_main_menu_usuario_btn"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_margin="8dp"
+-            android:layout_marginHorizontal="42dp"
+-            android:layout_weight="10"
+-
+-            android:background="@null"
+-            android:src="@drawable/ic_usuario_de_perfil" />
+-
+-    </LinearLayout>
+-
+-    <LinearLayout
+-        android:id="@+id/frg_explora_menu_lin_mas"
+-        android:layout_width="113dp"
+-        android:layout_height="123dp"
+-        android:orientation="horizontal"
+-        app:layout_constraintBottom_toBottomOf="@+id/frg_main_menu_lin"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/act_main_container">
+-
+-        <ImageButton
+-            android:id="@+id/frg_main_menu_crea"
+-            android:layout_width="match_parent"
+-            android:layout_height="match_parent"
+-            android:layout_gravity="clip_horizontal"
+-            android:background="@null"
+-            android:scaleType="fitCenter"
+-            android:src="@drawable/ic_mas1"
+-            android:stateListAnimator="@null"
+-            android:visibility="visible"
+-            tools:visibility="visible" />
+-
+-
+-    </LinearLayout>
+-
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/drawable/enviar_mensaje.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/enviar_mensaje.xml	(date 1610991590497)
++++ app/src/main/res/drawable/enviar_mensaje.xml	(date 1610991590497)
+@@ -0,0 +1,15 @@
++<shape
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    android:shape="rectangle">
++
++
++    <corners
++        android:bottomRightRadius="4dp"
++        android:bottomLeftRadius="4dp"
++        android:topLeftRadius="4dp"
++        android:topRightRadius="4dp"/>
++
++    <stroke
++        android:color="@color/black2"
++        android:width="1dp"/>
++</shape>
+\ No newline at end of file
