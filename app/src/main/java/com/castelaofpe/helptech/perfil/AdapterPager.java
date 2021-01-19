@@ -19,11 +19,11 @@ public class AdapterPager extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-
+                return new AdapterPreguntas();
             case 1:
-
+                return new AdapterRespuestas();
             case 2:
-
+                return new AdapterFavoritos();
             default:
                 return null;
         }
