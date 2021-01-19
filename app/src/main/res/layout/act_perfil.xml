@@ -45,9 +45,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:baselineAligned="false"
             android:orientation="horizontal"
-            android:paddingHorizontal="32dp"
             android:weightSum="100">
 
             <LinearLayout
@@ -56,14 +54,16 @@
                 android:layout_weight="70"
                 android:orientation="vertical"
                 android:paddingEnd="3dp"
-                android:paddingBottom="10dp">
+                android:paddingBottom="10dp"
+                android:weightSum="70">
 
                 <TextView
                     android:id="@+id/nombre_perfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
                     android:text="@string/nombre_datos_perfil"
-                    android:textAlignment="textStart"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="26sp" />
 
@@ -71,6 +71,7 @@
                     android:id="@+id/act_perfil_descripcion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
                     android:layout_marginTop="4dp"
                     android:text="@string/descripcion_perfil"
                     android:textAlignment="textStart"
@@ -84,72 +85,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="30"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/programador__1_" />
-            </LinearLayout>
+                android:orientation="vertical"
+                android:weightSum="30" />
 
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:weightSum="100"
-        android:paddingHorizontal="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/frg_main_menu_lin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/act_perfil_btn_preguntas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                style="@style/btnsPerfil"
-                android:backgroundTint="#00FFFFFF"
-                android:text="@string/act_perfil_btn_preguntas" />
-
-            <Button
-                android:id="@+id/act_perfil_btn_respuestas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                style="@style/btnsPerfil"
-                android:backgroundTint="#00FFFFFF"
-                android:text="@string/act_perfil_btn_respuestas" />
-
-            <Button
-                android:id="@+id/act_perfil_btn_favoritos"
-                android:layout_width="0dp"
-                android:layout_height="35dp"
-                style="@style/btnsPerfil"
-                android:layout_weight="1"
-                android:background="@drawable/ic_action_favorite"
-
-                android:text="@string/act_perfil_btn_favoritos" />
-        </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/frg_main_menu_lin"
@@ -229,4 +171,48 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/frg_main_menu_lin"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-16dp">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/act_perfil_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/act_perfil_tabPreguntas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preguntas"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/act_perfil_tabRespuestas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Respuestas" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/act_perfil_tabFavoritos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:icon="@drawable/ic_action_favorite" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/act_perfil_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
