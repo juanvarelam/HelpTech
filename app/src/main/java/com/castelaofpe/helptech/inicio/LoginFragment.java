@@ -62,6 +62,7 @@ public class LoginFragment extends Fragment {
 
     RegisterFragment frgInicial = new RegisterFragment();
     MainActivity actMain = new MainActivity();
+    RecuperaPassFragment frgRecuperaPass = new RecuperaPassFragment();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -88,6 +89,13 @@ public class LoginFragment extends Fragment {
             }
         });
 
+        Button btnRecuperaPass = v.findViewById(R.id.act_login_recovery_btn);
+        btnRecuperaPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((InicialActivity)getActivity()).changeFragmentInicio(frgRecuperaPass);
+            }
+        });
 
 
         return v;
