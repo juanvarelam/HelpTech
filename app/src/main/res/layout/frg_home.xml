@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout3"
+    style="@style/title"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".principal.HomeFragment" >
+    tools:context=".principal.HomeFragment">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOME"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="284dp" />
+    <LinearLayout
+        android:id="@+id/act_pregunta_detalle_title_lin"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="@drawable/supbar"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/act_pregunta_detalle_txt"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="85"
+            android:gravity="center"
+            android:text="@string/help_tech"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/frg_home_btn_mensajes"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:backgroundTint="@color/yellow"
+            android:src="@drawable/ic_icn_mensaje" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="417dp"
+        android:layout_height="666dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_pregunta_detalle_title_lin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

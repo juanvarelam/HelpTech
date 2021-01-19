@@ -60,7 +60,7 @@
             android:src="@drawable/ic_notificacion2" />
 
         <ImageButton
-            android:id="@+id/frg_main_menu_usuario_btn"
+            android:id="@+id/frg_main_menu_perfil_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
