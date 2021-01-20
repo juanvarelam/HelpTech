@@ -46,9 +46,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingHorizontal="24dp"
+            android:baselineAligned="false"
             android:orientation="horizontal"
-            android:weightSum="100"
-            android:baselineAligned="false">
+            android:weightSum="100">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -91,7 +92,6 @@
 
         </LinearLayout>
     </LinearLayout>
-
 
 
     <LinearLayout
@@ -184,36 +184,18 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/act_perfil_tabLayout"
             android:layout_width="match_parent"
-            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            >
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/act_perfil_tabPreguntas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Preguntas"/>
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/act_perfil_tabRespuestas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="Respuestas" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/act_perfil_tabFavoritos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:icon="@drawable/ic_action_favorite" />
-        </com.google.android.material.tabs.TabLayout>
+            app:tabMode="fixed"
+            app:tabIndicatorColor="@color/yellow"
+            android:background="@color/white"
+            app:tabGravity="fill"
+            android:layout_gravity="center"/>
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/act_perfil_viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
         </androidx.viewpager.widget.ViewPager>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
