@@ -12,13 +12,13 @@ import android.widget.Button;
 import com.castelaofpe.helptech.R;
 import com.castelaofpe.helptech.principal.MainActivity;
 
-/**
+/*
  * A simple {@link Fragment} subclass.
  * Use the {@link LoginFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class LoginFragment extends Fragment {
-
+/*
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -39,7 +39,7 @@ public class LoginFragment extends Fragment {
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
      * @return A new instance of fragment LoginFragment.
-     */
+
     // TODO: Rename and change types and number of parameters
     public static LoginFragment newInstance(String param1, String param2) {
         LoginFragment fragment = new LoginFragment();
@@ -58,9 +58,9 @@ public class LoginFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+*/
 
-
-    RegisterFragment frgInicial = new RegisterFragment();
+    RegisterFragment frgRegister = new RegisterFragment();
     MainActivity actMain = new MainActivity();
     RecuperaPassFragment frgRecuperaPass = new RecuperaPassFragment();
 
@@ -76,7 +76,7 @@ public class LoginFragment extends Fragment {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((InicialActivity)getActivity()).changeFragmentInicio(frgInicial);
+                ((InicialActivity)getActivity()).changeFragmentInicio(frgRegister);
             }
         });
 
