@@ -65,6 +65,8 @@
     <string name="act_perfi_btn_ajustes">Ajustes</string>
     <string name="act_perfil_titulo_pregunta">Titulo pregunta</string>
     <string name="act_perfil_fechaPregunta">11:21</string>
+    <string name="frg_preguntas_fecha_pregunta">10:25</string>
+    <string name="frg_preguntas_texto_preguntas">¿Cual es mejor framework de 2021 para trabajar con Java?</string>
 
     />
 </resources>
