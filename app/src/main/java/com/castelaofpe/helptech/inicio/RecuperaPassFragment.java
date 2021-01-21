@@ -15,7 +15,7 @@ import com.castelaofpe.helptech.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link RecuperaPassFragment#newInstance} factory method to
+ * Use the {@link RecuperaPassFragment#} factory method to
  * create an instance of this fragment.
  */
 public class RecuperaPassFragment extends Fragment {
@@ -62,6 +62,7 @@ public class RecuperaPassFragment extends Fragment {
     }
 */
 
+    LoginFragment frgLogin = new LoginFragment();
 
 
     @Override
@@ -69,7 +70,13 @@ public class RecuperaPassFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.frg_recupera_pass, container, false);
 
-
+        ImageButton btnLogBack = v.findViewById(R.id.frg_login_btn_back);
+        btnLogBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((InicialActivity)getActivity()).changeFragmentInicio(frgLogin);
+            }
+        });
 
         return v;
     }
