@@ -27,7 +27,7 @@ public class AdapterRecyclerTabsPerfil extends RecyclerView.Adapter<AdapterRecyc
 
     @NonNull
     @Override
-    public AdapterRecyclerTabsPerfil.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v;
         v = LayoutInflater.from(mContext).inflate(R.layout.item_preguntas, parent, false);
         MyViewHolder vHolder = new MyViewHolder(v);
@@ -35,7 +35,7 @@ public class AdapterRecyclerTabsPerfil extends RecyclerView.Adapter<AdapterRecyc
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterRecyclerTabsPerfil.MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, int position) {
         holder.str_fecha.setText(mData.get(position).getFecha());
         holder.str_texto_pregunta.setText(mData.get(position).getTexto());
         holder.int_comentarios.setText(mData.get(position).getComentarios());
@@ -56,13 +56,13 @@ public class AdapterRecyclerTabsPerfil extends RecyclerView.Adapter<AdapterRecyc
         private TextView int_votos;
         private TextView str_hagstags;
 
-    public MyViewHolder(@NonNull View itemView) {
-        super(itemView);
-        str_fecha = (TextView) itemView.findViewById(R.id.frg_preguntas_fecha);
-        str_texto_pregunta = (TextView) itemView.findViewById(R.id.frg_preguntas_texto_preguntas);
-        int_comentarios = (TextView) itemView.findViewById(R.id.frg_preguntas_numero_comentarios);
-        int_votos = (TextView) itemView.findViewById(R.id.frg_preguntas_numero_votos);
-        str_hagstags = (TextView) itemView.findViewById(R.id.frg_preguntas_hagstags);
+        public MyViewHolder(@NonNull View itemView) {
+            super(itemView);
+            str_fecha = (TextView) itemView.findViewById(R.id.frg_preguntas_fecha);
+            str_texto_pregunta = (TextView) itemView.findViewById(R.id.frg_preguntas_texto_preguntas);
+            int_comentarios = (TextView) itemView.findViewById(R.id.frg_preguntas_numero_comentarios);
+            int_votos = (TextView) itemView.findViewById(R.id.frg_preguntas_numero_votos);
+            str_hagstags = (TextView) itemView.findViewById(R.id.frg_preguntas_hagstags);
 
     }
     }

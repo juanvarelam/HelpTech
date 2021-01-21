@@ -24,10 +24,12 @@ public class Pregunta {
 
     //Getters
     public String getFecha() {
+
         return fecha;
     }
 
-    public String getTexto() {
+    public String getTexto()
+    {
         return texto;
     }
 

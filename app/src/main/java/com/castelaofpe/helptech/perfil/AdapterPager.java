@@ -15,12 +15,9 @@ public class AdapterPager extends FragmentPagerAdapter {
     private final List<Fragment> lstFragment = new ArrayList<>();
     private final List<String> lstTitles = new ArrayList<>();
 
-    public AdapterPager(@NonNull FragmentManager fm, Integer behavior) {
-        super(fm, behavior);
-    }
 
-    public AdapterPager(FragmentManager supportFragmentManager) {
-        super(supportFragmentManager);
+    public AdapterPager(@NonNull FragmentManager fm) {
+        super(fm);
     }
 
     @NonNull
@@ -37,12 +34,12 @@ public class AdapterPager extends FragmentPagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return (CharSequence) lstTitles.get(position);
+        return lstTitles.get(position);
     }
-
 
     public void AddFragment (Fragment fragment, String title) {
         lstFragment.add(fragment);
         lstTitles.add(title);
     }
+
 }
