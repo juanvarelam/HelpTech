@@ -37,7 +37,7 @@ public class AdapterPager extends FragmentPagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return lstTitles.get(position);
+        return (CharSequence) lstTitles.get(position);
     }
 
 

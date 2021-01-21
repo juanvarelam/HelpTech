@@ -30,7 +30,7 @@ public class AdapterPreguntas extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.frg_preguntas, container, false);
         myrecyclerview = (RecyclerView) v.findViewById(R.id.frg_preguntas_recyclerPreguntas);
         AdapterRecyclerTabsPerfil recyclerViewAdapter = new AdapterRecyclerTabsPerfil(getContext(),lstPregunta);
@@ -42,7 +42,6 @@ public class AdapterPreguntas extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         lstPregunta = new ArrayList<>();
         lstPregunta.add(new Pregunta("10:24", "¿Cómo usar el mejor framework em Java?", 8, 12, "#java, #framework"));
         lstPregunta.add(new Pregunta("8:20", "¿Cómo aprender a programar en el menor tiempo posible?", 4, 1, "#programar"));

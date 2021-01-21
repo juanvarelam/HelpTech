@@ -50,7 +50,6 @@ public class AdapterRecyclerTabsPerfil extends RecyclerView.Adapter<AdapterRecyc
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-
         private TextView str_fecha;
         private TextView str_texto_pregunta;
         private TextView int_comentarios;
@@ -66,6 +65,6 @@ public class AdapterRecyclerTabsPerfil extends RecyclerView.Adapter<AdapterRecyc
         str_hagstags = (TextView) itemView.findViewById(R.id.frg_preguntas_hagstags);
 
     }
-}
+    }
 
 }
