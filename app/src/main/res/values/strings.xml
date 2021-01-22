@@ -65,8 +65,6 @@
     <string name="act_perfi_btn_ajustes">Ajustes</string>
     <string name="act_perfil_titulo_pregunta">Titulo pregunta</string>
     <string name="act_perfil_fechaPregunta">11:21</string>
-    <string name="btn_crea_post">Post</string>
-    <string name="txt_creaPregunta">Escribe tu pregunta</string>
 
     />
 </resources>

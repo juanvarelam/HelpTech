@@ -15,11 +15,12 @@ import com.castelaofpe.helptech.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link RecuperaPassFragment#newInstance} factory method to
+ * Use the {@link RecuperaPassFragment#} factory method to
  * create an instance of this fragment.
  */
 public class RecuperaPassFragment extends Fragment {
 
+/*
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -40,7 +41,7 @@ public class RecuperaPassFragment extends Fragment {
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
      * @return A new instance of fragment RecuperaPassFragment.
-     */
+
     // TODO: Rename and change types and number of parameters
     public static RecuperaPassFragment newInstance(String param1, String param2) {
         RecuperaPassFragment fragment = new RecuperaPassFragment();
@@ -59,7 +60,9 @@ public class RecuperaPassFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+*/
 
+   // LoginFragment frgLogin = new LoginFragment();
 
 
     @Override
@@ -67,7 +70,14 @@ public class RecuperaPassFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.frg_recupera_pass, container, false);
 
-
+       /* ImageButton btnLogBack = v.findViewById(R.id.frg_login_btn_back);
+        btnLogBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((InicialActivity)getActivity()).changeFragmentInicio(frgLogin);
+            }
+        });
+*/
         return v;
     }
 
