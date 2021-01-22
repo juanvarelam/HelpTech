@@ -1,14 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    tools:context=".principal.CreaFragment">
+    tools:context=".perfil.MensajesActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <LinearLayout
+        android:id="@+id/act_crea_title_lin"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="@drawable/supbar"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <ImageButton
+            android:id="@+id/crea_back_btn"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/crea_title_txt"
+            style="@style/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:gravity="center"
+            android:text="@string/help_tech"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="368dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/borde_pequeno_creapregunta"
+        android:orientation="vertical"
+        android:weightSum="100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/act_crea_title_lin"
+        app:layout_constraintTop_toBottomOf="@+id/act_crea_title_lin">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="332dp"
+            android:background="@drawable/borde_pequeno_creapregunta"
+            android:text="@string/txt_creaPregunta"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="122dp"
+                android:layout_height="match_parent"
+                android:layout_weight="33"
+                app:srcCompat="@drawable/ic_not_img" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_weight="33"
+                app:srcCompat="@drawable/ic_camara" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_weight="33"
+                app:srcCompat="@drawable/ic_gif" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/frg_crea_btn_post"
+        android:layout_width="119dp"
+        android:layout_height="68dp"
+        android:background="@drawable/btn_comenzar"
+        android:text="@string/btn_crea_post"
+        android:textColor="@color/ic_launcher_background"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_crea_title_lin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
