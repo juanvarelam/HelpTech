@@ -3,83 +3,93 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/frg_preguntas_fecha"
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/azulito"
-        android:textStyle="bold"
-        android:text="@string/frg_preguntas_fecha_pregunta" />
-
-    <TextView
-        android:id="@+id/frg_preguntas_texto_preguntas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="12dp"
-        android:textColor="@color/black"
-        android:text="@string/frg_preguntas_texto_preguntas" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/transparente"
-            app:srcCompat="@drawable/comentario" />
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/frg_preguntas_numero_comentarios"
-            android:layout_width="wrap_content"
+            android:id="@+id/frg_preguntas_fecha"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="9"
-            android:layout_marginStart="4dp"
-            android:textColor="@color/black" />
-
-        <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:background="@color/transparente"
-            app:srcCompat="@drawable/corazon" />
+            android:textColor="@color/azulito"
+            android:textStyle="bold"
+            android:text="10:25" />
 
         <TextView
-            android:id="@+id/frg_preguntas_numero_votos"
-            android:layout_width="wrap_content"
+            android:id="@+id/frg_preguntas_texto_preguntas"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingStart="4dp"
-            android:text="43"
-            android:textColor="@color/black" />
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="@color/black"
+            android:text="Texto pregunta" />
 
-        <TextView
-            android:id="@+id/frg_preguntas_hagstags"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="16dp"
-            android:layout_weight="1"
-            android:text="#java #productividad #framework #2021"
-            android:textAlignment="viewEnd"
-            tools:ignore="RtlCompat" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparente"
+                app:srcCompat="@drawable/comentario" />
+
+            <TextView
+                android:id="@+id/frg_preguntas_numero_comentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/black" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@color/transparente"
+                app:srcCompat="@drawable/corazon" />
+
+            <TextView
+                android:id="@+id/frg_preguntas_numero_votos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="4dp"
+                android:text="43"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/frg_preguntas_hagstags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:text="#java #productividad #framework #2021"
+                android:textAlignment="viewEnd"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/gris"
+            android:orientation="horizontal"
+            />
+
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_marginVertical="8dp"
-        android:background="@color/gris"
-        android:orientation="horizontal"
-        />
 
 </LinearLayout>

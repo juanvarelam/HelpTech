@@ -1,15 +1,15 @@
-package com.castelaofpe.helptech;
+package com.castelaofpe.helptech.inicio;
 
-public class PreferenciaItem {
+public class Preferencia {
 
     private String nombre;
     private int icono;
 
-    public PreferenciaItem() {
+    public Preferencia() {
 
     }
 
-    public PreferenciaItem(String nombre, int icono) {
+    public Preferencia(String nombre, int icono) {
         this.nombre = nombre;
         this.icono = icono;
     }

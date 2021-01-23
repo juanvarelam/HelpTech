@@ -4,15 +4,11 @@ public class Pregunta {
 
     private String fecha;
     private String texto;
-    private int comentarios;
-    private int votos;
+    private String comentarios;
+    private String votos;
     private String hagstags;
 
-    //Constructores
-    public Pregunta() {
-    }
-
-    public Pregunta(String fecha, String texto, int comentarios, int votos, String hagstags) {
+    public Pregunta(String fecha, String texto, String comentarios, String votos, String hagstags) {
         this.fecha = fecha;
         this.texto = texto;
         this.comentarios = comentarios;
@@ -20,53 +16,43 @@ public class Pregunta {
         this.hagstags = hagstags;
     }
 
-
-
-    //Getters
     public String getFecha() {
-
         return fecha;
     }
 
-    public String getTexto()
-    {
-        return texto;
-    }
-
-    public int getComentarios() {
-        return comentarios;
-    }
-
-    public int getVotos() {
-        return votos;
-    }
-
-    public String getHagstags() {
-        return hagstags;
-    }
-
-
-
-    //Setters
     public void setFecha(String fecha) {
         this.fecha = fecha;
+    }
+
+    public String getTexto() {
+        return texto;
     }
 
     public void setTexto(String texto) {
         this.texto = texto;
     }
 
-    public void setComentarios(int comentarios) {
+    public String getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(String comentarios) {
         this.comentarios = comentarios;
     }
 
-    public void setVotos(int votos) {
+    public String getVotos() {
+        return votos;
+    }
+
+    public void setVotos(String votos) {
         this.votos = votos;
+    }
+
+    public String getHagstags() {
+        return hagstags;
     }
 
     public void setHagstags(String hagstags) {
         this.hagstags = hagstags;
     }
-
-
 }

@@ -9,24 +9,22 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.castelaofpe.helptech.PreferenciaItem;
 import com.castelaofpe.helptech.R;
 
 import java.util.ArrayList;
 
 public class AdapterPreferencias extends RecyclerView.Adapter<AdapterPreferencias.ViewHolderPreferencias> {
 
-    ArrayList<PreferenciaItem> listaItems;
+    ArrayList<Preferencia> listaItems;
 
-    public AdapterPreferencias(ArrayList<PreferenciaItem> listaItems) {
+    public AdapterPreferencias(ArrayList<Preferencia> listaItems) {
         this.listaItems = listaItems;
     }
 
     @NonNull
     @Override
     public ViewHolderPreferencias onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_preferencias, null, false);
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_grid_preferencias, null, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_preferencias, null, false);
         return new ViewHolderPreferencias(view);
     }
 
