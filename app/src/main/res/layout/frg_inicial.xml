@@ -51,7 +51,7 @@
             android:weightSum="100">
 
             <Button
-                android:id="@+id/frg_inicial_btn_inicio"
+                android:id="@+id/act_inicial_btn_inicio"
                 android:layout_width="300dp"
                 android:layout_height="64dp"
                 android:layout_marginLeft="70dp"
@@ -62,7 +62,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/frg_inicial_btn_registro"
+                android:id="@+id/act_inicial_btn_registro"
                 android:layout_width="448dp"
                 android:layout_height="68dp"
                 android:layout_marginLeft="20dp"

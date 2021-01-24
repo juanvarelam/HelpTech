@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.castelaofpe.helptech.R;
 import com.castelaofpe.helptech.principal.MainActivity;
@@ -63,6 +64,7 @@ public class LoginFragment extends Fragment {
     RegisterFragment frgRegister = new RegisterFragment();
     MainActivity actMain = new MainActivity();
     RecuperaPassFragment frgRecuperaPass = new RecuperaPassFragment();
+    //InicialActivity actIni = new InicialActivity();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -96,8 +98,15 @@ public class LoginFragment extends Fragment {
                 ((InicialActivity)getActivity()).changeFragmentInicio(frgRecuperaPass);
             }
         });
-
-
+/*
+        ImageButton btnBack = v.findViewById(R.id.frg_login_btn_back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((InicialActivity)getActivity()).iniciaActivity(actIni);
+            }
+        });
+*/
         return v;
     }
 }

@@ -2,10 +2,7 @@ package com.castelaofpe.helptech.inicio;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -77,7 +74,7 @@ public class InicialFragment extends Fragment {
         View v = inflater.inflate(R.layout.frg_inicial, container, false);
 
         //si pulsa SIGN IN
-        Button btnLogin = v.findViewById(R.id.frg_inicial_btn_inicio);
+        Button btnLogin = v.findViewById(R.id.act_inicial_btn_inicio);
         btnLogin.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
@@ -86,7 +83,7 @@ public class InicialFragment extends Fragment {
         });
 
         //si pulsa SIGN UP
-        Button btnRegister = v.findViewById(R.id.frg_inicial_btn_registro);
+        Button btnRegister = v.findViewById(R.id.act_inicial_btn_registro);
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
