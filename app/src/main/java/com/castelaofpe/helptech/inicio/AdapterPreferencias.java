@@ -50,4 +50,5 @@ public class AdapterPreferencias extends RecyclerView.Adapter<AdapterPreferencia
             foto = (ImageView) itemView.findViewById(R.id.iconoItemPreferencia);
         }
     }
+
 }
