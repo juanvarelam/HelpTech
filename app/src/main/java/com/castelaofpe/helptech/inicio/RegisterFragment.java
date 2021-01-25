@@ -7,16 +7,18 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.castelaofpe.helptech.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link RegisterFragment#newInstance} factory method to
+ * Use the {@link RegisterFragment#//newInstance} factory method to
  * create an instance of this fragment.
  */
 public class RegisterFragment extends Fragment {
-
+/*
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -38,6 +40,7 @@ public class RegisterFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment RegisterFragment.
      */
+    /*
     // TODO: Rename and change types and number of parameters
     public static RegisterFragment newInstance(String param1, String param2) {
         RegisterFragment fragment = new RegisterFragment();
@@ -47,20 +50,40 @@ public class RegisterFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+*/
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
+      /*  if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        }*/
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.frg_register, container, false);
+        View v = inflater.inflate(R.layout.frg_register, container, false);
+
+        ImageButton btnBack = v.findViewById(R.id.frg_register_btn_back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InicialActivity actInicial = new InicialActivity();
+                ((InicialActivity)getActivity()).iniciaActivity(actInicial);
+            }
+        });
+
+        Button btnLog = v.findViewById(R.id.frg_registro_btn_login);
+        btnLog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginFragment frgLog = new LoginFragment();
+                ((InicialActivity)getActivity()).changeFragmentInicio(frgLog);
+            }
+        });
+
+        return v;
     }
 }

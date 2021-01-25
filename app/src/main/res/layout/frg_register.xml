@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.117">
 
         <ImageButton
-            android:id="@+id/frg_login_btn_back"
+            android:id="@+id/frg_register_btn_back"
             android:layout_width="43dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
@@ -33,7 +33,7 @@
             android:src="@drawable/ic_back" />
 
         <Button
-            android:id="@+id/frg_login_btn_registro"
+            android:id="@+id/frg_registro_btn_login"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="230dp"
