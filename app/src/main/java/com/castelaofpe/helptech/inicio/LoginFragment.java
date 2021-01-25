@@ -64,9 +64,6 @@ public class LoginFragment extends Fragment {
 
 
 
-
-    //InicialActivity actIni = new InicialActivity();
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -102,15 +99,16 @@ public class LoginFragment extends Fragment {
                 ((InicialActivity)getActivity()).changeFragmentInicio(frgRecuperaPass);
             }
         });
-/*
+
         ImageButton btnBack = v.findViewById(R.id.frg_login_btn_back);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((InicialActivity)getActivity()).iniciaActivity(actIni);
+                InicialActivity actInicial = new InicialActivity();
+                ((InicialActivity)getActivity()).iniciaActivity(actInicial);
             }
         });
-*/
+
         return v;
     }
 }
