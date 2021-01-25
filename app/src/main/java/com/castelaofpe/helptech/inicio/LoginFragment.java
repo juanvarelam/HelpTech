@@ -50,20 +50,21 @@ public class LoginFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+*/
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
+      /*  if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-*/
+        }*/
 
-    RegisterFragment frgRegister = new RegisterFragment();
-    MainActivity actMain = new MainActivity();
-    RecuperaPassFragment frgRecuperaPass = new RecuperaPassFragment();
+    }
+
+
+
+
+
     //InicialActivity actIni = new InicialActivity();
 
     @Override
@@ -78,6 +79,7 @@ public class LoginFragment extends Fragment {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                RegisterFragment frgRegister = new RegisterFragment();
                 ((InicialActivity)getActivity()).changeFragmentInicio(frgRegister);
             }
         });
@@ -87,6 +89,7 @@ public class LoginFragment extends Fragment {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                MainActivity actMain = new MainActivity();
                 ((InicialActivity)getActivity()).iniciaActivity(actMain);
             }
         });
@@ -95,6 +98,7 @@ public class LoginFragment extends Fragment {
         btnRecuperaPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                RecuperaPassFragment frgRecuperaPass = new RecuperaPassFragment();
                 ((InicialActivity)getActivity()).changeFragmentInicio(frgRecuperaPass);
             }
         });

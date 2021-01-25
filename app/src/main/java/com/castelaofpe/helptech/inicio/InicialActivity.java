@@ -16,9 +16,8 @@ import com.castelaofpe.helptech.R;
 
 public class InicialActivity extends AppCompatActivity {
 
-    InicialFragment frgInicial    = new InicialFragment();
-    LoginFragment    frgLogin    = new LoginFragment();
-    RegisterFragment frgRegister = new RegisterFragment();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +35,7 @@ public class InicialActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                LoginFragment    frgLogin    = new LoginFragment();
                 changeFragmentInicio(frgLogin);
             }
         });
@@ -44,6 +44,7 @@ public class InicialActivity extends AppCompatActivity {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                RegisterFragment frgRegister = new RegisterFragment();
                 changeFragmentInicio(frgRegister);
             }
         });

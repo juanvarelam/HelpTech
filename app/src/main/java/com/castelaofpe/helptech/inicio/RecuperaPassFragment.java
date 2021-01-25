@@ -51,18 +51,18 @@ public class RecuperaPassFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+*/
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
+        /*if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        }*/
     }
-*/
 
-  //  LoginFragment frgLogin = new LoginFragment();
+
+
 
 
     @Override
@@ -70,14 +70,15 @@ public class RecuperaPassFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.frg_recupera_pass, container, false);
 
-   /*    ImageButton btnLogBack = v.findViewById(R.id.frg_login_btn_back);
+      ImageButton btnLogBack = v.findViewById(R.id.frg_login_btn_back);
         btnLogBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                LoginFragment frgLogin = new LoginFragment();
                 ((InicialActivity)getActivity()).changeFragmentInicio(frgLogin);
             }
         });
-*/
+
         return v;
     }
 
