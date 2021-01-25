@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.castelaofpe.helptech.R;
+import com.castelaofpe.helptech.principal.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -81,6 +82,15 @@ public class RegisterFragment extends Fragment {
             public void onClick(View v) {
                 LoginFragment frgLog = new LoginFragment();
                 ((InicialActivity)getActivity()).changeFragmentInicio(frgLog);
+            }
+        });
+
+        Button btnSignIn = v.findViewById(R.id.frg_registro_btn_sigin);
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PreferenciasActivity actPref = new PreferenciasActivity();
+                ((InicialActivity)getActivity()).iniciaActivity(actPref);
             }
         });
 

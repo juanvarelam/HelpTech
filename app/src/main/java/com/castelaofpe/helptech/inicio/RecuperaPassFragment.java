@@ -71,13 +71,16 @@ public class RecuperaPassFragment extends Fragment {
         View v = inflater.inflate(R.layout.frg_recupera_pass, container, false);
 
       ImageButton btnLogBack = v.findViewById(R.id.frg_recupera_btn_back);
-        btnLogBack.setOnClickListener(new View.OnClickListener() {
+      btnLogBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 LoginFragment frgLogin = new LoginFragment();
                 ((InicialActivity)getActivity()).changeFragmentInicio(frgLogin);
             }
         });
+
+
+
 
         return v;
     }
