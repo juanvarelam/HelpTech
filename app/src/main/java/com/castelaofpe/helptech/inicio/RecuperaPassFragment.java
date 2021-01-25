@@ -80,8 +80,6 @@ public class RecuperaPassFragment extends Fragment {
         });
 
 
-
-
         return v;
     }
 

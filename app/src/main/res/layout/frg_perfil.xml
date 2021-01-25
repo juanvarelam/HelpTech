@@ -2,9 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".perfil.PerfilActivity">
+    tools:context=".PerfilFragment" >
 
     <LinearLayout
         android:id="@+id/linearLayout4"
@@ -92,93 +93,12 @@
         </LinearLayout>
     </LinearLayout>
 
-
-
-    <LinearLayout
-        android:id="@+id/frg_main_menu_lin"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@drawable/supbar"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/frg_main_menu_home_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="10"
-            android:background="@null"
-            android:src="@drawable/ic_casa_silueta_negra_sin_puerta" />
-
-        <ImageButton
-            android:id="@+id/frg_main_menu_buscar_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="56dp"
-            android:layout_weight="10"
-            android:background="@null"
-            android:src="@drawable/ic_buscar" />
-
-
-        <ImageButton
-            android:id="@+id/frg_main_menu_notif_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="8dp"
-            android:layout_weight="10"
-            android:background="@null"
-            android:src="@drawable/ic_notificacion2" />
-
-        <ImageButton
-            android:id="@+id/frg_main_menu_perfil_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_marginHorizontal="42dp"
-            android:layout_weight="10"
-            android:background="@null"
-            android:src="@drawable/ic_usuario_de_perfil" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/frg_explora_menu_lin_mas"
-        android:layout_width="113dp"
-        android:layout_height="123dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/frg_main_menu_lin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_main_container">
-
-        <ImageButton
-            android:id="@+id/frg_main_menu_crea"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="clip_horizontal"
-            android:background="@null"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_mas1"
-            android:stateListAnimator="@null"
-            android:visibility="visible"
-            tools:visibility="visible" />
-
-
-    </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:weightSum="100"
-        app:layout_constraintBottom_toTopOf="@+id/frg_main_menu_lin"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
-        app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="-16dp">
 
         <LinearLayout
@@ -187,7 +107,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/act_perfil_btn_preguntas"
+                android:id="@+id/frg_perfil_btn_preguntas"
                 style="@style/btnsPerfil"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -196,7 +116,7 @@
                 android:text="@string/act_perfil_btn_preguntas" />
 
             <Button
-                android:id="@+id/act_perfil_btn_respuestas"
+                android:id="@+id/frg_perfil_btn_respuestas"
                 style="@style/btnsPerfil"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -205,7 +125,7 @@
                 android:text="@string/act_perfil_btn_respuestas" />
 
             <ImageButton
-                android:id="@+id/act_perfil_btn_favoritos"
+                android:id="@+id/frg_perfil_btn_favoritos"
                 style="@style/btnsPerfil"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
