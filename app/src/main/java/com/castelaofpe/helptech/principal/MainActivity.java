@@ -13,7 +13,6 @@ import android.widget.ImageButton;
 
 import com.castelaofpe.helptech.PerfilFragment;
 import com.castelaofpe.helptech.R;
-import com.castelaofpe.helptech.perfil.PerfilActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -98,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction trans = manager.beginTransaction();
 
-        trans.replace(R.id.act_perfil_contenedor, frg, "fragment_01");
+        trans.replace(R.id.frg_perfil_contenedor, frg, "fragment_01");
 
         trans.commit();
     }
