@@ -71,16 +71,6 @@ public class LoginFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.frg_login, container, false);
 
-        //si pulsa Registro
-        Button btnReg = v.findViewById(R.id.frg_login_btn_registro);
-        btnReg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RegisterFragment frgRegister = new RegisterFragment();
-                ((InicialActivity)getActivity()).changeFragmentInicio(frgRegister);
-            }
-        });
-
         //si accede a la aplicacion
         Button btnSignIn = v.findViewById(R.id.frg_login_btn_sigin);
         btnSignIn.setOnClickListener(new View.OnClickListener() {

@@ -76,15 +76,6 @@ public class RegisterFragment extends Fragment {
             }
         });
 
-        Button btnLog = v.findViewById(R.id.frg_registro_btn_login);
-        btnLog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                LoginFragment frgLog = new LoginFragment();
-                ((InicialActivity)getActivity()).changeFragmentInicio(frgLog);
-            }
-        });
-
         Button btnSignIn = v.findViewById(R.id.frg_registro_btn_sigin);
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
