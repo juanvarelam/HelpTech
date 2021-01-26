@@ -37,8 +37,8 @@ public class PerfilFragment extends Fragment {
         fragmentPreguntas = new AdapterPreguntas();
         fragmentRespuestas = new AdapterRespuestas();
         fragmentFavoritos = new AdapterFavoritos();
-
-       // getSupportFragmentManager().beginTransaction().add(R.id.frg_perfil_contenedor, fragmentPreguntas).commit();
+        
+        ((MainActivity)getActivity()).changeFragmentPerfil(fragmentPreguntas);
 
     }
 
