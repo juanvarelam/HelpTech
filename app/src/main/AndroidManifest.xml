@@ -15,6 +15,8 @@
         <activity android:name=".principal.MainActivity" />
         <activity android:name=".perfil.MensajesActivity" />
         <activity android:name=".inicio.PreferenciasActivity" />
+
+        <activity android:name=".perfil.ConfigActivity" />
         <activity android:name=".inicio.InicialActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

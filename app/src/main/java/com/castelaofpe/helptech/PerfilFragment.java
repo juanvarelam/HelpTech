@@ -1,11 +1,10 @@
 package com.castelaofpe.helptech;
 
+import android.app.Activity;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +12,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.castelaofpe.helptech.inicio.InicialActivity;
 import com.castelaofpe.helptech.perfil.AdapterFavoritos;
 import com.castelaofpe.helptech.perfil.AdapterPreguntas;
 import com.castelaofpe.helptech.perfil.AdapterRespuestas;
+import com.castelaofpe.helptech.perfil.ConfigActivity;
 import com.castelaofpe.helptech.principal.MainActivity;
 
 public class PerfilFragment extends Fragment {
@@ -29,6 +28,7 @@ public class PerfilFragment extends Fragment {
 
     FragmentManager transaction;
     Fragment fragmentPreguntas, fragmentRespuestas, fragmentFavoritos;
+    Activity configActivity = new ConfigActivity();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -71,18 +71,17 @@ public class PerfilFragment extends Fragment {
             }
         });
 
-       /* ImageButton btnConfig = v.findViewById(R.id.frg_perfil_btn_config);
+        ImageButton btnConfig = v.findViewById(R.id.frg_perfil_btn_config);
         btnConfig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                ((MainActivity)getActivity()).changeFragmentPerfil(fragmentFavoritos);
+                ((MainActivity)getActivity()).iniciaActivity(configActivity);
             }
-        });*/
+        });
 
         return v;
     }
-
 
 
 
