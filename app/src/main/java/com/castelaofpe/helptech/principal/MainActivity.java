@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.castelaofpe.helptech.PerfilFragment;
+import com.castelaofpe.helptech.perfil.PerfilFragment;
 import com.castelaofpe.helptech.R;
 
 public class MainActivity extends AppCompatActivity {

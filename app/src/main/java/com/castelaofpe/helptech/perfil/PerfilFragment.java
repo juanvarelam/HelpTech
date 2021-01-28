@@ -1,4 +1,4 @@
-package com.castelaofpe.helptech;
+package com.castelaofpe.helptech.perfil;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.castelaofpe.helptech.R;
 import com.castelaofpe.helptech.perfil.AdapterFavoritos;
 import com.castelaofpe.helptech.perfil.AdapterPreguntas;
 import com.castelaofpe.helptech.perfil.AdapterRespuestas;
@@ -34,7 +35,7 @@ public class PerfilFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        fragmentPreguntas = new AdapterPreguntas();
+        fragmentPreguntas = new PreguntasFragment();
         fragmentRespuestas = new AdapterRespuestas();
         fragmentFavoritos = new AdapterFavoritos();
         
