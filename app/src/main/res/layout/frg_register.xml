@@ -64,7 +64,7 @@
         app:layout_constraintVertical_bias="0.474">
 
         <EditText
-            android:id="@+id/frg_login_email"
+            android:id="@+id/frg_registro_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="57dp"
@@ -75,7 +75,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/frg_login_password"
+            android:id="@+id/frg_registro_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="57dp"
@@ -86,7 +86,7 @@
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/editTextTextPassword3"
+            android:id="@+id/frg_registro_confirm_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="57dp"

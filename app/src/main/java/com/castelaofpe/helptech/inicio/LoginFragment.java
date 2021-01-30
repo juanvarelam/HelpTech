@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import com.castelaofpe.helptech.R;
 import com.castelaofpe.helptech.principal.MainActivity;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.DataOutputStream;
 
@@ -23,6 +25,8 @@ import java.io.DataOutputStream;
 public class LoginFragment extends Fragment {
 
     private EditText email, password;
+
+
 
 
     @Override
@@ -41,6 +45,7 @@ public class LoginFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View v = inflater.inflate(R.layout.frg_login, container, false);
+
 
         email = v.findViewById(R.id.frg_login_email);
         password = v.findViewById(R.id.frg_login_password);
@@ -80,7 +85,6 @@ public class LoginFragment extends Fragment {
     private void checkDatos(){
 
         String error = getString(R.string.datos_incorrectos);
-
         Toast toast = Toast.makeText(getContext(), error,Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP,0,0);
 
@@ -94,7 +98,6 @@ public class LoginFragment extends Fragment {
             toast.show();
             return;
         }
-
 
 
 

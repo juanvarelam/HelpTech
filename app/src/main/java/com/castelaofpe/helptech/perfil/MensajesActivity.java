@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.castelaofpe.helptech.adapter.MensajeAdapter;
-import com.castelaofpe.helptech.models.Contacto;
+import com.castelaofpe.helptech.models.Usuario;
 import com.castelaofpe.helptech.R;
 import com.castelaofpe.helptech.adapter.ContactoAdapter;
 import com.castelaofpe.helptech.models.Mensaje;
@@ -17,7 +17,7 @@ import java.util.List;
 
 public class MensajesActivity extends AppCompatActivity {
 
-    private List<Contacto> contactos;
+    private List<Usuario> contactos;
     private List<Mensaje> mensajes;
     RecyclerView recyclerMensajesRecientes;
     RecyclerView recyclerMensajesLista;
@@ -31,11 +31,11 @@ public class MensajesActivity extends AppCompatActivity {
                 "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
                 "when an unknown printer took a galley of type and scrambled it to make a type specimen book.");
 
-        contactos = new ArrayList<Contacto>();
+        contactos = new ArrayList<Usuario>();
         mensajes = new ArrayList<Mensaje>();
 
         for(int i = 0; i < 10; i++){
-            contactos.add(new Contacto("User", R.drawable.programador));
+            contactos.add(new Usuario("User", R.drawable.programador));
             mensajes.add(new Mensaje("User", R.drawable.programador, "10:30",txt));
         }
 
