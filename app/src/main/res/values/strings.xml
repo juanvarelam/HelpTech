@@ -64,5 +64,6 @@
     <string name="frg_preguntas_texto_preguntas">¿Cual es mejor framework de 2021 para trabajar con Java?</string>
     <string name="frg_perfil_btnPreguntas">Preguntas</string>
     <string name="frg_perfil_btnRespuestas">Respuestas</string>
+    <string name="datos_incorrectos">Datos Incorrectos</string>
     />
 </resources>
