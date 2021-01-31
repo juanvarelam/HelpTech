@@ -1,14 +1,23 @@
 package com.castelaofpe.helptech.models;
 
-public class Usuario {
+import android.media.Image;
+
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
 
     private int id;
     private String email;
     private String pass;
+    private int imagen;
 
     public Usuario(String email, String pass) {
         this.email = email;
         this.pass = pass;
+    }
+
+    public int getImagen() {
+        return imagen;
     }
 
     public int getId() {

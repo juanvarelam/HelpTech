@@ -1,10 +1,12 @@
 package com.castelaofpe.helptech.inicio;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +31,7 @@ public class RegisterFragment extends Fragment {
 
     private FirebaseAuth mAuth;
     private EditText email, password, confirmPassword;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,12 +64,26 @@ public class RegisterFragment extends Fragment {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PreferenciasActivity actPref = new PreferenciasActivity();
-                ((InicialActivity)getActivity()).iniciaActivity(actPref);
+                registroUser();
+
             }
         });
 
         return v;
+    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
+
+    }
+
+    private void updateUI(FirebaseUser currentUser) {
+        Log.i("User:",""+currentUser);
     }
 
 
@@ -95,31 +112,45 @@ public class RegisterFragment extends Fragment {
             return;
         }
 
-        if(compruebaConfirmPassword != compruebaPassword){
+        if(!compruebaConfirmPassword.equals(compruebaPassword)){
             toast.show();
             return;
         }
 
-        mAuth.createUserWithEmailAndPassword(compruebaEmail, compruebaPassword)
-                .addOnCompleteListener((Executor) this, new OnCompleteListener <AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+       // mAuth = FirebaseAuth.getInstance();
+        creaUsuario(compruebaEmail, compruebaPassword);
 
-                        if (task.isSuccessful()) {
-
-
-
-                        } else {
-
-
-                        }
-
-                    }
-
-                });
-
+        PreferenciasActivity actPrefe = new PreferenciasActivity();
+        ((InicialActivity)getActivity()).iniciaActivity(actPrefe);
 
     }
+
+    private void creaUsuario(final String email, final String pass){
+
+        final String oki = "registrado";
+        final String fallo= "caspitas";
+
+
+            mAuth.createUserWithEmailAndPassword(email, pass)
+                    .addOnCompleteListener( new OnCompleteListener <AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+
+                            if (task.isSuccessful()) {
+                                Log.d("OK", "Usuario Creado");
+                                FirebaseUser currentUser = mAuth.getCurrentUser();
+                                updateUI(currentUser);
+                                Toast toast = Toast.makeText(getContext(), oki,Toast.LENGTH_SHORT);
+
+                            } else {
+                                Log.e("ERROR", "No se Ha creado el usuario");
+                                FirebaseUser currentUser = mAuth.getCurrentUser();
+                                updateUI(null);
+                                Toast toast = Toast.makeText(getContext(), fallo,Toast.LENGTH_SHORT);
+                            }
+                        }
+                    });
+        }
 
 
 }

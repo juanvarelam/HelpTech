@@ -39,9 +39,9 @@ public class ContactoAdapter  extends RecyclerView.Adapter<ContactoAdapter.Conta
     public void onBindViewHolder(@NonNull ContactoHolder holder, int position) {
         final Usuario item = items.get(position);
 
-        String texto = item.getName();
+        String texto = item.getEmail();
         holder.txt.setText(texto);
-        holder.icon.setImageResource(item.getImage());
+        holder.icon.setImageResource(item.getImagen());
 
     }
 
