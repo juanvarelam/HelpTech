@@ -102,6 +102,7 @@ public class LoginFragment extends Fragment {
             return;
         }
 
+        inicioSesion(compruebaEmail, compruebaPassword);
         MainActivity actMain = new MainActivity();
         ((InicialActivity)getActivity()).iniciaActivity(actMain);
 
@@ -116,6 +117,7 @@ public class LoginFragment extends Fragment {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("OK", "Sesion iniciada");
                             FirebaseUser user = mAuth.getCurrentUser();
+
 
                         } else {
                             // If sign in fails, display a message to the user.

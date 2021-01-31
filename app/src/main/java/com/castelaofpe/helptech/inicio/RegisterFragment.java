@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
+import android.util.Patterns;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.concurrent.Executor;
+import java.util.regex.Pattern;
 
 
 public class RegisterFragment extends Fragment {
@@ -86,6 +88,10 @@ public class RegisterFragment extends Fragment {
         Log.i("User:",""+currentUser);
     }
 
+    private boolean validarEmail(String email) {
+        Pattern pattern = Patterns.EMAIL_ADDRESS;
+        return pattern.matcher(email).matches();
+    }
 
     private void registroUser(){
 
@@ -98,6 +104,10 @@ public class RegisterFragment extends Fragment {
         if(compruebaEmail.trim().isEmpty()){
             toast.show();
             return;
+        }
+        if (!validarEmail(compruebaEmail)){
+           toast.show();
+           return;
         }
 
         final String compruebaPassword = password.getText().toString();
