@@ -1,5 +1,6 @@
 package com.castelaofpe.helptech.perfil;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,11 +17,13 @@ import com.castelaofpe.helptech.R;
 import java.util.ArrayList;
 
 public class AdapterPreguntas extends RecyclerView.Adapter<AdapterPreguntas.PreguntaViewHolder> {
-
+    LayoutInflater inflater;
     ArrayList<Pregunta> listaPreguntas;
 
-    public AdapterPreguntas(ArrayList<Pregunta> listaPreguntas) {
+    public AdapterPreguntas(Context context, ArrayList<Pregunta> listaPreguntas) {
+
         this.listaPreguntas = listaPreguntas;
+        this.inflater = LayoutInflater.from(context);
     }
 
     @NonNull
@@ -32,16 +35,22 @@ public class AdapterPreguntas extends RecyclerView.Adapter<AdapterPreguntas.Preg
 
     @Override
     public void onBindViewHolder(@NonNull PreguntaViewHolder holder, int position) {
-        holder.txtFecha.setText(listaPreguntas.get(position).getFecha());
-        holder.txtTexto.setText(listaPreguntas.get(position).getTexto());
-        holder.txtComentarios.setText(listaPreguntas.get(position).getComentarios());
-        holder.txtVotos.setText(listaPreguntas.get(position).getVotos());
-        holder.txtHagstags.setText(listaPreguntas.get(position).getHagstags());
+        String fecha = listaPreguntas.get(position).getFecha();
+        String texto = listaPreguntas.get(position).getTexto();
+        String comentarios = listaPreguntas.get(position).getComentarios();
+        String votos = listaPreguntas.get(position).getVotos();
+        String hagstags = listaPreguntas.get(position).getHagstags();
+
+        holder.txtFecha.setText(fecha);
+        holder.txtTexto.setText(texto);
+        holder.txtComentarios.setText(comentarios);
+        holder.txtVotos.setText(votos);
+        holder.txtHagstags.setText(hagstags);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listaPreguntas.size();
     }
 
     public class PreguntaViewHolder extends RecyclerView.ViewHolder {
