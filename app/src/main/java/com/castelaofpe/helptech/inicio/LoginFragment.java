@@ -36,10 +36,8 @@ public class LoginFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
+        mAuth = FirebaseAuth.getInstance();
     }
-
-
 
 
     @Override
@@ -103,12 +101,14 @@ public class LoginFragment extends Fragment {
         }
 
         inicioSesion(compruebaEmail, compruebaPassword);
-        MainActivity actMain = new MainActivity();
-        ((InicialActivity)getActivity()).iniciaActivity(actMain);
+
 
     }
 
     private void inicioSesion(String email, String password){
+
+        final String fallo = getString(R.string.datos_incorrectos);
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -117,12 +117,14 @@ public class LoginFragment extends Fragment {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("OK", "Sesion iniciada");
                             FirebaseUser user = mAuth.getCurrentUser();
-
+                            MainActivity actMain = new MainActivity();
+                            ((InicialActivity)getActivity()).iniciaActivity(actMain);
 
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.e("ERROR", "No se pudo iniciar sesion");
-                            Toast toast = Toast.makeText(getContext(), "fallo",Toast.LENGTH_SHORT);
+                            Toast toast = Toast.makeText(getContext(), fallo,Toast.LENGTH_SHORT);
+                            toast.show();;
                             updateUI(null);
                             // ...
                         }
@@ -131,6 +133,7 @@ public class LoginFragment extends Fragment {
                     }
                 });
     }
+
 
     private void updateUI(FirebaseUser currentUser) {
         Log.i("User:",""+currentUser);

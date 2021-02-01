@@ -82,7 +82,7 @@
             android:layout_marginTop="40dp"
             android:drawableEnd="@drawable/ic_candado"
             android:ems="10"
-            android:hint="@string/pass"
+            android:hint="@string/pass_reg"
             android:inputType="textPassword" />
 
         <EditText
@@ -93,7 +93,7 @@
             android:layout_marginTop="40dp"
             android:drawableEnd="@drawable/ic_candado"
             android:ems="10"
-            android:hint="@string/pass"
+            android:hint="@string/pass_reg"
             android:inputType="textPassword" />
 
         <Button

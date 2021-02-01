@@ -14,7 +14,8 @@
     <string name="registro">Registro</string>
     <string name="cuenta">Cuenta</string>
     <string name="nombre_usuario">Nombre de usuario</string>
-    <string name="pass">Contraseña [6 o + digitos]</string>
+    <string name="pass">Contraseña</string>
+    <string name="pass_reg">Contraseña [6 o + digitos]</string>
     <string name="email">E-mail</string>
     <string name="privacidad">Privacidad</string>
     <string name="foto_perfil">Foto de perfil</string>

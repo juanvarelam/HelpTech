@@ -145,7 +145,8 @@ public class RegisterFragment extends Fragment {
 
         final String oki = "registrado";
         final String fallo= "caspitas";
-
+        final Toast toast = Toast.makeText(getContext(), oki,Toast.LENGTH_SHORT);
+        final Toast toast1 = Toast.makeText(getContext(), fallo,Toast.LENGTH_SHORT);
 
             mAuth.createUserWithEmailAndPassword(email, pass)
                     .addOnCompleteListener( new OnCompleteListener <AuthResult>() {
@@ -156,13 +157,13 @@ public class RegisterFragment extends Fragment {
                                 Log.d("OK", "Usuario Creado");
                                 FirebaseUser currentUser = mAuth.getCurrentUser();
                                 updateUI(currentUser);
-                                Toast toast = Toast.makeText(getContext(), oki,Toast.LENGTH_SHORT);
+                                toast.show();
 
                             } else {
                                 Log.e("ERROR", "No se Ha creado el usuario");
                                 FirebaseUser currentUser = mAuth.getCurrentUser();
                                 updateUI(null);
-                                Toast toast = Toast.makeText(getContext(), fallo,Toast.LENGTH_SHORT);
+                                toast1.show();
                             }
                         }
                     });
