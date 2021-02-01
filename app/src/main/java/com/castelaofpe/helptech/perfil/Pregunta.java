@@ -8,6 +8,10 @@ public class Pregunta {
     private String votos;
     private String hagstags;
 
+    public Pregunta() {
+
+    }
+
     public Pregunta(String fecha, String texto, String comentarios, String votos, String hagstags) {
         this.fecha = fecha;
         this.texto = texto;

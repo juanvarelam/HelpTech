@@ -36,11 +36,12 @@ public class PreguntasFragment extends Fragment {
         View v = inflater.inflate(R.layout.frg_preguntas, container, false);
 
         listaPreguntas = new ArrayList<>();
-        recyclerPreguntas = (RecyclerView) v.findViewById(R.id.frg_preguntas_recyclerView);
+        recyclerPreguntas = v.findViewById(R.id.frg_preguntas_recyclerView);
         recyclerPreguntas.setLayoutManager(new LinearLayoutManager(getContext()));
         
         llenarLista();
-        AdapterPreguntas adapter = new AdapterPreguntas(listaPreguntas);
+
+        AdapterPreguntas adapter = new AdapterPreguntas(getContext(), listaPreguntas);
         recyclerPreguntas.setAdapter(adapter);
 
         return v;
