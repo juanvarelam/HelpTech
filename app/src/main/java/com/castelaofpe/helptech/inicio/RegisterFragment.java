@@ -96,7 +96,9 @@ public class RegisterFragment extends Fragment {
     private void registroUser(){
 
         String error = getString(R.string.datos_incorrectos);
+        String error2 = getString(R.string.pass_corta);
         Toast toast = Toast.makeText(getContext(), error,Toast.LENGTH_SHORT);
+        Toast toast1 = Toast.makeText(getContext(), error2,Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP,0,0);
 
 
@@ -113,6 +115,10 @@ public class RegisterFragment extends Fragment {
         final String compruebaPassword = password.getText().toString();
         if(compruebaPassword.trim().isEmpty()){
             toast.show();
+            return;
+        }
+        if(compruebaPassword.length()<6){
+            toast1.show();
             return;
         }
 

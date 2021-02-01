@@ -65,5 +65,6 @@
     <string name="frg_perfil_btnPreguntas">Preguntas</string>
     <string name="frg_perfil_btnRespuestas">Respuestas</string>
     <string name="datos_incorrectos">Datos Incorrectos</string>
+    <string name="pass_corta">Contraseña Corta</string>
     />
 </resources>

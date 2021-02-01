@@ -18,10 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     HomeFragment frgHome = new HomeFragment();
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
