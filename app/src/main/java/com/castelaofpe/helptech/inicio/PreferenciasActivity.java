@@ -25,7 +25,6 @@ public class PreferenciasActivity extends AppCompatActivity {
 
         listaPreferencias = new ArrayList<>();
         recyclerPreferencias = (RecyclerView) findViewById(R.id.recycler_preferencias);
-        //recyclerPreferencias.setLayoutManager(new LinearLayoutManager(this));
         recyclerPreferencias.setLayoutManager(new GridLayoutManager(this, 2));
 
         llenarPreferencias();

@@ -7,16 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.castelaofpe.helptech.R;
-import com.castelaofpe.helptech.inicio.InicialActivity;
+import com.castelaofpe.helptech.explora.ExplorarFragment;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class HomeFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -32,14 +27,7 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
+
     // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
@@ -59,7 +47,7 @@ public class HomeFragment extends Fragment {
         }
     }
 
-    ExploraFragment frgExplora = new ExploraFragment();
+    ExplorarFragment frgExplora = new ExplorarFragment();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.castelaofpe.helptech.explora.ExplorarFragment;
 import com.castelaofpe.helptech.perfil.PerfilFragment;
 import com.castelaofpe.helptech.R;
 
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btnExplora.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ExploraFragment frgExplora = new ExploraFragment();
+                ExplorarFragment frgExplora = new ExplorarFragment();
                 changeFragmentMain(frgExplora);
             }
         });
