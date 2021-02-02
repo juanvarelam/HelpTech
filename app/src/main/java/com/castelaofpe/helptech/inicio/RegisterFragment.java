@@ -136,8 +136,7 @@ public class RegisterFragment extends Fragment {
        // mAuth = FirebaseAuth.getInstance();
         creaUsuario(compruebaEmail, compruebaPassword);
 
-        PreferenciasActivity actPrefe = new PreferenciasActivity();
-        ((InicialActivity)getActivity()).iniciaActivity(actPrefe);
+
 
     }
 
@@ -158,6 +157,8 @@ public class RegisterFragment extends Fragment {
                                 FirebaseUser currentUser = mAuth.getCurrentUser();
                                 updateUI(currentUser);
                                 toast.show();
+                                PreferenciasActivity actPrefe = new PreferenciasActivity();
+                                ((InicialActivity)getActivity()).iniciaActivity(actPrefe);
 
                             } else {
                                 Log.e("ERROR", "No se Ha creado el usuario");
