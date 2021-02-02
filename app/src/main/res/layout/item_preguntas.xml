@@ -7,9 +7,7 @@
     android:orientation="vertical">
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -18,24 +16,24 @@
             android:id="@+id/frg_preguntas_fecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="10:25"
             android:textColor="@color/azulito"
-            android:textStyle="bold"
-            android:text="10:25" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/frg_preguntas_texto_preguntas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="12dp"
+            android:text="Texto pregunta"
             android:textColor="@color/black"
-            android:text="Texto pregunta" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageButton
@@ -49,8 +47,8 @@
                 android:id="@+id/frg_preguntas_numero_comentarios"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="9"
                 android:layout_marginStart="4dp"
+                android:text="9"
                 android:textColor="@color/black" />
 
             <ImageButton
@@ -65,14 +63,13 @@
                 android:id="@+id/frg_preguntas_numero_votos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:paddingStart="4dp"
                 android:text="43"
                 android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/frg_preguntas_hagstags"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="16dp"
@@ -82,14 +79,15 @@
                 tools:ignore="RtlCompat" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_marginVertical="8dp"
-            android:background="@color/gris"
-            android:orientation="horizontal"
-            />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="8dp"
+        android:background="@color/gris"
+        android:orientation="horizontal"
+        android:weightSum="100" />
 
 </LinearLayout>
