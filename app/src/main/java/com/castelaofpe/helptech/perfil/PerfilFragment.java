@@ -26,8 +26,6 @@ public class PerfilFragment extends Fragment {
 
     }
 
-
-    FragmentManager transaction;
     Fragment fragmentPreguntas, fragmentRespuestas, fragmentFavoritos;
     Activity configActivity = new ConfigActivity();
 

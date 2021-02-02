@@ -17,13 +17,12 @@ import com.castelaofpe.helptech.R;
 import java.util.ArrayList;
 
 public class AdapterPreguntas extends RecyclerView.Adapter<AdapterPreguntas.PreguntaViewHolder> {
-    LayoutInflater inflater;
+
     ArrayList<Pregunta> listaPreguntas;
 
-    public AdapterPreguntas(Context context, ArrayList<Pregunta> listaPreguntas) {
+    public AdapterPreguntas(ArrayList<Pregunta> listaPreguntas) {
 
         this.listaPreguntas = listaPreguntas;
-        this.inflater = LayoutInflater.from(context);
     }
 
     @NonNull
@@ -58,11 +57,11 @@ public class AdapterPreguntas extends RecyclerView.Adapter<AdapterPreguntas.Preg
 
         public PreguntaViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtFecha = (TextView) itemView.findViewById(R.id.frg_preguntas_fecha);
-            txtTexto = (TextView) itemView.findViewById(R.id.frg_preguntas_texto_preguntas);
-            txtComentarios = (TextView) itemView.findViewById(R.id.frg_preguntas_numero_comentarios);
-            txtVotos = (TextView) itemView.findViewById(R.id.frg_preguntas_numero_votos);
-            txtHagstags = (TextView) itemView.findViewById(R.id.frg_preguntas_hagstags);
+            txtFecha = itemView.findViewById(R.id.frg_preguntas_fecha);
+            txtTexto = itemView.findViewById(R.id.frg_preguntas_texto_preguntas);
+            txtComentarios = itemView.findViewById(R.id.frg_preguntas_numero_comentarios);
+            txtVotos = itemView.findViewById(R.id.frg_preguntas_numero_votos);
+            txtHagstags = itemView.findViewById(R.id.frg_preguntas_hagstags);
         }
     }
 }

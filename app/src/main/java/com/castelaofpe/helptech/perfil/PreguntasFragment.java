@@ -41,7 +41,7 @@ public class PreguntasFragment extends Fragment {
         
         llenarLista();
 
-        AdapterPreguntas adapter = new AdapterPreguntas(getContext(), listaPreguntas);
+        AdapterPreguntas adapter = new AdapterPreguntas(listaPreguntas);
         recyclerPreguntas.setAdapter(adapter);
 
         return v;

@@ -96,52 +96,49 @@
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:weightSum="100"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
-        tools:layout_editor_absoluteX="-16dp">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/frg_perfil_btn_preguntas"
+            style="@style/btnsPerfil"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_weight="33"
+            android:text="@string/frg_perfil_btnPreguntas" />
 
-            <Button
-                android:id="@+id/frg_perfil_btn_preguntas"
-                style="@style/btnsPerfil"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="33"
-                android:text="@string/frg_perfil_btnPreguntas"/>
+        <Button
+            android:id="@+id/frg_perfil_btn_respuestas"
+            style="@style/btnsPerfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:text="@string/frg_perfil_btnRespuestas" />
 
-            <Button
-                android:id="@+id/frg_perfil_btn_respuestas"
-                style="@style/btnsPerfil"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="33"
-                android:text="@string/frg_perfil_btnRespuestas" />
-
-            <ImageButton
-                android:id="@+id/frg_perfil_btn_favoritos"
-                style="@style/btnsPerfil"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="33"
-                app:srcCompat="@drawable/ic_action_favorite" />
-
-        </LinearLayout>
+        <ImageButton
+            android:id="@+id/frg_perfil_btn_favoritos"
+            style="@style/btnsPerfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="33"
+            app:srcCompat="@drawable/ic_action_favorite"
+            android:contentDescription="TODO" />
 
     </LinearLayout>
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/frg_perfil_contenedor"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
-    </FrameLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
