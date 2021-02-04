@@ -45,6 +45,7 @@
     <string name="recuerdame">Recuerdame</string>
     <string name="elegir_preferencias">Selecciona tus temas de interés</string>
     <string name="itemJavatxt">Java</string>
+    <string name="vsctxt">Visual Studio Code</string>
     <string name="javatxt">Java</string>
     <string name="act_preferencias_btn_comenzar">Comenzar!</string>
     <string name="iniciar_sesion">Login</string>

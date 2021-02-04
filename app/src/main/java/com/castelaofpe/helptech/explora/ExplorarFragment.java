@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,7 +45,7 @@ public class ExplorarFragment extends Fragment {
         View v = inflater.inflate(R.layout.frg_explorar, container, false);
         listaItemsExplorar = new ArrayList<>();
         recyclerExplorar = v.findViewById(R.id.frg_explorar_recyclerView);
-        recyclerExplorar.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        recyclerExplorar.setLayoutManager(new StaggeredGridLayoutManager( 3, StaggeredGridLayoutManager.VERTICAL));
 
         llenarLista();
 
@@ -55,13 +56,16 @@ public class ExplorarFragment extends Fragment {
     }
 
     private void llenarLista() {
-        listaItemsExplorar.add(new ItemExplora("Java"));
+        listaItemsExplorar.add(new ItemExplora("Visual Studio Code"));
         listaItemsExplorar.add(new ItemExplora("C"));
         listaItemsExplorar.add(new ItemExplora("JavaScript"));
         listaItemsExplorar.add(new ItemExplora("NodeJS"));
         listaItemsExplorar.add(new ItemExplora("Python"));
-        listaItemsExplorar.add(new ItemExplora("Visual Studio Code"));
-        listaItemsExplorar.add(new ItemExplora("Android Studio"));
+        listaItemsExplorar.add(new ItemExplora("Java"));
+        listaItemsExplorar.add(new ItemExplora("AngularJS"));
+        listaItemsExplorar.add(new ItemExplora("C++"));
+        listaItemsExplorar.add(new ItemExplora("ReactJS"));
+        listaItemsExplorar.add(new ItemExplora("VueJS"));
 
     }
 }

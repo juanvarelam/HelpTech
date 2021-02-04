@@ -1,5 +1,6 @@
 package com.castelaofpe.helptech.explora;
 
+import android.opengl.GLES30;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 
 
 public class AdapterExplora extends RecyclerView.Adapter<AdapterExplora.ViewHolderExplora>{
+
 
     ArrayList<ItemExplora> listaItemsExplora;
 
