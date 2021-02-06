@@ -17,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingVertical="2dp"
+            style="@style/tipografiaApp1"
             android:paddingEnd="28dp"
             android:paddingStart="24dp"
             android:text="@string/vsctxt"

@@ -17,8 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="10:25"
-            android:textColor="@color/azulito"
-            android:textStyle="bold" />
+            style="@style/tipografiaHora" />
 
         <TextView
             android:id="@+id/frg_preguntas_texto_preguntas"
@@ -26,10 +25,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="12dp"
-            android:text="Texto pregunta"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            style="@style/tipografiaTxtPregunta"
+            android:text="Texto pregunta"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="9"
-                android:textColor="@color/black" />
+                style="@style/tipografiaVotosComents"/>
 
             <ImageButton
                 android:id="@+id/imageButton5"
@@ -65,18 +62,15 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="4dp"
                 android:text="43"
-                android:textColor="@color/black" />
+                style="@style/tipografiaVotosComents"/>
 
             <TextView
                 android:id="@+id/frg_preguntas_hagstags"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="16dp"
+                style="@style/tipografiaHagstags"
                 android:layout_weight="1"
-                android:text="#java #productividad #framework #2021"
-                android:textAlignment="viewEnd"
-                tools:ignore="RtlCompat" />
+                android:text="#java #productividad #framework #2021" />
         </LinearLayout>
 
 

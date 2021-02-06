@@ -23,7 +23,7 @@
 
         <TextView
             android:id="@+id/frg_recupera_pass_title"
-            style="@style/title"
+            style="@style/tipografiaTitulo3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="90"
@@ -51,8 +51,7 @@
             android:layout_marginRight="24dp"
             android:text="@string/subtitle_recupera_passw"
             android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="44sp"
+            style="@style/tipografiaTitulo4"
             tools:text="@string/subtitle_recupera_passw" />
 
         <TextView
@@ -64,8 +63,7 @@
             android:layout_marginRight="24dp"
             android:text="@string/info2_recupera_pass"
             android:textAlignment="center"
-            android:textColor="@color/black2"
-            android:textSize="22sp"
+            style="@style/tipografiaTitulo5"
             tools:text="@string/info2_recupera_pass" />
 
     </LinearLayout>
@@ -98,9 +96,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
+            style="@style/btns_iniciales"
+            android:textColor="@color/black"
             android:background="@drawable/btn_enviar_recupera_pass"
             android:text="@string/btn_enviar"
-            android:textSize="20sp" />
+            android:textAllCaps="false"/>
 
 
 

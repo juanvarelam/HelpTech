@@ -27,7 +27,7 @@
 
         <TextView
             android:id="@+id/mensajes_title_txt"
-            style="@style/title"
+            style="@style/tipografiaTitulo"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="80"

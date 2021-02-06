@@ -32,22 +32,22 @@
     <string name="num_ejemplo">128</string>
     <string name="lenguaje_c">C</string>
     <string name="ejemplo_votos">128 votos</string>
-    <string name="Bienvenido">Bienvenido</string>
-    <string name="inicio_sesion">Sign In</string>
-    <string name="btn_registro">Sign Up</string>
+    <string name="Bienvenido">¡Bienvenido!</string>
+    <string name="inicio_sesion">Iniciar sesión</string>
+    <string name="btn_registro">Registrarse</string>
     <string name="Notificaciones">Notificaciones</string>
     <string name="txtNotificacion">Tu notificacion</string>
     <string name="todo">TODO</string>
     <string name="explora">Explora</string>
     <string name="cerrar_sesion">Cerrar sesión</string>
-    <string name="help_tech">Help Tech</string>
-    <string name="olvidar_pass">Olvidaste tu contraseña ?</string>
-    <string name="recuerdame">Recuerdame</string>
+    <string name="help_tech">HelpTech</string>
+    <string name="olvidar_pass">¿Olvidaste tu contraseña ?</string>
+    <string name="recordar">Recordar</string>
     <string name="elegir_preferencias">Selecciona tus temas de interés</string>
     <string name="itemJavatxt">Java</string>
     <string name="vsctxt">Visual Studio Code</string>
     <string name="javatxt">Java</string>
-    <string name="act_preferencias_btn_comenzar">Comenzar!</string>
+    <string name="act_preferencias_btn_comenzar">¡Comenzar!</string>
     <string name="iniciar_sesion">Login</string>
     <string name="pregunta">Pregunta</string>
     <string name="ejemplo_fecha_pregunta">Ayer, 19:30</string>
@@ -69,5 +69,6 @@
     <string name="datos_incorrectos">Datos Incorrectos</string>
     <string name="pass_corta">Contraseña Corta</string>
     <string name="correo_enviado">Correo Enviado</string>
+    <string name="frg_register_guiño_txt">en HelpTech</string>
     />
 </resources>

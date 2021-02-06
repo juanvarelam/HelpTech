@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".perfil.ConfigFragment">
+    tools:context=".perfil.ConfigActivity">
 
     <LinearLayout
         android:id="@+id/frg_config_title_lin"
@@ -28,7 +28,7 @@
 
         <TextView
             android:id="@+id/frg_config_title"
-            style="@style/title"
+            style="@style/tipografiaTitulo3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="40"
@@ -62,6 +62,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:padding="8dp"
+                android:fontFamily="@font/rubik"
                 android:text="@string/cuenta"
                 android:textColor="@color/black"
                 android:textSize="22sp"
@@ -75,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@null"
+                android:fontFamily="@font/rubik"
                 android:padding="16dp"
                 android:text="@string/nombre_usuario"
                 android:textAlignment="viewStart"
@@ -93,6 +95,7 @@
                 android:text="@string/pass"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
+                android:fontFamily="@font/rubik"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="16sp" />
 
@@ -103,6 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@null"
+                android:fontFamily="@font/rubik"
                 android:padding="16dp"
                 android:text="@string/email"
                 android:textAlignment="viewStart"
@@ -121,6 +125,7 @@
                 android:text="@string/privacidad"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
+                android:fontFamily="@font/rubik"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="16sp" />
 
@@ -130,6 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                android:fontFamily="@font/rubik"
                 android:background="@null"
                 android:padding="16dp"
                 android:text="@string/foto_perfil"
@@ -144,6 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@null"
+                android:fontFamily="@font/rubik"
                 android:gravity="start|center_vertical"
                 android:padding="16dp"
                 android:text="@string/cerrar_sesion"
@@ -163,6 +170,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="fill_vertical"
+                    android:fontFamily="@font/rubik"
                     android:text="@string/notificaciones"
                     android:textColor="@color/black"
                     android:textSize="22sp"
