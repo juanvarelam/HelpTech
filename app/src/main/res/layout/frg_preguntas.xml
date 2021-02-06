@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".perfil.AdapterPreguntas">
+    tools:context=".perfil.PreguntasFragment">
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/frg_preguntas_recyclerPreguntas"
+        android:id="@+id/frg_preguntas_recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

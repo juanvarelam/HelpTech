@@ -8,22 +8,16 @@ import androidx.fragment.app.FragmentTransaction;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.QuickContactBadge;
 
+import com.castelaofpe.helptech.explora.ExplorarFragment;
+import com.castelaofpe.helptech.perfil.PerfilFragment;
 import com.castelaofpe.helptech.R;
-import com.castelaofpe.helptech.inicio.InicialActivity;
-import com.castelaofpe.helptech.perfil.PerfilActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     HomeFragment frgHome = new HomeFragment();
-    ExploraFragment frgExplora = new ExploraFragment();
-    CreaFragment frgCrea = new CreaFragment();
-    NotificacionesFragment frgNoti = new NotificacionesFragment();
-    PerfilActivity actPerfil = new PerfilActivity();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btnExplora.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ExplorarFragment frgExplora = new ExplorarFragment();
                 changeFragmentMain(frgExplora);
             }
         });
@@ -62,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         btnCrea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CreaFragment frgCrea = new CreaFragment();
                 changeFragmentMain(frgCrea);
             }
         });
@@ -69,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         btnNoti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                NotificacionesFragment frgNoti = new NotificacionesFragment();
                 changeFragmentMain(frgNoti);
             }
         });
@@ -76,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
         btnPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iniciaActivity(actPerfil);
+                PerfilFragment frgPerfil = new PerfilFragment();
+                changeFragmentMain(frgPerfil);
             }
         });
 
@@ -88,6 +86,15 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction trans = manager.beginTransaction();
 
         trans.replace(R.id.act_main_container, frg, "fragment_01");
+
+        trans.commit();
+    }
+
+    public void changeFragmentPerfil(Fragment frg){
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction trans = manager.beginTransaction();
+
+        trans.replace(R.id.frg_perfil_contenedor, frg, "fragment_01");
 
         trans.commit();
     }

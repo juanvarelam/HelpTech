@@ -11,7 +11,7 @@ import android.app.Activity;
         import androidx.constraintlayout.widget.ConstraintLayout;
         import androidx.recyclerview.widget.RecyclerView;
 
-        import com.castelaofpe.helptech.models.Contacto;
+        import com.castelaofpe.helptech.models.Usuario;
         import com.castelaofpe.helptech.R;
 
         import java.util.List;
@@ -20,9 +20,9 @@ public class ContactoAdapter  extends RecyclerView.Adapter<ContactoAdapter.Conta
 
     private static final int layout = R.layout.mensajes_recientes_adapter_item;
     private final Activity act;
-    private List<Contacto> items;
+    private List<Usuario> items;
 
-    public ContactoAdapter(Activity act, List<Contacto> items) {
+    public ContactoAdapter(Activity act, List<Usuario> items) {
         this.act = act;
         this.items = items;
     }
@@ -37,11 +37,11 @@ public class ContactoAdapter  extends RecyclerView.Adapter<ContactoAdapter.Conta
 
     @Override
     public void onBindViewHolder(@NonNull ContactoHolder holder, int position) {
-        final Contacto item = items.get(position);
+        final Usuario item = items.get(position);
 
-        String texto = item.getName();
+        String texto = item.getEmail();
         holder.txt.setText(texto);
-        holder.icon.setImageResource(item.getImage());
+        holder.icon.setImageResource(item.getImagen());
 
     }
 

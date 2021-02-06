@@ -2,67 +2,43 @@ package com.castelaofpe.helptech.inicio;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.StringDef;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.castelaofpe.helptech.R;
 import com.castelaofpe.helptech.principal.MainActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-/*
- * A simple {@link Fragment} subclass.
- * Use the {@link LoginFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.io.DataOutputStream;
+
+
 public class LoginFragment extends Fragment {
-/*
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public LoginFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment LoginFragment.
-
-    // TODO: Rename and change types and number of parameters
-    public static LoginFragment newInstance(String param1, String param2) {
-        LoginFragment fragment = new LoginFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    private EditText email, password;
+    private FirebaseAuth mAuth;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-*/
 
-    RegisterFragment frgRegister = new RegisterFragment();
-    MainActivity actMain = new MainActivity();
-    RecuperaPassFragment frgRecuperaPass = new RecuperaPassFragment();
+        mAuth = FirebaseAuth.getInstance();
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -71,21 +47,18 @@ public class LoginFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.frg_login, container, false);
 
-        //si pulsa Registro
-        Button btnReg = v.findViewById(R.id.frg_login_btn_registro);
-        btnReg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((InicialActivity)getActivity()).changeFragmentInicio(frgRegister);
-            }
-        });
+
+        email = v.findViewById(R.id.frg_login_email);
+        password = v.findViewById(R.id.frg_login_password);
 
         //si accede a la aplicacion
         Button btnSignIn = v.findViewById(R.id.frg_login_btn_sigin);
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((InicialActivity)getActivity()).iniciaActivity(actMain);
+
+                checkDatos();
+
             }
         });
 
@@ -93,11 +66,77 @@ public class LoginFragment extends Fragment {
         btnRecuperaPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                RecuperaPassFragment frgRecuperaPass = new RecuperaPassFragment();
                 ((InicialActivity)getActivity()).changeFragmentInicio(frgRecuperaPass);
             }
         });
 
+        ImageButton btnBack = v.findViewById(R.id.frg_login_btn_back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InicialActivity actInicial = new InicialActivity();
+                ((InicialActivity)getActivity()).iniciaActivity(actInicial);
+            }
+        });
 
         return v;
     }
+
+    private void checkDatos(){
+
+        String error = getString(R.string.datos_incorrectos);
+        Toast toast = Toast.makeText(getContext(), error,Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.TOP,0,0);
+
+        String compruebaEmail = email.getText().toString();
+        if(compruebaEmail.trim().isEmpty()){
+            toast.show();
+            return;
+        }
+        String compruebaPassword = password.getText().toString();
+        if(compruebaPassword.trim().isEmpty()){
+            toast.show();
+            return;
+        }
+
+        inicioSesion(compruebaEmail, compruebaPassword);
+
+
+    }
+
+    private void inicioSesion(String email, String password){
+
+        final String fallo = getString(R.string.datos_incorrectos);
+
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d("OK", "Sesion iniciada");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            MainActivity actMain = new MainActivity();
+                            ((InicialActivity)getActivity()).iniciaActivity(actMain);
+
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.e("ERROR", "No se pudo iniciar sesion");
+                            Toast toast = Toast.makeText(getContext(), fallo,Toast.LENGTH_SHORT);
+                            toast.show();;
+                            updateUI(null);
+                            // ...
+                        }
+
+                        // ...
+                    }
+                });
+    }
+
+
+    private void updateUI(FirebaseUser currentUser) {
+        Log.i("User:",""+currentUser);
+    }
+
 }

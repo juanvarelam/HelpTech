@@ -12,6 +12,7 @@
         android:id="@+id/frg_explora__sup_layout"
         android:layout_width="442dp"
         android:layout_height="57dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="215dp"
         android:background="@drawable/supbar"
         android:orientation="horizontal"
@@ -24,23 +25,11 @@
         app:layout_constraintVertical_bias="0.117">
 
         <ImageButton
-            android:id="@+id/frg_login_btn_back"
-            android:layout_width="43dp"
+            android:id="@+id/frg_register_btn_back"
+            android:layout_width="60dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="10"
             android:background="@null"
             android:src="@drawable/ic_back" />
-
-        <Button
-            android:id="@+id/frg_login_btn_registro"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="230dp"
-            android:layout_weight="10"
-            android:backgroundTint="@color/yellow"
-            android:text="@string/iniciar_sesion"
-            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -75,7 +64,7 @@
         app:layout_constraintVertical_bias="0.474">
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/frg_registro_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="57dp"
@@ -86,29 +75,29 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/frg_registro_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="57dp"
             android:layout_marginTop="40dp"
             android:drawableEnd="@drawable/ic_candado"
             android:ems="10"
-            android:hint="@string/pass"
+            android:hint="@string/pass_reg"
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/editTextTextPassword3"
+            android:id="@+id/frg_registro_confirm_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="57dp"
             android:layout_marginTop="40dp"
             android:drawableEnd="@drawable/ic_candado"
             android:ems="10"
-            android:hint="@string/pass"
+            android:hint="@string/pass_reg"
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/frg_login_btn_sigin"
+            android:id="@+id/frg_registro_btn_sigin"
             android:layout_width="189dp"
             android:layout_height="81dp"
             android:layout_marginHorizontal="147dp"

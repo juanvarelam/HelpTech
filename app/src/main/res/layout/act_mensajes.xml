@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/mensajes_back_btn"
+            android:id="@+id/act_msg_mensajes_back_btn"
             android:layout_width="64dp"
             android:layout_height="match_parent"
             android:layout_weight="10"

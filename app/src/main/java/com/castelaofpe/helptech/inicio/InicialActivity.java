@@ -11,19 +11,43 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.view.View;
 
+
 import com.castelaofpe.helptech.R;
 
 public class InicialActivity extends AppCompatActivity {
 
-    InicialFragment frgInicial    = new InicialFragment();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_inicial);
 
-        changeFragmentInicio(frgInicial);
+       // changeFragmentInicio(frgInicial);
+
+        initButtons();
         
+    }
+
+    private void initButtons() {
+        Button btnLogin = findViewById(R.id.act_inicial_btn_inicio);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginFragment    frgLogin    = new LoginFragment();
+                changeFragmentInicio(frgLogin);
+            }
+        });
+
+        Button btnReg = findViewById(R.id.act_inicial_btn_registro);
+        btnReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RegisterFragment frgRegister = new RegisterFragment();
+                changeFragmentInicio(frgRegister);
+            }
+        });
     }
 
     public void changeFragmentInicio(Fragment frg){

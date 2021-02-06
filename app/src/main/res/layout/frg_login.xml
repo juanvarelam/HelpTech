@@ -30,16 +30,6 @@
             android:background="@null"
             android:src="@drawable/ic_back" />
 
-        <Button
-            android:id="@+id/frg_login_btn_registro"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="230dp"
-            android:layout_weight="10"
-            android:backgroundTint="@color/yellow"
-            android:text="@string/registro"
-            android:textSize="20sp" />
-
     </LinearLayout>
 
     <TextView
@@ -74,7 +64,7 @@
         app:layout_constraintVertical_bias="0.333">
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/frg_login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="57dp"
@@ -85,7 +75,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/frg_login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="57dp"

@@ -1,52 +1,67 @@
 package com.castelaofpe.helptech.perfil;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.castelaofpe.helptech.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
+public class AdapterPreguntas extends RecyclerView.Adapter<AdapterPreguntas.PreguntaViewHolder> {
 
-public class AdapterPreguntas extends Fragment {
+    ArrayList<Pregunta> listaPreguntas;
 
-    View v;
-    private RecyclerView myRecyclerView;
-    private List<Pregunta> lstPregunta;
+    public AdapterPreguntas(ArrayList<Pregunta> listaPreguntas) {
 
-    public AdapterPreguntas() {
+        this.listaPreguntas = listaPreguntas;
     }
 
-    @Nullable
+    @NonNull
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.frg_preguntas, container, false);
-        myRecyclerView = (RecyclerView) v.findViewById(R.id.frg_preguntas_recyclerPreguntas);
-        AdapterRecyclerTabsPerfil recyclerTabsPerfil = new AdapterRecyclerTabsPerfil(getContext(), lstPregunta);
-        myRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        myRecyclerView.setAdapter(recyclerTabsPerfil);
-        return v;
+    public PreguntaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_preguntas, null, false);
+        return new PreguntaViewHolder(v);
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onBindViewHolder(@NonNull PreguntaViewHolder holder, int position) {
+        String fecha = listaPreguntas.get(position).getFecha();
+        String texto = listaPreguntas.get(position).getTexto();
+        String comentarios = listaPreguntas.get(position).getComentarios();
+        String votos = listaPreguntas.get(position).getVotos();
+        String hagstags = listaPreguntas.get(position).getHagstags();
 
-        lstPregunta = new ArrayList<>();
-        lstPregunta.add(new Pregunta("10:24", "¿cómo empezar a programar?", 4, 23, "#programar #junior"));
-        lstPregunta.add(new Pregunta("10:24", "¿cómo empezar a programar?", 4, 23, "#programar #junior"));
-        lstPregunta.add(new Pregunta("10:24", "¿cómo empezar a programar?", 4, 23, "#programar #junior"));
-        lstPregunta.add(new Pregunta("10:24", "¿cómo empezar a programar?", 4, 23, "#programar #junior"));
+        holder.txtFecha.setText(fecha);
+        holder.txtTexto.setText(texto);
+        holder.txtComentarios.setText(comentarios);
+        holder.txtVotos.setText(votos);
+        holder.txtHagstags.setText(hagstags);
+    }
 
+    @Override
+    public int getItemCount() {
+        return listaPreguntas.size();
+    }
 
+    public class PreguntaViewHolder extends RecyclerView.ViewHolder {
+        TextView txtFecha, txtTexto, txtComentarios, txtVotos, txtHagstags;
+
+        public PreguntaViewHolder(@NonNull View itemView) {
+            super(itemView);
+            txtFecha = itemView.findViewById(R.id.frg_preguntas_fecha);
+            txtTexto = itemView.findViewById(R.id.frg_preguntas_texto_preguntas);
+            txtComentarios = itemView.findViewById(R.id.frg_preguntas_numero_comentarios);
+            txtVotos = itemView.findViewById(R.id.frg_preguntas_numero_votos);
+            txtHagstags = itemView.findViewById(R.id.frg_preguntas_hagstags);
+        }
     }
 }
