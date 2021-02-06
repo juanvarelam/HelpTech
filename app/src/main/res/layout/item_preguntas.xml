@@ -73,8 +73,8 @@
                 android:id="@+id/frg_preguntas_hagstags"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/tipografiaHagstags"
                 android:textColor="@color/gris"
+                android:textAlignment="textEnd"
                 android:layout_weight="1"
                 android:text="#java #productividad #framework #2021" />
         </LinearLayout>
