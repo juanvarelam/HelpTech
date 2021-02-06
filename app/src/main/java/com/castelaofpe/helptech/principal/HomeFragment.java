@@ -7,9 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.castelaofpe.helptech.R;
 import com.castelaofpe.helptech.explora.ExplorarFragment;
+import com.castelaofpe.helptech.perfil.MensajesActivity;
 
 
 public class HomeFragment extends Fragment {
@@ -47,26 +49,24 @@ public class HomeFragment extends Fragment {
         }
     }
 
-    ExplorarFragment frgExplora = new ExplorarFragment();
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-       // View v = inflater.inflate(R.layout.frg_home, container, false);
+        View v = inflater.inflate(R.layout.frg_home, container, false);
 
-       // Button btnBuscar = v.findViewById(R.id.frg_main_menu_buscar_btn);
-       // btnBuscar.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-          //  public void onClick(View v) {
-      //          ((MainActivity)getActivity()).changeFragmentMain(frgExplora);
-      //      }
-      //  });
+        ImageButton btnMensajes = v.findViewById(R.id.frg_home_btn_mensajes);
+        btnMensajes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MensajesActivity actMsg = new MensajesActivity();
+                ((MainActivity)getActivity()).iniciaActivity(actMsg);
+            }
+        });
 
-
-
-
-        return inflater.inflate(R.layout.frg_home, container, false);
+        return v;
     }
 }
