@@ -32,6 +32,7 @@
             android:layout_width="238dp"
             android:layout_height="64dp"
             android:layout_weight="60"
+            android:textColor="@color/black"
             android:gravity="center_horizontal|center_vertical"
             android:textStyle="bold"
             tools:text="@string/Notificaciones" />
@@ -40,9 +41,8 @@
             android:id="@+id/frg_notificacion_btn_user"
             android:layout_width="64dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="30"
             android:background="@null"
-            android:contentDescription="TODO"
             android:src="@drawable/ic_usuario_de_perfil" />
 
     </LinearLayout>

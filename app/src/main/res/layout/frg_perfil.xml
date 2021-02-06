@@ -55,7 +55,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="70"
+                android:layout_weight="67"
                 android:orientation="vertical"
                 android:paddingEnd="3dp"
                 android:paddingBottom="10dp"
@@ -89,10 +89,19 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="120dp"
                 android:layout_weight="30"
+                android:paddingStart="4dp"
                 android:orientation="vertical"
-                android:weightSum="30" />
+                android:weightSum="33" >
+
+                <ImageView
+                    android:id="@+id/frg_perfil_imagen_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/foto_perfil"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
@@ -142,6 +151,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
