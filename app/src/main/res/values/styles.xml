@@ -34,5 +34,15 @@
         <item name="android:paddingHorizontal">0dp</item>
     </style>
 
+    <style name="tipografiaTitulo" parent="android:TextAppearance.DeviceDefault.Large">
+        <item name="fontFamily">@font/kaushanscript_regular</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="tipografiaApp1" parent="android:TextAppearance.DeviceDefault.Large">
+        <item name="fontFamily">@font/kaushanscript_regular</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
 
 </resources>
