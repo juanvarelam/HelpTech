@@ -26,7 +26,7 @@
 
         <TextView
             android:id="@+id/act_pregunta_detalle_txt"
-            style="@style/tipografiaTitulo3"
+            style="@style/tipografiaTituloPestañaActiva"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginEnd="32dp"
@@ -66,7 +66,7 @@
                 android:text="@string/user"
                 android:textColor="@color/black"
                 android:textSize="22sp"
-                android:fontFamily="@font/rubik"
+                android:fontFamily="@font/robotoslab_regular"
                 android:textStyle="bold"
                 app:drawableStartCompat="@drawable/programador" />
 
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:fontFamily="@font/rubik"
+            android:fontFamily="@font/robotoslab_regular"
             android:text="@string/ejemplo_detalle"
             android:textColor="@color/black"
             android:textSize="22sp"
@@ -160,7 +160,7 @@
         android:text="@string/respuestas"
         android:textColor="@color/black"
         android:textSize="24sp"
-        android:fontFamily="@font/rubik"
+        android:fontFamily="@font/robotoslab_regular"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

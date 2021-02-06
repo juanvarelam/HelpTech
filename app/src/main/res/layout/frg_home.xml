@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout3"
-    style="@style/tipografiaTitulo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".principal.HomeFragment">
@@ -21,7 +20,7 @@
 
         <TextView
             android:id="@+id/act_pregunta_detalle_txt"
-            style="@style/tipografiaTitulo"
+            style="@style/tipografiaTituloPestañaActiva"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_weight="85"

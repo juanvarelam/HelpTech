@@ -28,7 +28,7 @@
 
         <TextView
             android:id="@+id/frg_config_title"
-            style="@style/tipografiaTitulo3"
+            style="@style/tipografiaTituloPestañaActiva"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="40"
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:padding="8dp"
-                android:fontFamily="@font/rubik"
+                android:fontFamily="@font/robotoslab_regular"
                 android:text="@string/cuenta"
                 android:textColor="@color/black"
                 android:textSize="22sp"
@@ -71,7 +71,6 @@
 
             <Button
                 android:id="@+id/frg_config_nombre_btn"
-                style="@style/AppTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -86,7 +85,6 @@
 
             <Button
                 android:id="@+id/frg_config_pass_btn"
-                style="@style/AppTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -101,7 +99,6 @@
 
             <Button
                 android:id="@+id/frg_config_email_btn"
-                style="@style/AppTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -116,7 +113,6 @@
 
             <Button
                 android:id="@+id/frg_config_privacidad_btn"
-                style="@style/AppTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -131,7 +127,6 @@
 
             <Button
                 android:id="@+id/frg_config_foto_btn"
-                style="@style/AppTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -170,7 +165,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="fill_vertical"
-                    android:fontFamily="@font/rubik"
+                    android:fontFamily="@font/robotoslab_regular"
                     android:text="@string/notificaciones"
                     android:textColor="@color/black"
                     android:textSize="22sp"

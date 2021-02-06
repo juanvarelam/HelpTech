@@ -23,7 +23,7 @@
 
         <TextView
             android:id="@+id/frg_recupera_pass_title"
-            style="@style/tipografiaTitulo3"
+            style="@style/tipografiaTituloPestañaActiva"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="90"
@@ -51,7 +51,7 @@
             android:layout_marginRight="24dp"
             android:text="@string/subtitle_recupera_passw"
             android:textAlignment="center"
-            style="@style/tipografiaTitulo4"
+            style="@style/tipografiaTituloInfo"
             tools:text="@string/subtitle_recupera_passw" />
 
         <TextView
@@ -61,9 +61,10 @@
             android:layout_marginLeft="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="24dp"
+            android:textSize="24sp"
             android:text="@string/info2_recupera_pass"
             android:textAlignment="center"
-            style="@style/tipografiaTitulo5"
+            android:textColor="@color/black"
             tools:text="@string/info2_recupera_pass" />
 
     </LinearLayout>
@@ -86,7 +87,7 @@
             android:inputType="textEmailAddress"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:textAlignment="center"
             android:textSize="24sp" />
 
@@ -96,7 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            style="@style/btns_iniciales"
+            style="@style/TipografiaBotones"
             android:textColor="@color/black"
             android:background="@drawable/btn_enviar_recupera_pass"
             android:text="@string/btn_enviar"

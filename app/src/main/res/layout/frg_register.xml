@@ -36,8 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:text="@string/btn_registro"
-        style="@style/tipografiaTituloRegister"
-        android:textAppearance="@style/tipografiaTituloFrgResgister"
+        style="@style/tipografiaTituloInfo"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -47,7 +46,7 @@
 
     <TextView
         android:id="@+id/textView4"
-        style="@style/tipografiaGuiñoFrgResgister"
+        style="@style/tipografiaGuiño"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="90dp"
@@ -107,7 +106,7 @@
 
         <Button
             android:id="@+id/frg_registro_btn_sigin"
-            style="@style/btns_iniciales"
+            style="@style/TipografiaBotones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

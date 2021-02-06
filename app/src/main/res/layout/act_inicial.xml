@@ -29,7 +29,7 @@
 
         <TextView
             android:id="@+id/textView2"
-            style="@style/tipografiaTitulo"
+            style="@style/tipografiaTituloPestañaActiva"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
@@ -46,7 +46,7 @@
 
             <Button
                 android:id="@+id/act_inicial_btn_inicio"
-                style="@style/btns_iniciales"
+                style="@style/TipografiaBotones"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -61,7 +61,7 @@
 
             <Button
                 android:id="@+id/act_inicial_btn_registro"
-                style="@style/btns_iniciales"
+                style="@style/TipografiaBotones"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

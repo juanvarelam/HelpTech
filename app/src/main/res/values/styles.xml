@@ -14,23 +14,6 @@
 
     </style>
 
-    <style name="tipografiaTituloFrgResgister" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">35dp</item>
-        <item name="android:textStyle">normal</item>
-    </style>
-
-    <style name="tipografiaGuiñoFrgResgister" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/courgette_regular</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="appName" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/courgette_regular</item>
-        <item name="android:textSize">32sp</item>
-    </style>
-
     <style name="btnsPerfil">btnsPerfil
         <item name="android:textAllCaps">false</item>
         <item name="android:textSize">18sp</item>
@@ -41,18 +24,14 @@
         <item name="android:paddingHorizontal">0dp</item>
     </style>
 
-    <style name="tipografiaTitulo" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/courgette_regular</item>
-        <item name="android:textSize">32sp</item>
+    <style name="tipografiaGuiño" parent="android:TextAppearance.DeviceDefault.Large">
+        <item name="fontFamily">@font/robotoslab_regular</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="tipografiaTitulo2" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">32sp</item>
-    </style>
-
-    <style name="tipografiaApp1" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
+    <style name="tipografiaTituloPestañaActiva" parent="android:TextAppearance.DeviceDefault.Large">
+        <item name="fontFamily">@font/robotoslab_regular</item>
         <item name="android:textSize">32sp</item>
     </style>
 
@@ -63,93 +42,13 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="tipografiaTxtPregunta" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="tipografiaVotosComents" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">16sp</item>
-    </style>
-
-    <style name="tipografiaHagstags" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:layout_marginStart">16dp</item>
-        <item name="android:textAlignment">viewEnd</item>
-        <item name="android:textColor">@color/gris</item>
-    </style>
-
-    <style name="tipografiaNombreUsuarioMsjListaAdapter" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="tipografiaHoraMsjListaAdapter" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="tipografiaMensajeMsjListaAdapter" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/gris</item>
-    </style>
-
-    <style name="tipografiaMsjRecientesNombreUsuario" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/black</item>
-    </style>
-
-    <style name="tipografiaRespuestasAdapterUsertxt" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="tipografiaRespuestasAdapterHora" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="tipografiaRespuestasAdapterRespuestatxt" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/gris</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="tipografiaRespuestasAdapterVotos" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="tipografiaRespuestasAdapterVotarBtn" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">19sp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="tipografiaTituloRegister">
-        <item name="fontFamily">@font/rubik</item>
+    <style name="tipografiaTituloInfo">
+        <item name="fontFamily">@font/robotoslab_regular</item>
         <item name="android:textSize">48sp</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="btns_iniciales">
+    <style name="TipografiaBotones">
         <item name="fontFamily">@font/rubik</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">24sp</item>
@@ -159,24 +58,5 @@
         <item name="fontFamily">@font/rubik</item>
         <item name="android:textStyle">bold</item>
     </style>
-
-    <style name="tipografiaTitulo3">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">28sp</item>
-        <item name="android:textColor">@color/black</item>
-    </style>
-
-    <style name="tipografiaTitulo4">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">44sp</item>
-        <item name="android:textColor">@color/black</item>
-    </style>
-
-    <style name="tipografiaTitulo5">
-        <item name="fontFamily">@font/rubik</item>
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/black</item>
-    </style>
-
 
 </resources>

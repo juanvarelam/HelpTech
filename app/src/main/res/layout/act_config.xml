@@ -28,7 +28,7 @@
 
         <TextView
             android:id="@+id/act_config_title"
-            style="@style/tipografiaTitulo"
+            style="@style/tipografiaTituloPestañaActiva"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="40"
@@ -70,7 +70,7 @@
 
             <Button
                 android:id="@+id/act_config_nombre_btn"
-                style="@style/AppTheme"
+                android:fontFamily="@font/robotoslab_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -79,13 +79,12 @@
                 android:text="@string/nombre_usuario"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="16sp" />
 
             <Button
                 android:id="@+id/act_config_pass_btn"
-                style="@style/AppTheme"
                 android:layout_width="match_parent"
+                android:fontFamily="@font/robotoslab_regular"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/btn_sombra"
@@ -93,12 +92,11 @@
                 android:text="@string/pass"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="16sp" />
 
             <Button
                 android:id="@+id/act_config_email_btn"
-                style="@style/AppTheme"
+                android:fontFamily="@font/robotoslab_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -107,12 +105,11 @@
                 android:text="@string/email"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="16sp" />
 
             <Button
                 android:id="@+id/act_config_privacidad_btn"
-                style="@style/AppTheme"
+                android:fontFamily="@font/robotoslab_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -121,12 +118,11 @@
                 android:text="@string/privacidad"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="16sp" />
 
             <Button
                 android:id="@+id/act_config_foto_btn"
-                style="@style/AppTheme"
+                android:fontFamily="@font/robotoslab_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -135,7 +131,6 @@
                 android:text="@string/foto_perfil"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="16sp" />
 
             <Button
@@ -148,6 +143,7 @@
                 android:padding="16dp"
                 android:text="@string/cerrar_sesion"
                 android:textAllCaps="false"
+                android:fontFamily="@font/robotoslab_regular"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -164,6 +160,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="fill_vertical"
                     android:text="@string/notificaciones"
+                    android:fontFamily="@font/robotoslab_regular"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     android:textStyle="bold"

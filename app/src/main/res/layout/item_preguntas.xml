@@ -25,7 +25,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="12dp"
-            style="@style/tipografiaTxtPregunta"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/rubik"
             android:text="Texto pregunta"/>
 
         <LinearLayout
@@ -46,7 +49,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="9"
-                style="@style/tipografiaVotosComents"/>
+                android:textSize="16sp"
+                android:textColor="@color/black" />
 
             <ImageButton
                 android:id="@+id/imageButton5"
@@ -62,13 +66,15 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="4dp"
                 android:text="43"
-                style="@style/tipografiaVotosComents"/>
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/frg_preguntas_hagstags"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/tipografiaHagstags"
+                android:textColor="@color/gris"
                 android:layout_weight="1"
                 android:text="#java #productividad #framework #2021" />
         </LinearLayout>
