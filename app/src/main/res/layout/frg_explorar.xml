@@ -61,6 +61,8 @@
             android:id="@+id/frg_explorar_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="12dp"
             android:layout_marginTop="16dp" />
     </LinearLayout>
 
