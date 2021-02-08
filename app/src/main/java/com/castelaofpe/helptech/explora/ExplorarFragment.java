@@ -45,7 +45,7 @@ public class ExplorarFragment extends Fragment {
         View v = inflater.inflate(R.layout.frg_explorar, container, false);
         listaItemsExplorar = new ArrayList<>();
         recyclerExplorar = v.findViewById(R.id.frg_explorar_recyclerView);
-        recyclerExplorar.setLayoutManager(new StaggeredGridLayoutManager( 3, StaggeredGridLayoutManager.VERTICAL));
+        recyclerExplorar.setLayoutManager(new StaggeredGridLayoutManager( 2, StaggeredGridLayoutManager.VERTICAL));
 
         llenarLista();
 
