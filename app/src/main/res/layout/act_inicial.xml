@@ -47,30 +47,30 @@
             <Button
                 android:id="@+id/act_inicial_btn_inicio"
                 style="@style/TipografiaBotones"
-                android:layout_width="wrap_content"
+                android:layout_width="184dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_round_inicio_blanco"
                 android:paddingHorizontal="32dp"
                 android:paddingVertical="14dp"
-                android:background="@drawable/btn_round_inicio_blanco"
                 android:text="@string/inicio_sesion"
-                android:textColor="@color/black"
                 android:textAllCaps="false"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/act_inicial_btn_registro"
                 style="@style/TipografiaBotones"
-                android:layout_width="wrap_content"
+                android:layout_width="184dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:background="@drawable/btn_round_inico_negro_"
                 android:paddingHorizontal="32dp"
                 android:paddingVertical="14dp"
-                android:background="@drawable/btn_round_inico_negro_"
                 android:text="@string/btn_registro"
-                android:textColor="@color/white"
                 android:textAllCaps="false"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>

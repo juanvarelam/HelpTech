@@ -73,6 +73,8 @@
     <string name="pass_reg">Repite la Contraseña</string>
     <string name="recordar">Recordar</string>
     <string name="vsctxt">Visual Studio Code</string>
-
+    <string name="datos_incorrectos">Datos Incorrectos</string>
+    <string name="correo_enviado">Correo Enviado</string>
+    <string name="pass_corta">Contraseña Corta</string>
     />
 </resources>
