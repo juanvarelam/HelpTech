@@ -27,7 +27,7 @@
 
         <TextView
             android:id="@+id/mensajes_title_txt"
-            style="@style/title"
+            style="@style/tipografiaTituloPestañaActiva"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="80"
@@ -70,6 +70,7 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:fontFamily="@font/robotoslab_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"

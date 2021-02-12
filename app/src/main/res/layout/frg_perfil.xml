@@ -21,15 +21,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
 
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_weight="1"
+                android:layout_weight="90"
+                android:fontFamily="@font/robotoslab_regular"
                 android:text="@string/nombre_perfil"
                 android:textAlignment="center"
                 android:textColor="@color/black"
@@ -37,7 +39,8 @@
 
             <ImageButton
                 android:id="@+id/frg_perfil_btn_config"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="10"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/yellow"
                 app:srcCompat="@drawable/ic_ajustes" />
@@ -53,8 +56,8 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="70"
+                android:layout_height="wrap_content"
+                android:layout_weight="67"
                 android:orientation="vertical"
                 android:paddingEnd="3dp"
                 android:paddingBottom="10dp"
@@ -65,6 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
+                    android:fontFamily="@font/robotoslab_regular"
                     android:text="@string/nombre_datos_perfil"
                     android:textAlignment="center"
                     android:textColor="@color/black"
@@ -76,6 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="4dp"
+                    android:fontFamily="@font/rubik"
                     android:text="@string/descripcion_perfil"
                     android:textAlignment="textStart"
                     android:textColor="@color/black2"
@@ -89,7 +94,17 @@
                 android:layout_height="match_parent"
                 android:layout_weight="30"
                 android:orientation="vertical"
-                android:weightSum="30" />
+                android:paddingEnd="3dp"
+                android:paddingBottom="10dp"
+                android:weightSum="30">
+
+                <ImageView
+                    android:id="@+id/frg_perfil_foto_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/imagen_forma_circular"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
@@ -108,6 +123,7 @@
             android:id="@+id/frg_perfil_btn_preguntas"
             style="@style/btnsPerfil"
             android:layout_width="0dp"
+            android:fontFamily="@font/robotoslab_regular"
             android:layout_height="wrap_content"
             android:layout_weight="33"
             android:text="@string/frg_perfil_btnPreguntas" />
@@ -115,6 +131,7 @@
         <Button
             android:id="@+id/frg_perfil_btn_respuestas"
             style="@style/btnsPerfil"
+            android:fontFamily="@font/robotoslab_regular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="33"
@@ -137,6 +154,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

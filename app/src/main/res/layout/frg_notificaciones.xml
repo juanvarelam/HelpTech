@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="8dp"
     android:background="#FFFFFF"
-    tools:context=".perfil.ConfigFragment">
+    tools:context=".perfil.ConfigActivity">
 
     <LinearLayout
         android:id="@+id/frg_config_title_lin"
@@ -29,12 +28,12 @@
 
         <TextView
             android:id="@+id/frg_notificacion_title"
-            style="@style/title"
+            style="@style/tipografiaTituloPestañaActiva"
             android:layout_width="238dp"
             android:layout_height="64dp"
             android:layout_weight="60"
+            android:textColor="@color/black"
             android:gravity="center_horizontal|center_vertical"
-            android:text=""
             android:textStyle="bold"
             tools:text="@string/Notificaciones" />
 
@@ -42,9 +41,8 @@
             android:id="@+id/frg_notificacion_btn_user"
             android:layout_width="64dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="30"
             android:background="@null"
-            android:contentDescription="TODO"
             android:src="@drawable/ic_usuario_de_perfil" />
 
     </LinearLayout>

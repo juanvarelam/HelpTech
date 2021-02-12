@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="39dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:background="@drawable/background_item_explora"
-        android:elevation="12dp"
-        android:orientation="vertical">
+        android:elevation="12dp">
 
         <TextView
             android:id="@+id/nombreItemExplora"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingVertical="2dp"
-            android:paddingEnd="28dp"
-            android:paddingStart="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/rubik"
+            android:paddingHorizontal="24dp"
             android:text="@string/vsctxt"
+            android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="26sp" />
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

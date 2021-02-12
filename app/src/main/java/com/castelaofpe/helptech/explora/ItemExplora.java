@@ -1,5 +1,7 @@
 package com.castelaofpe.helptech.explora;
 
+import androidx.annotation.NonNull;
+
 public class ItemExplora {
 
     private String nombre;
@@ -17,5 +19,11 @@ public class ItemExplora {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

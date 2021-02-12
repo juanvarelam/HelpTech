@@ -11,7 +11,6 @@
 
     <TextView
         android:id="@+id/textView12"
-        style="@style/appName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -19,6 +18,7 @@
         android:gravity="center"
         android:padding="4dp"
         android:text="@string/help_tech"
+        style="@style/tipografiaTituloPestañaActiva"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/seleccion_preferencias"
         android:paddingStart="24dp"
+        android:fontFamily="@font/robotoslab_regular"
         android:paddingTop="16dp"
         android:paddingEnd="24dp"
         android:layout_marginTop="8dp"
@@ -67,7 +68,8 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="22sp"
-        android:paddingHorizontal="18dp"
+        style="@style/TipografiaBotones"
+        android:paddingHorizontal="24dp"
         android:paddingVertical="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/recycler_preferencias"

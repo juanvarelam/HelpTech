@@ -13,13 +13,14 @@
         android:background="@drawable/supbar"
         android:orientation="vertical"
         android:weightSum="100"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/frg_recupera_pass_title"
-            style="@style/title"
+            style="@style/tipografiaTituloPestañaActiva"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="90"
@@ -49,8 +50,9 @@
     <LinearLayout
         android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
@@ -59,6 +61,8 @@
             android:id="@+id/frg_explorar_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="12dp"
             android:layout_marginTop="16dp" />
     </LinearLayout>
 

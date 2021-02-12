@@ -45,7 +45,7 @@ public class ExplorarFragment extends Fragment {
         View v = inflater.inflate(R.layout.frg_explorar, container, false);
         listaItemsExplorar = new ArrayList<>();
         recyclerExplorar = v.findViewById(R.id.frg_explorar_recyclerView);
-        recyclerExplorar.setLayoutManager(new StaggeredGridLayoutManager( 3, StaggeredGridLayoutManager.VERTICAL));
+        recyclerExplorar.setLayoutManager(new StaggeredGridLayoutManager(2, GridLayoutManager.VERTICAL));
 
         llenarLista();
 
@@ -67,5 +67,20 @@ public class ExplorarFragment extends Fragment {
         listaItemsExplorar.add(new ItemExplora("ReactJS"));
         listaItemsExplorar.add(new ItemExplora("VueJS"));
 
+
+        /*=================================================================
+
+        División de espacios para columnas
+
+        int contador = 0;
+        for (int i=0; i<listaItemsExplorar.size(); i++) {
+            String  item = listaItemsExplorar.get(i).toString();
+            if(item.length() >= contador) {
+                contador = item.length();
+            }
+        }
+        int cols = 25/contador;
+
+        */
     }
 }

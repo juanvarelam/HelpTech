@@ -26,7 +26,7 @@
 
         <TextView
             android:id="@+id/act_pregunta_detalle_txt"
-            style="@style/title"
+            style="@style/tipografiaTituloPestañaActiva"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginEnd="32dp"
@@ -66,6 +66,7 @@
                 android:text="@string/user"
                 android:textColor="@color/black"
                 android:textSize="22sp"
+                android:fontFamily="@font/robotoslab_regular"
                 android:textStyle="bold"
                 app:drawableStartCompat="@drawable/programador" />
 
@@ -75,6 +76,8 @@
                 android:layout_height="match_parent"
                 android:gravity="fill_vertical|end"
                 android:text="@string/ejemplo_fecha_pregunta"
+                android:fontFamily="@font/rubik"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
         </LinearLayout>
@@ -84,6 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
+            android:fontFamily="@font/robotoslab_regular"
             android:text="@string/ejemplo_detalle"
             android:textColor="@color/black"
             android:textSize="22sp"
@@ -94,6 +98,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
+            android:fontFamily="@font/rubik"
             android:text="@string/ejemplo_txt"
             android:textSize="18sp" />
 
@@ -109,6 +114,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:layout_weight="40"
+                android:fontFamily="@font/rubik"
                 android:background="@drawable/supbar"
                 android:gravity="center_horizontal|center_vertical"
                 android:text="@string/ejemplo_votos"
@@ -122,6 +128,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:layout_weight="40"
+                android:fontFamily="@font/rubik"
                 android:background="@drawable/supbar"
                 android:gravity="center_horizontal|center_vertical"
                 android:text="@string/ejemplo_respuestas"
@@ -135,6 +142,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:layout_weight="20"
+                android:fontFamily="@font/rubik"
                 android:background="@drawable/btn_round"
                 android:padding="8dp"
                 android:text="@string/lenguaje_c"
@@ -152,6 +160,7 @@
         android:text="@string/respuestas"
         android:textColor="@color/black"
         android:textSize="24sp"
+        android:fontFamily="@font/robotoslab_regular"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
