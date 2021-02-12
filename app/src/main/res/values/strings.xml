@@ -65,6 +65,14 @@
     <string name="act_perfi_btn_ajustes">Ajustes</string>
     <string name="act_perfil_titulo_pregunta">Titulo pregunta</string>
     <string name="act_perfil_fechaPregunta">11:21</string>
+    <string name="txt_creaPregunta">Escribe aquí tu pregunta...</string>
+    <string name="btn_crea_post">Publicar</string>
+    <string name="frg_perfil_btnPreguntas">Preguntas</string>
+    <string name="frg_perfil_btnRespuestas">Preguntas</string>
+    <string name="frg_register_guiño_txt">in HelpTech</string>
+    <string name="pass_reg">Repite la Contraseña</string>
+    <string name="recordar">Recordar</string>
+    <string name="vsctxt">Visual Studio Code</string>
 
     />
 </resources>
