@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    app:background="@drawable/supbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/seleccion_preferencias"
+        android:fontFamily="@font/robotoslab_regular"
+        android:paddingStart="24dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="16dp"
+        android:text="@string/frg_foto_descripcion_escoger_foto"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView7"
+        style="@style/tipografiaTituloPestañaActiva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/help_tech"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/transparente"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:srcCompat="@drawable/camara" />
+
+    <Button
+        android:id="@+id/act_foto_descripcion_abrir_camara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/supbar"
+        android:backgroundTint="@color/white"
+        style="@style/TipografiaBotones"
+        android:textAllCaps="false"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="4dp"
+        android:textColor="@color/black"
+        android:text="@string/act_foto_descripcion_btn_abrirCamara"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <Button
+        android:id="@+id/act_foto_descripcion_subir_foto"
+        style="@style/TipografiaBotones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/supbar"
+        android:backgroundTint="@color/black"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="4dp"
+        android:text="@string/act_foto_descripcion_btn_subirFoto"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/act_foto_descripcion_abrir_camara"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="@+id/act_foto_descripcion_abrir_camara"
+        app:layout_constraintTop_toBottomOf="@+id/act_foto_descripcion_abrir_camara" />
+
+    <Button
+        style="@style/TipografiaBotones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/btn_comenzar"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:text="@string/act_foto_descripcion_btn_siguiente"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/act_foto_descripcion_subir_foto"
+        app:layout_constraintStart_toStartOf="@+id/act_foto_descripcion_subir_foto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
