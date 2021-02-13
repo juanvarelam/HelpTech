@@ -69,7 +69,7 @@
     <string name="txt_creaPregunta">Escribe aquí tu pregunta...</string>
     <string name="btn_crea_post">Publicar</string>
     <string name="frg_perfil_btnPreguntas">Preguntas</string>
-    <string name="frg_perfil_btnRespuestas">Preguntas</string>
+    <string name="frg_perfil_btnRespuestas">Respuestas</string>
     <string name="frg_register_guiño_txt">in HelpTech</string>
     <string name="pass_reg">Repite la Contraseña</string>
     <string name="recordar">Recordar</string>

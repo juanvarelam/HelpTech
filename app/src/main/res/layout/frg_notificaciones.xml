@@ -18,32 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/frg_notificacion_btn_back"
-            android:layout_width="64dp"
-            android:layout_height="match_parent"
-            android:layout_weight="10"
-            android:background="@null"
-            app:srcCompat="@drawable/ic_back" />
-
         <TextView
             android:id="@+id/frg_notificacion_title"
             style="@style/tipografiaTituloPestañaActiva"
-            android:layout_width="238dp"
+            android:layout_width="match_parent"
             android:layout_height="64dp"
             android:layout_weight="60"
+            android:gravity="center"
             android:textColor="@color/black"
-            android:gravity="center_horizontal|center_vertical"
             android:textStyle="bold"
             tools:text="@string/Notificaciones" />
 
-        <ImageButton
-            android:id="@+id/frg_notificacion_btn_user"
-            android:layout_width="64dp"
-            android:layout_height="match_parent"
-            android:layout_weight="30"
-            android:background="@null"
-            android:src="@drawable/ic_usuario_de_perfil" />
 
     </LinearLayout>
 

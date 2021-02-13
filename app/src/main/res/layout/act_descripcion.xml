@@ -37,23 +37,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:background="@drawable/fondo_imput_descripcion"
         android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_height="164dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/fondo_txt_field_descripcion"
+
+        android:padding="24dp"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="@string/frg_descripcion_hint_descripcion"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="18dp"
-            android:hint="@string/frg_descripcion_hint_descripcion"
-            android:textSize="18sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <Button
         style="@style/TipografiaBotones"
