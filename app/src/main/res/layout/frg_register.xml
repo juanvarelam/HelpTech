@@ -116,7 +116,7 @@
             android:layout_weight="75"
             android:background="@drawable/btn_round_inico_negro_"
             android:textAllCaps="false"
-            android:text="@string/inicio_sesion" />
+            android:text="@string/registrarse" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

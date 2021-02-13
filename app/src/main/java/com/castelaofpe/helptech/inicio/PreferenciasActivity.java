@@ -48,7 +48,7 @@ public class PreferenciasActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        Intent vista = new Intent(PreferenciasActivity.this, MainActivity.class);
+        Intent vista = new Intent(PreferenciasActivity.this, FotoActivity.class);
         startActivity(vista);
     }
 }
