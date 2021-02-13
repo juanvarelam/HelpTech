@@ -77,7 +77,7 @@
     <string name="datos_incorrectos">Datos Incorrectos</string>
     <string name="correo_enviado">Correo Enviado</string>
     <string name="pass_corta">Contraseña Corta</string>
-    <string name="act_foto_descripcion_btn_abrir_camara">Abrir Cámara</string>
+    <string name="act_foto_btn_subir_imagen">Subir Imagen</string>
     <string name="act_foto_descripcion_btn_abrirCamara">Abrir cámara</string>
     <string name="frg_foto_descripcion_escoger_foto">Llegó la hora de ponerse guapos...</string>
     <string name="act_foto_descripcion_btn_siguiente">Siguiente</string>

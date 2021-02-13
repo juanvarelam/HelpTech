@@ -44,14 +44,14 @@
         android:layout_height="200dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/act_foto_abrir_camara"
+        app:layout_constraintBottom_toTopOf="@+id/act_foto_btn_subir_imagen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
         app:srcCompat="@drawable/camara"/>
 
     <Button
-        android:id="@+id/act_foto_abrir_camara"
+        android:id="@+id/act_foto_btn_subir_imagen"
         style="@style/TipografiaBotones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
         android:backgroundTint="@color/white"
         android:paddingHorizontal="18dp"
         android:paddingVertical="4dp"
-        android:text="@string/act_foto_descripcion_btn_abrir_camara"
+        android:text="@string/act_foto_btn_subir_imagen"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,22 +79,7 @@
         android:onClick="onClickNext"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/act_foto_abrir_camara"
-        app:layout_constraintStart_toStartOf="@+id/act_foto_abrir_camara" />
-
-    <Button
-        android:id="@+id/button4"
-        style="@style/TipografiaBotones"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:paddingHorizontal="18dp"
-        android:background="@drawable/supbar"
-        android:backgroundTint="@color/white"
-        android:text="@string/act_foto_agregar_dese_galeria"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_foto_abrir_camara" />
+        app:layout_constraintEnd_toEndOf="@+id/act_foto_btn_subir_imagen"
+        app:layout_constraintStart_toStartOf="@+id/act_foto_btn_subir_imagen" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

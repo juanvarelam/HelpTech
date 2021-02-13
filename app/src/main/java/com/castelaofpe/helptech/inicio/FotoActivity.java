@@ -10,6 +10,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -25,8 +26,9 @@ public class FotoActivity extends AppCompatActivity {
     Button btnSubirImagen;
     ImageView imagen;
 
-    private static final int REQUEST_PERMISSION_CAMERA = 100;
-    private static final int REQUEST_IMAGE_CAMERA = 101;
+    private static final int REQUEST_PERMISSION_CODE = 100;
+    private static final int REQUEST_IMAGE_GALLERY = 101;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,19 +36,20 @@ public class FotoActivity extends AppCompatActivity {
         setContentView(R.layout.act_foto);
 
         imagen = findViewById(R.id.act_foto_imageView_camara);
-        btnSubirImagen = findViewById(R.id.act_foto_abrir_camara);
+        btnSubirImagen = findViewById(R.id.act_foto_btn_subir_imagen);
 
         btnSubirImagen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    if (ActivityCompat.checkSelfPermission(FotoActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-                        abrirCamara();
+                    if (ActivityCompat.checkSelfPermission(FotoActivity.this,
+                            Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                        abrirGaleria();
                     }else{
-                        ActivityCompat.requestPermissions(FotoActivity.this, new String[] {Manifest.permission.CAMERA}, 100);
+                        ActivityCompat.requestPermissions(FotoActivity.this, new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_PERMISSION_CODE);
                     }
                 }else{
-                    abrirCamara();
+                    abrirGaleria();
                 }
             }
         });
@@ -55,13 +58,14 @@ public class FotoActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
-        if (requestCode == REQUEST_PERMISSION_CAMERA) {
+        if (requestCode == REQUEST_PERMISSION_CODE) {
             if (permissions.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                abrirCamara();
+                abrirGaleria();
             }else{
-                Toast.makeText(this, "Necesitas conceder permisos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Necesitas conceder los permisos", Toast.LENGTH_SHORT).show();
             }
         }
+
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
@@ -73,19 +77,25 @@ public class FotoActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if (requestCode == REQUEST_IMAGE_CAMERA) {
-            if (resultCode == Activity.RESULT_OK) {
-                Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-                imagen.setImageBitmap(bitmap);
+
+        if (requestCode == REQUEST_IMAGE_GALLERY){  //GALERÍA
+            if (resultCode == Activity.RESULT_OK && data != null) {
+                Uri foto = data.getData();
+                imagen.setImageURI(foto);
+            }else{
+                Toast.makeText(this, "No seleccionaste ninguna foto.", Toast.LENGTH_SHORT).show();
             }
+        }else if (requestCode == REQUEST_IMAGE_GALLERY){
+
         }
+
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void abrirCamara() {
-        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (cameraIntent.resolveActivity(getPackageManager())!=null) {
-            startActivityForResult(cameraIntent, REQUEST_IMAGE_CAMERA);
-        }
+
+    private void abrirGaleria() {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/");
+        startActivityForResult(intent, REQUEST_IMAGE_GALLERY);
     }
 }

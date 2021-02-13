@@ -3,7 +3,7 @@
     package="com.castelaofpe.helptech">
 
     <uses-permission android:name="android.permission.CAMERA"/>  //ABRIR CAMARA
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>  //ACCEDER GALERÍA
 
 
     <application
