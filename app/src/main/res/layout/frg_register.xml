@@ -23,8 +23,10 @@
 
         <ImageButton
             android:id="@+id/frg_register_btn_back"
-            android:layout_width="60dp"
+            android:layout_width="0dp"
+            android:paddingVertical="8dp"
             android:layout_height="match_parent"
+            android:layout_weight="18"
             android:background="@null"
             android:src="@drawable/ic_back" />
 
@@ -32,11 +34,11 @@
 
     <TextView
         android:id="@+id/textView10"
+        style="@style/tipografiaTituloInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="64dp"
         android:text="@string/btn_registro"
-        style="@style/tipografiaTituloInfo"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -57,9 +59,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="486dp"
-        android:layout_height="571dp"
-        android:layout_marginTop="293dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="240dp"
         android:background="@drawable/btn_round_inicio_blanco"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,14 +71,24 @@
         app:layout_constraintVertical_bias="0.474">
 
         <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="57dp"
+            android:layout_marginTop="64dp"
+            android:drawableEnd="@drawable/ic_usuario"
+            android:ems="10"
+            android:fontFamily="@font/rubik"
+            android:hint="@string/nombre_usuario" />
+
+        <EditText
             android:id="@+id/frg_registro_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="57dp"
-            android:fontFamily="@font/rubik"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="24dp"
             android:drawableEnd="@drawable/ic_usuario"
             android:ems="10"
+            android:fontFamily="@font/rubik"
             android:hint="@string/email"
             android:inputType="textEmailAddress" />
 
@@ -85,10 +97,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="57dp"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/rubik"
+            android:layout_marginTop="24dp"
             android:drawableEnd="@drawable/ic_candado"
             android:ems="10"
+            android:fontFamily="@font/rubik"
             android:hint="@string/pass_reg"
             android:inputType="textPassword" />
 
@@ -97,26 +109,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="57dp"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/rubik"
+            android:layout_marginTop="24dp"
             android:drawableEnd="@drawable/ic_candado"
             android:ems="10"
+            android:fontFamily="@font/rubik"
             android:hint="@string/pass_reg"
             android:inputType="textPassword" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/frg_registro_btn_sigin"
             style="@style/TipografiaBotones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingHorizontal="32dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="120dp"
-            android:layout_weight="75"
+            android:layout_marginVertical="20dp"
             android:background="@drawable/btn_round_inico_negro_"
-            android:textAllCaps="false"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="20dp"
             android:text="@string/registrarse" />
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,9 +2,9 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <layer-list>
-            <item android:right="5dp" android:top="5dp">
+            <item>
                 <shape>
-                    <corners android:radius="100dp" />
+                    <corners android:topLeftRadius="44dp" android:topRightRadius="44dp" />
                     <solid android:color="@color/white" />
                 </shape>
             </item>
