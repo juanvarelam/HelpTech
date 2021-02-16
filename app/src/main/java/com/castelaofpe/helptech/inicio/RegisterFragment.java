@@ -1,6 +1,8 @@
 package com.castelaofpe.helptech.inicio;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -32,7 +34,7 @@ import java.util.regex.Pattern;
 public class RegisterFragment extends Fragment {
 
     private FirebaseAuth mAuth;
-    private EditText email, password, confirmPassword;
+    private EditText usuario, email, password, confirmPassword;
 
 
     @Override
@@ -49,6 +51,7 @@ public class RegisterFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.frg_register, container, false);
 
+        usuario = v.findViewById(R.id.frg_registro_usuario);
         email = v.findViewById(R.id.frg_registro_email);
         password = v.findViewById(R.id.frg_registro_password);
         confirmPassword = v.findViewById(R.id.frg_registro_confirm_password);
@@ -101,6 +104,11 @@ public class RegisterFragment extends Fragment {
         Toast toast1 = Toast.makeText(getContext(), error2,Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP,0,0);
 
+        final String compruebaUser = usuario.getText().toString();
+        if(compruebaUser.trim().isEmpty()){
+            toast.show();
+            return;
+        }
 
         final String compruebaEmail = email.getText().toString();
         if(compruebaEmail.trim().isEmpty()){
@@ -134,20 +142,20 @@ public class RegisterFragment extends Fragment {
         }
 
        // mAuth = FirebaseAuth.getInstance();
-        creaUsuario(compruebaEmail, compruebaPassword);
+        creaUsuario(compruebaUser, compruebaEmail, compruebaPassword);
 
 
 
     }
 
-    private void creaUsuario(final String email, final String pass){
+    private void creaUsuario(final String user1, final String email1, final String pass1){
 
         final String oki = "registrado";
         final String fallo= "caspitas";
         final Toast toast = Toast.makeText(getContext(), oki,Toast.LENGTH_SHORT);
         final Toast toast1 = Toast.makeText(getContext(), fallo,Toast.LENGTH_SHORT);
 
-            mAuth.createUserWithEmailAndPassword(email, pass)
+            mAuth.createUserWithEmailAndPassword(email1, pass1)
                     .addOnCompleteListener( new OnCompleteListener <AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -157,6 +165,7 @@ public class RegisterFragment extends Fragment {
                                 FirebaseUser currentUser = mAuth.getCurrentUser();
                                 updateUI(currentUser);
                                 toast.show();
+                                shared(user1, email1, pass1);
                                 PreferenciasActivity actPrefe = new PreferenciasActivity();
                                 ((InicialActivity)getActivity()).iniciaActivity(actPrefe);
 
@@ -168,7 +177,20 @@ public class RegisterFragment extends Fragment {
                             }
                         }
                     });
-        }
+    }
 
+    private void shared(String usuario, String email, String password){
+
+        String filename = "ficheroConfiguracion";
+        Context ctx = getContext();
+        SharedPreferences sharedPref = ctx.getSharedPreferences(filename, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("id", email);
+        editor.putString("user"+email, usuario);
+        editor.putString("email"+email, email);
+        editor.putString("pass"+email, password);
+        editor.commit();
+
+    }
 
 }

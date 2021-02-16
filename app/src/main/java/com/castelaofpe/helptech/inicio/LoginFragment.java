@@ -142,14 +142,15 @@ public class LoginFragment extends Fragment {
         Log.i("User:",""+currentUser);
     }
 
-    private void shared(String usuario, String password){
+    private void shared(String email, String password){
 
         String filename = "ficheroConfiguracion";
         Context ctx = getContext();
         SharedPreferences sharedPref = ctx.getSharedPreferences(filename, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("email", usuario);
-        editor.putString("pass", password);
+        editor.putString("id", email);
+        editor.putString("email"+email, email);
+        editor.putString("pass"+email, password);
         editor.commit();
 
     }

@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.castelaofpe.helptech.explora.ExplorarFragment;
+import com.castelaofpe.helptech.inicio.InicialActivity;
 import com.castelaofpe.helptech.perfil.PerfilFragment;
 import com.castelaofpe.helptech.R;
 
@@ -84,9 +85,16 @@ public class MainActivity extends AppCompatActivity {
     public String cargaEmail(){
         String filename = "ficheroConfiguracion";
         SharedPreferences sharedPref = getSharedPreferences(filename, Context.MODE_PRIVATE);
-        return sharedPref.getString("email", "No existe");
+        String busca = sharedPref.getString("id", "No existe");
+        return sharedPref.getString("email"+busca, "No existe");
     }
 
+    public String cargaUser(){
+        String filename = "ficheroConfiguracion";
+        SharedPreferences sharedPref = getSharedPreferences(filename, Context.MODE_PRIVATE);
+        String busca = sharedPref.getString("id", "No existe");
+        return sharedPref.getString("user"+busca, "No existe");
+    }
 
     public void changeFragmentMain(Fragment frg){
         FragmentManager manager = getSupportFragmentManager();

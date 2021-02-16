@@ -6,10 +6,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.view.View;
+import android.widget.TextView;
 
 
 import com.castelaofpe.helptech.R;
@@ -17,7 +20,7 @@ import com.castelaofpe.helptech.R;
 public class InicialActivity extends AppCompatActivity {
 
 
-
+    TextView emailPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +30,7 @@ public class InicialActivity extends AppCompatActivity {
        // changeFragmentInicio(frgInicial);
 
         initButtons();
-        
+
     }
 
     private void initButtons() {
@@ -63,5 +66,6 @@ public class InicialActivity extends AppCompatActivity {
         Intent intent = new Intent(this, act.getClass());
         startActivity(intent);
     }
+
 
 }

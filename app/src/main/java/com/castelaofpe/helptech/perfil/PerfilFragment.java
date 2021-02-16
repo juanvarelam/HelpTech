@@ -30,7 +30,7 @@ public class PerfilFragment extends Fragment {
 
     Fragment fragmentPreguntas, fragmentRespuestas, fragmentFavoritos;
     Activity configActivity = new ConfigActivity();
-    TextView emailPerfil;
+    TextView emailPerfil, usuarioPerfil;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,6 +56,10 @@ public class PerfilFragment extends Fragment {
         emailPerfil = (TextView) v.findViewById(R.id.frg_perfil_email);
         String emailPreference = ((MainActivity)getActivity()).cargaEmail();
         emailPerfil.setText(emailPreference);
+
+        usuarioPerfil = (TextView) v.findViewById(R.id.frg_perfil_usuario);
+        String usuarioPreference = ((MainActivity)getActivity()).cargaUser();
+        usuarioPerfil.setText(usuarioPreference);
 
         Button btnPreguntas = v.findViewById(R.id.frg_perfil_btn_preguntas);
         btnPreguntas.setOnClickListener(new View.OnClickListener() {
