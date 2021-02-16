@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.castelaofpe.helptech.R;
 import com.castelaofpe.helptech.perfil.AdapterFavoritos;
@@ -28,6 +30,7 @@ public class PerfilFragment extends Fragment {
 
     Fragment fragmentPreguntas, fragmentRespuestas, fragmentFavoritos;
     Activity configActivity = new ConfigActivity();
+    TextView emailPerfil;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,15 +39,23 @@ public class PerfilFragment extends Fragment {
         fragmentPreguntas = new PreguntasFragment();
         fragmentRespuestas = new AdapterRespuestas();
         fragmentFavoritos = new AdapterFavoritos();
-        
+
         ((MainActivity)getActivity()).changeFragmentPerfil(fragmentPreguntas);
 
+
+
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.frg_perfil, container, false);
+
+        emailPerfil = (TextView) v.findViewById(R.id.frg_perfil_email);
+        String emailPreference = ((MainActivity)getActivity()).cargaEmail();
+        emailPerfil.setText(emailPreference);
 
         Button btnPreguntas = v.findViewById(R.id.frg_perfil_btn_preguntas);
         btnPreguntas.setOnClickListener(new View.OnClickListener() {

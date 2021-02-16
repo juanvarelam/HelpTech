@@ -1,5 +1,7 @@
 package com.castelaofpe.helptech.inicio;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -105,7 +107,7 @@ public class LoginFragment extends Fragment {
 
     }
 
-    private void inicioSesion(String email, String password){
+    private void inicioSesion(final String email, final String password){
 
         final String fallo = getString(R.string.datos_incorrectos);
 
@@ -117,6 +119,7 @@ public class LoginFragment extends Fragment {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("OK", "Sesion iniciada");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            shared(email, password);
                             MainActivity actMain = new MainActivity();
                             ((InicialActivity)getActivity()).iniciaActivity(actMain);
 
@@ -138,5 +141,20 @@ public class LoginFragment extends Fragment {
     private void updateUI(FirebaseUser currentUser) {
         Log.i("User:",""+currentUser);
     }
+
+    private void shared(String usuario, String password){
+
+        String filename = "ficheroConfiguracion";
+        Context ctx = getContext();
+        SharedPreferences sharedPref = ctx.getSharedPreferences(filename, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("email", usuario);
+        editor.putString("pass", password);
+        editor.commit();
+
+    }
+
+
+
 
 }

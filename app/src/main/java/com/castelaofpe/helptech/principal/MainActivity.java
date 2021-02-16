@@ -6,7 +6,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -27,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         initButtons();
 
         changeFragmentMain(frgHome);
-
 
     }
 
@@ -78,6 +79,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public String cargaEmail(){
+        String filename = "ficheroConfiguracion";
+        SharedPreferences sharedPref = getSharedPreferences(filename, Context.MODE_PRIVATE);
+        return sharedPref.getString("email", "No existe");
     }
 
 
