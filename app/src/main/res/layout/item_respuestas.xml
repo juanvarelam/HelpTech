@@ -15,55 +15,40 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/frg_preguntas_fecha"
+            android:id="@+id/frg_respuestas_fecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="10:25"
             style="@style/tipografiaHora" />
 
         <TextView
-            android:id="@+id/frg_preguntas_texto_preguntas"
+            android:id="@+id/frg_respuestas_texto_preguntas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="8dp"
             android:textStyle="bold"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:fontFamily="@font/rubik"
-            android:text="Texto pregunta"/>
+            android:text="Texto respuesta"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="start"
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/frg_preguntas_btn_comentarios"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/transparente"
-                app:srcCompat="@drawable/comentario" />
-
-            <TextView
-                android:id="@+id/frg_preguntas_numero_comentarios"
+                android:id="@+id/frg_respuestas_btn_votos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="9"
-                android:textSize="16sp"
-                android:textColor="@color/black" />
-
-            <ImageButton
-                android:id="@+id/frg_preguntas_btn_votos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:background="@color/transparente"
                 app:srcCompat="@drawable/corazon" />
 
             <TextView
-                android:id="@+id/frg_preguntas_numero_votos"
+                android:id="@+id/frg_respuestas_numero_votos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingStart="4dp"
@@ -71,14 +56,6 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/frg_preguntas_hagstags"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/gris"
-                android:textAlignment="textEnd"
-                android:layout_weight="1"
-                android:text="#java #productividad #framework #2021" />
         </LinearLayout>
 
 

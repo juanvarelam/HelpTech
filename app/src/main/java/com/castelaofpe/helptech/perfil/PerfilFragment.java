@@ -37,7 +37,7 @@ public class PerfilFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         fragmentPreguntas = new PreguntasFragment();
-        fragmentRespuestas = new AdapterRespuestas();
+        fragmentRespuestas = new RespuestasFragment();
         fragmentFavoritos = new AdapterFavoritos();
 
         ((MainActivity)getActivity()).changeFragmentPerfil(fragmentPreguntas);

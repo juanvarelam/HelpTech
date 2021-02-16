@@ -102,7 +102,7 @@
                     android:id="@+id/frg_perfil_foto_usuario"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/imagen_forma_circular"
+                    android:src="@drawable/foto_perfil"
                     android:scaleType="centerCrop" />
             </LinearLayout>
 
