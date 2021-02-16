@@ -38,12 +38,9 @@ public class PerfilFragment extends Fragment {
 
         fragmentPreguntas = new PreguntasFragment();
         fragmentRespuestas = new RespuestasFragment();
-        fragmentFavoritos = new AdapterFavoritos();
+        fragmentFavoritos = new FavoritosFragment();
 
         ((MainActivity)getActivity()).changeFragmentPerfil(fragmentPreguntas);
-
-
-
     }
 
 

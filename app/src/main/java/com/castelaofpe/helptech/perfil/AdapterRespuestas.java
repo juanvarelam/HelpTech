@@ -49,7 +49,7 @@ public class AdapterRespuestas extends RecyclerView.Adapter<AdapterRespuestas.Re
         public RespuestaViewHolder(@NonNull View itemView) {
             super(itemView);
             txtFecha = itemView.findViewById(R.id.frg_respuestas_fecha);
-            txtTexto = itemView.findViewById(R.id.frg_respuestas_texto_preguntas);
+            txtTexto = itemView.findViewById(R.id.frg_respuestas_texto_respuestas);
             txtVotos = itemView.findViewById(R.id.frg_respuestas_numero_votos);
         }
     }
