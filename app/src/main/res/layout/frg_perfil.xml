@@ -26,7 +26,7 @@
             android:weightSum="100">
 
             <TextView
-                android:id="@+id/frg_perfil_email"
+                android:id="@+id/textView14"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -64,7 +64,7 @@
                 android:weightSum="70">
 
                 <TextView
-                    android:id="@+id/frg_perfil_usuario"
+                    android:id="@+id/nombre_perfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -102,8 +102,8 @@
                     android:id="@+id/frg_perfil_foto_usuario"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/foto_perfil"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/foto_perfil" />
             </LinearLayout>
 
         </LinearLayout>
