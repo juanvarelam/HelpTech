@@ -47,7 +47,7 @@ public class MensajesActivity extends AppCompatActivity {
         mensajes = new ArrayList<Mensaje>();
 
         for(int i = 0; i < 10; i++){
-            contactos.add(new Usuario("User", "R.drawable.programador"));
+            //contactos.add(new Usuario("User", "R.drawable.programador"));
             mensajes.add(new Mensaje("User", R.drawable.programador, "10:30",txt));
         }
 

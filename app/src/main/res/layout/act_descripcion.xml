@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/act_description_description"
         android:layout_width="match_parent"
         android:layout_marginHorizontal="8dp"
         android:layout_height="164dp"

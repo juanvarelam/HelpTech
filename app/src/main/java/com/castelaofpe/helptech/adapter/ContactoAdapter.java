@@ -41,7 +41,7 @@ public class ContactoAdapter  extends RecyclerView.Adapter<ContactoAdapter.Conta
 
         String texto = item.getEmail();
         holder.txt.setText(texto);
-        holder.icon.setImageResource(item.getImagen());
+       // holder.icon.setImageResource(item.getImagen());
 
     }
 
@@ -62,5 +62,8 @@ public class ContactoAdapter  extends RecyclerView.Adapter<ContactoAdapter.Conta
             linRoot = v.findViewById(R.id.mensajes_recientes_adapter_root);
         }
     }
+
+    private void getImagen(){}
+
 }
 

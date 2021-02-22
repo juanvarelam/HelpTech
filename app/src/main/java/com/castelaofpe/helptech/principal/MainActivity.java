@@ -1,5 +1,6 @@
 package com.castelaofpe.helptech.principal;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -15,12 +16,23 @@ import android.widget.ImageButton;
 
 import com.castelaofpe.helptech.explora.ExplorarFragment;
 import com.castelaofpe.helptech.inicio.InicialActivity;
+import com.castelaofpe.helptech.models.Usuario;
 import com.castelaofpe.helptech.perfil.PerfilFragment;
 import com.castelaofpe.helptech.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class MainActivity extends AppCompatActivity {
 
     HomeFragment frgHome = new HomeFragment();
+    FirebaseAuth mAuth;
+    FirebaseFirestore db;
+    FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +40,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.act_main);
 
         initButtons();
+
+       // mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
+
+
+        //user = mAuth.getCurrentUser();
+       // cargaDocumentoUsuarioLogueado(user.getUid());
+
+        String doc = idDOcUserLOgueado();
+        cargaDocumentoUsuarioLogueado(doc);
+
+
 
         changeFragmentMain(frgHome);
 
@@ -82,19 +106,73 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public String cargaEmail(){
+    public String cargaemail(){
         String filename = "ficheroConfiguracion";
         SharedPreferences sharedPref = getSharedPreferences(filename, Context.MODE_PRIVATE);
-        String busca = sharedPref.getString("id", "No existe");
-        return sharedPref.getString("email"+busca, "No existe");
+        String busca = sharedPref.getString("email", "No existe");
+        return busca;
     }
 
-    public String cargaUser(){
+    public String cargaUsername(){
+        String filename = "ficheroConfiguracion";
+        SharedPreferences sharedPref = getSharedPreferences(filename, Context.MODE_PRIVATE);
+        String busca = sharedPref.getString("username", "No existe");
+        return busca;
+    }
+
+    public String cargaDescription(){
+        String filename = "ficheroConfiguracion";
+        SharedPreferences sharedPref = getSharedPreferences(filename, Context.MODE_PRIVATE);
+        String busca = sharedPref.getString("description", "No existe");
+        return busca;
+    }
+
+  /*  public FirebaseUser cargaUsuarioLogueado(){
+        FirebaseUser user = mAuth.getCurrentUser();
+        return user;
+    }*/
+
+
+    public String idDOcUserLOgueado(){
         String filename = "ficheroConfiguracion";
         SharedPreferences sharedPref = getSharedPreferences(filename, Context.MODE_PRIVATE);
         String busca = sharedPref.getString("id", "No existe");
-        return sharedPref.getString("user"+busca, "No existe");
+        return busca;
     }
+
+    public void cargaDocumentoUsuarioLogueado(String id){
+
+        DocumentReference docRef = db.collection("users").document(id);
+        docRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+
+               Usuario u = value.toObject(Usuario.class);
+               saveOnShared(u);
+
+            }
+        });
+
+
+    }
+
+
+    private void saveOnShared(Usuario user) {
+
+        if (user == null){
+            return;
+        }
+
+        String fileName = getString(R.string.sharedpreferences_file);
+        SharedPreferences sharedPref = getSharedPreferences(fileName, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        editor.putStringSet("profile", user.toMap().entrySet() );
+
+        editor.commit();
+
+    }
+
 
     public void changeFragmentMain(Fragment frg){
         FragmentManager manager = getSupportFragmentManager();

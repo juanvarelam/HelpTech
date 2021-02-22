@@ -26,7 +26,14 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 import java.util.concurrent.Executor;
 import java.util.regex.Pattern;
 
@@ -36,6 +43,9 @@ public class RegisterFragment extends Fragment {
     private FirebaseAuth mAuth;
     private EditText usuario, email, password, confirmPassword;
 
+   // DatabaseReference mRootReference;
+    FirebaseFirestore db;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,6 +53,8 @@ public class RegisterFragment extends Fragment {
 
         mAuth = FirebaseAuth.getInstance();
 
+       // mRootReference = FirebaseDatabase.getInstance().getReference();
+        db = FirebaseFirestore.getInstance();
     }
 
     @Override
@@ -141,7 +153,6 @@ public class RegisterFragment extends Fragment {
             return;
         }
 
-       // mAuth = FirebaseAuth.getInstance();
         creaUsuario(compruebaUser, compruebaEmail, compruebaPassword);
 
 
@@ -165,7 +176,8 @@ public class RegisterFragment extends Fragment {
                                 FirebaseUser currentUser = mAuth.getCurrentUser();
                                 updateUI(currentUser);
                                 toast.show();
-                                shared(user1, email1, pass1);
+                                guardaDatos(user1, email1, currentUser);
+                               shared(currentUser.getUid());
                                 PreferenciasActivity actPrefe = new PreferenciasActivity();
                                 ((InicialActivity)getActivity()).iniciaActivity(actPrefe);
 
@@ -179,18 +191,32 @@ public class RegisterFragment extends Fragment {
                     });
     }
 
-    private void shared(String usuario, String email, String password){
+     private void shared(String id){
 
         String filename = "ficheroConfiguracion";
         Context ctx = getContext();
         SharedPreferences sharedPref = ctx.getSharedPreferences(filename, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("id", email);
-        editor.putString("user"+email, usuario);
-        editor.putString("email"+email, email);
-        editor.putString("pass"+email, password);
+        editor.putString("id", id);
         editor.commit();
 
     }
+
+   private void guardaDatos(String username, String email, FirebaseUser user){
+
+        Map<String, Object> datosUsuario = new HashMap<>();
+        datosUsuario.put("email", email);
+        datosUsuario.put("username", username);
+
+        db.collection("users").document(user.getUid())
+                .set(datosUsuario);
+
+
+   }
+
+
+
+
+
 
 }

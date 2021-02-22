@@ -85,5 +85,6 @@
     <string name="frg_descripcion_hint_descripcion">Sé creativo...</string>
     <string name="act_descripcion_btn_finalizar">¡Finalizar!</string>
     <string name="act_foto_agregar_dese_galeria">Añadir de la galería</string>
+    <string name="sharedpreferences_file">ficheroConfiguracion</string>
     />
 </resources>

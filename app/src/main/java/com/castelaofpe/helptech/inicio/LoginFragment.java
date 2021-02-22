@@ -119,7 +119,7 @@ public class LoginFragment extends Fragment {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("OK", "Sesion iniciada");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            shared(email, password);
+                            shared(user.getUid());
                             MainActivity actMain = new MainActivity();
                             ((InicialActivity)getActivity()).iniciaActivity(actMain);
 
@@ -128,7 +128,7 @@ public class LoginFragment extends Fragment {
                             Log.e("ERROR", "No se pudo iniciar sesion");
                             Toast toast = Toast.makeText(getContext(), fallo,Toast.LENGTH_SHORT);
                             toast.show();;
-                            updateUI(null);
+
                             // ...
                         }
 
@@ -142,15 +142,13 @@ public class LoginFragment extends Fragment {
         Log.i("User:",""+currentUser);
     }
 
-    private void shared(String email, String password){
+    private void shared(String id){
 
         String filename = "ficheroConfiguracion";
         Context ctx = getContext();
         SharedPreferences sharedPref = ctx.getSharedPreferences(filename, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("id", email);
-        editor.putString("email"+email, email);
-        editor.putString("pass"+email, password);
+        editor.putString("id", id);
         editor.commit();
 
     }

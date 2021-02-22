@@ -1,6 +1,8 @@
 package com.castelaofpe.helptech.perfil;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -20,6 +22,8 @@ import com.castelaofpe.helptech.perfil.AdapterPreguntas;
 import com.castelaofpe.helptech.perfil.AdapterRespuestas;
 import com.castelaofpe.helptech.perfil.ConfigActivity;
 import com.castelaofpe.helptech.principal.MainActivity;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
 
 public class PerfilFragment extends Fragment {
 
@@ -30,7 +34,8 @@ public class PerfilFragment extends Fragment {
 
     Fragment fragmentPreguntas, fragmentRespuestas, fragmentFavoritos;
     Activity configActivity = new ConfigActivity();
-    TextView emailPerfil, usuarioPerfil;
+    TextView emailPerfil, usuarioPerfil, descripcionPerfil;
+    FirebaseUser user;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,9 @@ public class PerfilFragment extends Fragment {
         fragmentPreguntas = new PreguntasFragment();
         fragmentRespuestas = new RespuestasFragment();
         fragmentFavoritos = new FavoritosFragment();
+
+      //  user = ((MainActivity)getActivity()).cargaUsuarioLogueado();
+      //  ((MainActivity)getActivity()).cargaDocumentoUsuarioLogueado(user.getUid());
 
         ((MainActivity)getActivity()).changeFragmentPerfil(fragmentPreguntas);
     }
@@ -51,12 +59,16 @@ public class PerfilFragment extends Fragment {
         View v = inflater.inflate(R.layout.frg_perfil, container, false);
 
         emailPerfil = (TextView) v.findViewById(R.id.frg_perfil_email);
-        String emailPreference = ((MainActivity)getActivity()).cargaEmail();
-        emailPerfil.setText(emailPreference);
+        String emaildb = ((MainActivity)getActivity()).cargaemail();
+        emailPerfil.setText(emaildb);
 
         usuarioPerfil = (TextView) v.findViewById(R.id.frg_perfil_usuario);
-        String usuarioPreference = ((MainActivity)getActivity()).cargaUser();
+        String usuarioPreference = ((MainActivity)getActivity()).cargaUsername();
         usuarioPerfil.setText(usuarioPreference);
+
+        descripcionPerfil = (TextView) v.findViewById(R.id.act_perfil_descripcion);
+        String descripcionPreference = ((MainActivity)getActivity()).cargaDescription();
+        descripcionPerfil.setText(descripcionPreference);
 
         Button btnPreguntas = v.findViewById(R.id.frg_perfil_btn_preguntas);
         btnPreguntas.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +105,8 @@ public class PerfilFragment extends Fragment {
 
         return v;
     }
+
+
 
 
 

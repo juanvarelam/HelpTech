@@ -22,6 +22,7 @@ public class InicialActivity extends AppCompatActivity {
 
     TextView emailPerfil;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
