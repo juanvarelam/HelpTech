@@ -62,7 +62,7 @@ public class PerfilFragment extends Fragment {
         String emaildb = ((MainActivity)getActivity()).cargaemail();
         emailPerfil.setText(emaildb);
 
-        usuarioPerfil = (TextView) v.findViewById(R.id.frg_perfil_usuario);
+        usuarioPerfil = (TextView) v.findViewById(R.id.frg_perfil_name);
         String usuarioPreference = ((MainActivity)getActivity()).cargaUsername();
         usuarioPerfil.setText(usuarioPreference);
 
