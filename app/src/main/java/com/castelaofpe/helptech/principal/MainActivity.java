@@ -26,6 +26,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.gson.Gson;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -106,23 +107,31 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private Usuario getUser(){
+        final Gson gson = new Gson();
+
+        String fileName = getString(R.string.sharedpreferences_file);
+        SharedPreferences sharedPref = getSharedPreferences(fileName, Context.MODE_PRIVATE);
+        String profile = sharedPref.getString("profile", "{}");
+        Usuario user = gson.fromJson(profile, Usuario.class);
+        return user;
+    }
+
     public String cargaemail(){
-        String filename = "ficheroConfiguracion";
-        SharedPreferences sharedPref = getSharedPreferences(filename, Context.MODE_PRIVATE);
-        String busca = sharedPref.getString("email", "No existe");
-        return busca;
+        Usuario user = this.getUser();
+        return user.getEmail();
     }
 
     public String cargaUsername(){
-        String filename = "ficheroConfiguracion";
-        SharedPreferences sharedPref = getSharedPreferences(filename, Context.MODE_PRIVATE);
+        String fileName = getString(R.string.sharedpreferences_file);
+        SharedPreferences sharedPref = getSharedPreferences(fileName, Context.MODE_PRIVATE);
         String busca = sharedPref.getString("username", "No existe");
         return busca;
     }
 
     public String cargaDescription(){
-        String filename = "ficheroConfiguracion";
-        SharedPreferences sharedPref = getSharedPreferences(filename, Context.MODE_PRIVATE);
+        String fileName = getString(R.string.sharedpreferences_file);
+        SharedPreferences sharedPref = getSharedPreferences(fileName, Context.MODE_PRIVATE);
         String busca = sharedPref.getString("description", "No existe");
         return busca;
     }
@@ -134,8 +143,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public String idDOcUserLOgueado(){
-        String filename = "ficheroConfiguracion";
-        SharedPreferences sharedPref = getSharedPreferences(filename, Context.MODE_PRIVATE);
+        String fileName = getString(R.string.sharedpreferences_file);
+        SharedPreferences sharedPref = getSharedPreferences(fileName, Context.MODE_PRIVATE);
         String busca = sharedPref.getString("id", "No existe");
         return busca;
     }
@@ -167,7 +176,9 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPref = getSharedPreferences(fileName, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
 
-        editor.putStringSet("profile", user.toMap().entrySet() );
+        final Gson gson = new Gson();
+        String jsonData = gson.toJson(user);
+        editor.putString("profile", jsonData );
 
         editor.commit();
 
