@@ -123,17 +123,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public String cargaUsername(){
-        String fileName = getString(R.string.sharedpreferences_file);
-        SharedPreferences sharedPref = getSharedPreferences(fileName, Context.MODE_PRIVATE);
-        String busca = sharedPref.getString("username", "No existe");
-        return busca;
+        Usuario user = this.getUser();
+        return user.getUsername();
     }
 
     public String cargaDescription(){
-        String fileName = getString(R.string.sharedpreferences_file);
-        SharedPreferences sharedPref = getSharedPreferences(fileName, Context.MODE_PRIVATE);
-        String busca = sharedPref.getString("description", "No existe");
-        return busca;
+        Usuario user = this.getUser();
+        return user.getDescription();
     }
 
   /*  public FirebaseUser cargaUsuarioLogueado(){
