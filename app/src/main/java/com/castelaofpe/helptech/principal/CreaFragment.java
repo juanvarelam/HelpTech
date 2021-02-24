@@ -49,6 +49,9 @@ public class CreaFragment extends Fragment {
 
                 publicaPregunta();
 
+                CreaFragment frgCrea = new CreaFragment();
+                ((MainActivity)getActivity()).changeFragmentMain(frgCrea);
+
             }
         });
 
