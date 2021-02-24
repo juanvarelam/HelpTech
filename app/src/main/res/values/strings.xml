@@ -86,5 +86,6 @@
     <string name="act_descripcion_btn_finalizar">¡Finalizar!</string>
     <string name="act_foto_agregar_dese_galeria">Añadir de la galería</string>
     <string name="sharedpreferences_file">ficheroConfiguracion</string>
+    <string name="item_preguntaHome_nombreUsuario">estabandi23</string>
     />
 </resources>

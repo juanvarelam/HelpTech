@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:paddingHorizontal="24dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/frg_preguntasHome_fecha"
+            style="@style/tipografiaHora"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:text="10:25" />
+
+        <TextView
+            android:id="@+id/frg_preguntasHome_nombreUsuario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            style="@style/tipografiaHora"
+            android:textAlignment="textEnd"
+            android:text="@string/item_preguntaHome_nombreUsuario" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/frg_preguntasHome_texto_preguntas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/rubik"
+            android:text="Texto pregunta"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/frg_preguntasHome_btn_comentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparente"
+                app:srcCompat="@drawable/comentario" />
+
+            <TextView
+                android:id="@+id/frg_preguntasHome_numero_comentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="9"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <ImageButton
+                android:id="@+id/frg_preguntasHome_btn_votos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@color/transparente"
+                app:srcCompat="@drawable/corazon" />
+
+            <TextView
+                android:id="@+id/frg_preguntasHome_numero_votos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="4dp"
+                android:text="43"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/frg_preguntasHome_hagstags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gris"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"
+                android:text="#java #productividad #framework #2021" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
