@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class CreaFragment extends Fragment {
 
-    EditText txtPregunta;
+    EditText txtPregunta, txtHagstag;
     FirebaseFirestore db;
 
     @Override
@@ -41,6 +41,7 @@ public class CreaFragment extends Fragment {
         View v = inflater.inflate(R.layout.frg_crea, container, false);
 
         txtPregunta = v.findViewById(R.id.frg_crea_texto);
+        txtHagstag = v.findViewById(R.id.frg_crea_hagstags);
 
         Button btnPublica = v.findViewById(R.id.frg_crea_btn_post);
         btnPublica.setOnClickListener(new View.OnClickListener() {
@@ -70,16 +71,19 @@ public class CreaFragment extends Fragment {
             return;
         }
 
+        String txtHagst = txtHagstag.getText().toString();
+
         Usuario user = ((MainActivity)getActivity()).getUser();
 
-        guardaDatos(txtPreg, user);
+        guardaDatos(txtPreg, txtHagst, user);
 
     }
 
-    private void guardaDatos(String txtPreg, Usuario user){
+    private void guardaDatos(String txtPreg, String txtHagstag, Usuario user){
 
         Map<String, Object> datosPregunta = new HashMap<>();
         datosPregunta.put("pregunta", txtPreg);
+        datosPregunta.put("hagstag", txtHagstag);
         datosPregunta.put("username", user.getUsername());
         datosPregunta.put("votos", 0);
 

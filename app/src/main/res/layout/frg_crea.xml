@@ -60,7 +60,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/frg_crea_hagstags"
                 android:layout_width="match_parent"
                 android:background="@drawable/fondo_crea_pregunta"
                 android:layout_height="wrap_content"
