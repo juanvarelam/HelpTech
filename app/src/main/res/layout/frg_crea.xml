@@ -48,8 +48,8 @@
             android:layout_width="match_parent"
             android:layout_height="332dp"
             android:ems="10"
+            android:hint="@string/haz_tu_pregunta"
             android:inputType="textPersonName"
-            android:text="@string/haz_tu_pregunta"
             android:textAlignment="center" />
 
         <LinearLayout
