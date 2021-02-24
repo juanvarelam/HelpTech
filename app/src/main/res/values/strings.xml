@@ -87,5 +87,7 @@
     <string name="act_foto_agregar_dese_galeria">Añadir de la galería</string>
     <string name="sharedpreferences_file">ficheroConfiguracion</string>
     <string name="item_preguntaHome_nombreUsuario">estabandi23</string>
+    <string name="frg_crea">Haz Una Pregunta</string>
+    <string name="haz_tu_pregunta">Haz tu pregunta</string>
     />
 </resources>

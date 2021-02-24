@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private Usuario getUser(){
+    public Usuario getUser(){
         final Gson gson = new Gson();
 
         String fileName = getString(R.string.sharedpreferences_file);

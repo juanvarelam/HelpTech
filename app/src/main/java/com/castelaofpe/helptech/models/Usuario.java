@@ -67,7 +67,6 @@ public class Usuario implements Serializable {
 
         return map;
 
-
     }
 
 

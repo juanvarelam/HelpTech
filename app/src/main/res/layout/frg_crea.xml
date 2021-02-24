@@ -17,22 +17,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/crea_back_btn"
-            android:layout_width="64dp"
-            android:layout_height="match_parent"
-            android:layout_weight="10"
-            android:background="@null"
-            app:srcCompat="@drawable/ic_back" />
-
         <TextView
             android:id="@+id/crea_title_txt"
             style="@style/tipografiaTituloPestañaActiva"
-            android:layout_width="wrap_content"
+            android:layout_width="394dp"
             android:layout_height="match_parent"
             android:layout_weight="80"
             android:gravity="center"
-            android:text="@string/help_tech"
+            android:text="@string/frg_crea"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -51,13 +43,14 @@
         app:layout_constraintStart_toStartOf="@+id/act_crea_title_lin"
         app:layout_constraintTop_toBottomOf="@+id/act_crea_title_lin">
 
-        <TextView
-            android:id="@+id/textView2"
+        <EditText
+            android:id="@+id/frg_crea_texto"
             android:layout_width="match_parent"
             android:layout_height="332dp"
-            android:background="@drawable/borde_pequeno_creapregunta"
-            android:text="@string/txt_creaPregunta"
-            android:textSize="22sp" />
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/haz_tu_pregunta"
+            android:textAlignment="center" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -93,11 +86,13 @@
         android:id="@+id/frg_crea_btn_post"
         android:layout_width="119dp"
         android:layout_height="68dp"
+        android:layout_marginEnd="156dp"
         android:background="@drawable/btn_comenzar"
         android:text="@string/btn_crea_post"
         android:textColor="@color/ic_launcher_background"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_crea_title_lin" />
+        app:layout_constraintTop_toBottomOf="@+id/act_crea_title_lin"
+        app:layout_constraintVertical_bias="0.409" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
