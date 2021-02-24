@@ -38,6 +38,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/frg_home_items_preguntas"
         android:layout_width="417dp"
         android:layout_height="666dp"
         android:layout_marginTop="16dp"

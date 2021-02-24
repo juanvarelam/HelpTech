@@ -132,11 +132,6 @@ public class MainActivity extends AppCompatActivity {
         return user.getDescription();
     }
 
-  /*  public FirebaseUser cargaUsuarioLogueado(){
-        FirebaseUser user = mAuth.getCurrentUser();
-        return user;
-    }*/
-
 
     public String idDOcUserLOgueado(){
         String fileName = getString(R.string.sharedpreferences_file);
