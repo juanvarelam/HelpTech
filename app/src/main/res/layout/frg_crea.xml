@@ -2,97 +2,120 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".perfil.MensajesActivity">
 
     <LinearLayout
-        android:id="@+id/act_crea_title_lin"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/supbar"
+        android:paddingVertical="6dp"
         android:orientation="horizontal"
-        android:weightSum="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/crea_title_txt"
+            android:id="@+id/frg_crea_title_txt"
             style="@style/tipografiaTituloPestañaActiva"
-            android:layout_width="394dp"
-            android:layout_height="match_parent"
-            android:layout_weight="80"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/frg_crea"
-            android:textStyle="bold" />
-
+            android:text="@string/frg_crea" />
     </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_width="368dp"
-        android:layout_height="400dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="15dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/borde_pequeno_creapregunta"
         android:orientation="vertical"
         android:weightSum="100"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/frg_crea_btn_post"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/act_crea_title_lin"
-        app:layout_constraintTop_toBottomOf="@+id/act_crea_title_lin">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-        <EditText
-            android:id="@+id/frg_crea_texto"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="332dp"
-            android:ems="10"
-            android:hint="@string/haz_tu_pregunta"
-            android:inputType="textPersonName"
-            android:textAlignment="center" />
+
+            android:layout_height="200dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/frg_crea_texto"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:hint="@string/haz_tu_pregunta"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginVertical="4dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:background="@drawable/fondo_crea_pregunta"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="18sp"
+                android:hint="@string/hagstags_crear_pregunta"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginVertical="4dp"
             android:orientation="horizontal"
+            android:layout_gravity="center"
             android:weightSum="100">
 
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="122dp"
+            <ImageButton
+                android:id="@+id/frg_crea_btn_abrir_galeria"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="33"
-                app:srcCompat="@drawable/ic_not_img" />
+                android:layout_weight="50"
+                android:backgroundTint="@color/transparente"
+                android:scaleX="2.4"
+                android:scaleY="2.2"
+                android:src="@drawable/ic_not_img" />
 
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="130dp"
+            <ImageButton
+                android:id="@+id/frg_crea_btn_camara"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="33"
+                android:layout_weight="50"
+                android:layout_gravity="bottom"
+                android:backgroundTint="@color/transparente"
+                android:scaleX="2.4"
+                android:scaleY="2.2"
                 app:srcCompat="@drawable/ic_camara" />
 
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="110dp"
-                android:layout_height="match_parent"
-                android:layout_weight="33"
-                app:srcCompat="@drawable/ic_gif" />
         </LinearLayout>
 
     </LinearLayout>
 
     <Button
         android:id="@+id/frg_crea_btn_post"
-        android:layout_width="119dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="156dp"
-        android:background="@drawable/btn_comenzar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:background="@drawable/btn_round_inico_negro_"
         android:text="@string/btn_crea_post"
-        android:textColor="@color/ic_launcher_background"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        style="@style/TipografiaBotones"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_crea_title_lin"
-        app:layout_constraintVertical_bias="0.409" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

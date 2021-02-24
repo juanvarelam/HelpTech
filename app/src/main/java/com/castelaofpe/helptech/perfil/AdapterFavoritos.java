@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class AdapterFavoritos extends RecyclerView.Adapter<AdapterFavoritos.FavoritoViewHolder> {
 
-        ArrayList<Favorito> listaFavoritos;
+    ArrayList<Favorito> listaFavoritos;
 
     public AdapterFavoritos(ArrayList<Favorito> listaFavoritos) {
 
