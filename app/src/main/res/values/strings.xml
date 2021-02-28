@@ -90,5 +90,10 @@
     <string name="frg_crea">Haz Una Pregunta</string>
     <string name="haz_tu_pregunta">Haz tu pregunta</string>
     <string name="hagstags_crear_pregunta">Escribe tus hagstags aquí</string>
+    <string name="password_actualizada">Contraseña actualizada</string>
+    <string name="sesion_cerrada">Sesión cerrada</string>
+    <string name="email_actualizado">Email actualizado</string>
+    <string name="nombre_actualizado">Username actualizado</string>
+    <string name="nuevo_email">Nuevo email</string>
     />
 </resources>
