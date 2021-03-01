@@ -27,12 +27,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:autofillHints=""
-        android:fontFamily="@font/rubik"
         android:ems="10"
+        android:fontFamily="@font/rubik"
         android:hint="@string/nuevo_nombre"
         android:inputType="textPersonName"
         android:padding="16dp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
 </LinearLayout>

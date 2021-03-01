@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,17 +20,27 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.*;
 import androidx.appcompat.widget.SwitchCompat;
 
+import com.bumptech.glide.Glide;
 import com.castelaofpe.helptech.R;
 import com.castelaofpe.helptech.inicio.InicialActivity;
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
 public class ConfigActivity extends AppCompatActivity {
 
+    private static final int PHOTO_PERFIL = 2;
     private FirebaseFirestore db;
     private FirebaseAuth auth;
     private Button btnNombre;
@@ -56,10 +67,20 @@ public class ConfigActivity extends AppCompatActivity {
 
         initButtons();
         initListeners();
+
+
+        cargafoto();
+    }
+
+    private void cargafoto() {
+        //Prueba
+        Activity context = this.act;
+        Glide.with(context)
+                .load(FirebaseAuth.getInstance().getCurrentUser().getPhotoUrl())
+                .into((ImageView) findViewById(R.id.act_config_fotoPrueba));
     }
 
     private void initButtons() {
-
         btnNombre = findViewById(R.id.act_config_nombre_btn);
         btnPass = findViewById(R.id.act_config_pass_btn);
         btnPrivacidad = findViewById(R.id.act_config_privacidad_btn);
@@ -197,12 +218,17 @@ public class ConfigActivity extends AppCompatActivity {
             }
         });
 
+
         btnFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //seleccionaFoto();
+                Intent i = new Intent(Intent.ACTION_GET_CONTENT);
+                i.setType("image/*");
+                i.putExtra(Intent.EXTRA_LOCAL_ONLY, true);
+                startActivityForResult(Intent.createChooser(i, "Selecciona una foto"), PHOTO_PERFIL);
             }
         });
+
 
         btnEmail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -223,8 +249,8 @@ public class ConfigActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
 
-                                    String email = edtNuevoEmail.getText().toString();
-                                    Objects.requireNonNull(auth.getCurrentUser()).updateEmail(email);
+                                String email = edtNuevoEmail.getText().toString();
+                                Objects.requireNonNull(auth.getCurrentUser()).updateEmail(email);
 
                                 Toast.makeText(getApplicationContext(),
                                         getString(R.string.email_actualizado), Toast.LENGTH_SHORT).show();
@@ -254,20 +280,6 @@ public class ConfigActivity extends AppCompatActivity {
 
     }
 
-    private void seleccionaFoto() {
-
-      /*  Intent intent = new Intent();
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-
-        startActivityForResult(intent, PICK_IMAGE);
-
-        Uri foto = intent.getData();
-
-        StorageReference storageRef = FirebaseStorage.getInstance().getReferenceFromUrl("gs://helptech-a1b55.appspot.com/");
-        storageRef.putFile(foto);*/
-    }
-
     private void actualizaUsername(String username) {
 
         Map<String, Object> datos = new HashMap<>();
@@ -279,5 +291,54 @@ public class ConfigActivity extends AppCompatActivity {
         String uid = sharedPref.getString("id", "{}");
         db.collection("users").document(uid).set(datos, SetOptions.merge());
     }
-}
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PHOTO_PERFIL && resultCode == RESULT_OK) {
+            Uri u = data.getData();
+            final StorageReference ref = FirebaseStorage.getInstance().getReference().child("fotos/" + auth.getCurrentUser().getUid());
+            final UploadTask uploadTask = ref.putFile(u);
+            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                    .setPhotoUri(u)
+                    .build();
+
+            auth.getCurrentUser().updateProfile(profileUpdates)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(getApplicationContext(), "FOTO ACTUALIZADA", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+            uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+                @Override
+                public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+                    if (!task.isSuccessful()) {
+                        throw task.getException();
+                    }
+                    return ref.getDownloadUrl();
+                }
+            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                @Override
+                public void onComplete(@NonNull Task<Uri> task) {
+                    if (task.isSuccessful()) {
+                        Uri downloadUri = task.getResult();
+                        String downloadURL = downloadUri.toString();
+
+                        Map<String, Object> imagen = new HashMap<>();
+                        imagen.put("foto", downloadURL);
+                        String uid = auth.getCurrentUser().getUid();
+                        db.collection("users").document(uid).set(imagen, SetOptions.merge());
+
+                    }
+
+                }
+            });
+
+        }
+    }
+
+
+}
